@@ -1,0 +1,40 @@
+{
+  "name": "bloom",
+  "author": {
+    "name": "compsigh",
+    "email": "hello@compsigh.club",
+    "url": "https://compsigh.club"
+  },
+  "bugs": {
+    "url": "https://github.com/compsigh/bloom/issues"
+  },
+  "homepage": "https://bloom.compsigh.club",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "description": "BLOOM: the Spring 2025 hackathon for the arts & sciences, hosted by @compsigh — the social computer science club at the University of San Francisco for meeting cool people && building cool things",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/compsigh/bloom.git"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "@eslint/eslintrc": "^3"
+  }
+}
