@@ -1,3 +1,7 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "markdownlint.config": {
+    "MD033": false, // Allow inline HTML
+    "MD041": false, // Allow non-H1s on first line
+  }
 }
