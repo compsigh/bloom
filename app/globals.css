@@ -1,6 +1,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-title: "Mondwest", serif;
+  --font-mono: "iA Writer Mono V", monospace;
+  --font-link: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +20,10 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
 
 * {
@@ -30,14 +32,30 @@ body {
   margin: 0;
 }
 
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+  font-family: var(--font-link);
+  text-transform: uppercase;
+  text-decoration: underline dashed var(--foreground) 2px;
+  text-underline-offset: 6px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  text-decoration: none;
 }
 
+h1 {
+  font-family: var(--font-title);
+  font-weight: 400;
+}
