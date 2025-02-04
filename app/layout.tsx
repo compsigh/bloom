@@ -1,10 +1,31 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import localFont from 'next/font/local'
-import React from 'react'; // Import React
+import type { Metadata } from "next"
+import localFont from "next/font/local"
 
-const mondwest = localFont({ src: '../public/PPMondwest-Regular.otf', variable: '--font-mondwest' })
-const daydream = localFont({ src: '../public/Daydream.ttf', variable: '--font-daydream' })
+import "./globals.css"
+
+const Mondwest = localFont({
+  src: "../public/fonts/PPMondwest-Regular.otf",
+  variable: "--font-mondwest"
+})
+
+const Daydream = localFont({
+  src: "../public/fonts/Daydream.ttf",
+  variable: "--font-daydream"
+})
+
+const iAWriterMono = localFont({
+  src: [
+    {
+      path: "../public/fonts/iAWriterMonoV.ttf",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/iAWriterMonoV-Italic.ttf",
+      style: "italic"
+    }
+  ],
+  variable: "--font-ia-writer-mono"
+})
 
 export const metadata: Metadata = {
   title: "BLOOM",
@@ -30,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mondwest.variable} ${daydream.variable}`}>
+      <body className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable}`}>
         {children}
       </body>
     </html>
