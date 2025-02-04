@@ -11,9 +11,6 @@ importers:
       '@next/eslint-plugin-next':
         specifier: ^15.1.6
         version: 15.1.6
-      add-to-calendar-button-react:
-        specifier: ^2.8.1
-        version: 2.8.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       eslint-plugin-react-hooks:
         specifier: ^5.1.0
         version: 5.1.0(eslint@9.19.0)
@@ -371,17 +368,6 @@ packages:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  add-to-calendar-button-react@2.8.1:
-    resolution: {integrity: sha512-OFdb4Jb6nkE+h7M+29Bq8glaz+NgG+MwpvjcbU7hywTus918jrkq2tRjBD2HbCvfZkJyeG00ivwTPCu7GQv1JQ==}
-    engines: {node: '>=18.17.0', npm: '>=9.6.7'}
-    peerDependencies:
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-
-  add-to-calendar-button@2.8.1:
-    resolution: {integrity: sha512-bGRuTbbwlIzaEdksL2alZD1YVBx5pemDkgmeIBr30AIuPy0zJjQtOxabySdJtY6BM89alSOjLdb70lcnbTvdUw==}
-    engines: {node: '>=18.17.0', npm: '>=9.6.7'}
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -1349,10 +1335,6 @@ packages:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
 
-  timezones-ical-library@1.9.1:
-    resolution: {integrity: sha512-OBC7oPoQi6JZn6u/2xQcFTMbe1BLjPrv+QUh5jHfYmg0QTR5HnuhwsBqHfvScNTHqTrDxqlXofXzSm2hFDC1Ow==}
-    engines: {node: '>=18.17.0', npm: '>=9.6.7'}
-
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
@@ -1724,16 +1706,6 @@ snapshots:
       acorn: 8.14.0
 
   acorn@8.14.0: {}
-
-  add-to-calendar-button-react@2.8.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
-    dependencies:
-      add-to-calendar-button: 2.8.1
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-
-  add-to-calendar-button@2.8.1:
-    dependencies:
-      timezones-ical-library: 1.9.1
 
   ajv@6.12.6:
     dependencies:
@@ -2964,8 +2936,6 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tapable@2.2.1: {}
-
-  timezones-ical-library@1.9.1: {}
 
   to-regex-range@5.0.1:
     dependencies:

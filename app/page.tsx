@@ -1,12 +1,10 @@
 import styles from "./page.module.css"
-import CalendarButton from "../components/CalendarButton"
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>BLOOM</h1>
       <div className={styles.buttonWrapper}>
-        <CalendarButton />
       </div>
       <div className={styles.socialLinks}>
         <a
