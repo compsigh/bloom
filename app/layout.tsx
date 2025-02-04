@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
+
+const mondwest = localFont({ src: '../public/PPMondwest-Regular.otf' })
+const daydream = localFont({ src: '../public/Daydream.ttf' })
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

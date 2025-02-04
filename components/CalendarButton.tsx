@@ -19,7 +19,7 @@ export default function CalendarButton() {
       buttonStyle="flat"
       hideBackground
       lightMode="system"
-    ></AddToCalendarButton>
+    />
   )
 }
 
