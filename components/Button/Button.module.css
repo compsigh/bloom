@@ -1,0 +1,27 @@
+button.button {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-ia-writer-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+}
+
+button.primary {
+  border: 2px dashed var(--foreground);
+  padding: 14px 60px; /* TODO: just make this fill the container instead */
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+button.primary:hover {
+  border: 2px solid var(--foreground);
+  background-color: var(--foreground);
+  color: var(--background);
+}

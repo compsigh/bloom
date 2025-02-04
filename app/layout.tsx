@@ -1,16 +1,31 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next"
+import localFont from "next/font/local"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import "./globals.css"
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const Mondwest = localFont({
+  src: "../public/fonts/PPMondwest-Regular.otf",
+  variable: "--font-mondwest"
+})
+
+const Daydream = localFont({
+  src: "../public/fonts/Daydream.ttf",
+  variable: "--font-daydream"
+})
+
+const iAWriterMono = localFont({
+  src: [
+    {
+      path: "../public/fonts/iAWriterMonoV.ttf",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/iAWriterMonoV-Italic.ttf",
+      style: "italic"
+    }
+  ],
+  variable: "--font-ia-writer-mono"
+})
 
 export const metadata: Metadata = {
   title: "BLOOM",
@@ -36,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable}`}>
         {children}
       </body>
     </html>
