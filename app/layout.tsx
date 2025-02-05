@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 
+import { Analytics } from "@vercel/analytics/react"
 import { VercelToolbar } from "@vercel/toolbar/next"
 
 import "./globals.css"
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable}`}>
         {children}
         {shouldInjectToolbar && <VercelToolbar />}
+        <Analytics />
       </body>
     </html>
   );
