@@ -1,6 +1,7 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background:    hsla(000deg, 000%, 100%, 1.0);
+  --foreground:    hsla(000deg, 000%, 009%, 1.0);
+  --foreground-20: hsla(000deg, 000%, 100%, 0.2);
 
   --font-title: "Mondwest", serif;
   --font-mono: "iA Writer Mono V", monospace;
