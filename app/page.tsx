@@ -8,7 +8,23 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.info}>
         <h1 id={styles.title}>BLOOM</h1>
-        <p className={styles.subtitle}>Feb. 28 – Mar. 2</p>
+        <p
+          className={styles.subtitle}
+          style={{
+            paddingBottom: "16px",
+            borderBottom: "2px dashed var(--foreground-20)"
+          }}
+        >
+          The hackathon for <br /> the arts &amp; sciences
+        </p>
+        <p
+          className={styles.subtitle}
+          style={{
+            paddingTop: "16px"
+          }}
+        >
+          Feb. 28 – Mar. 2
+        </p>
         <p className={styles.subtitle}>Social Hive</p>
       </div>
       <Button
