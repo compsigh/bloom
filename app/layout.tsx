@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 
+import { VercelToolbar } from "@vercel/toolbar/next"
+
 import "./globals.css"
 
 const Mondwest = localFont({
@@ -49,10 +51,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const shouldInjectToolbar = process.env.NODE_ENV === "development"
   return (
     <html lang="en">
       <body className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable}`}>
         {children}
+        {shouldInjectToolbar && <VercelToolbar />}
       </body>
     </html>
   );

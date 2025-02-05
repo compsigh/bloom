@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^15.1.6",
+    "@vercel/toolbar": "^0.1.30",
     "eslint-plugin-react-hooks": "^5.1.0",
     "next": "15.1.6",
     "react": "^19.0.0",
