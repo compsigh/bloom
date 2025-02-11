@@ -2,18 +2,31 @@ div.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 40px;
-  margin: 0 40px;
+  margin: 40px;
   min-height: 100vh;
   background-color: var(--background);
   color: var(--foreground);
 }
 
-div.info {
+header#header {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  align-items: last baseline;
+  gap: 70px;
+}
+
+div.wordmark {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 16px;
+}
+
+div.logo {
+  position: relative;
+  width: 90px;
+  height: 90px;
 }
 
 h1#title {
@@ -22,10 +35,14 @@ h1#title {
 }
 
 p.subtitle {
-  font-size: 2rem;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  text-align: center;
+  font-size: 1.5rem;
+  max-width: 300px;
+}
+
+div.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 div.socials {
@@ -42,9 +59,28 @@ a.social {
     background-color: var(--background);
     color: var(--foreground);
   }
+
+  div.logo {
+    filter: invert();
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1320px) {
+  header#header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  div.wordmark {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+
   h1#title {
     font-size: 6rem;
   }
