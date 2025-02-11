@@ -4,6 +4,7 @@
   --foreground-20: hsla(000deg, 000%, 100%, 0.2);
 
   --font-title: "Mondwest", serif;
+  --font-text: "Departure Mono", monospace;
   --font-mono: "iA Writer Mono V", monospace;
   --font-link: var(--font-mono);
 }
