@@ -1,6 +1,7 @@
 :root {
   --background:    hsla(000deg, 000%, 100%, 1.0);
   --foreground:    hsla(000deg, 000%, 009%, 1.0);
+  --foreground-10: hsla(000deg, 000%, 009%, 0.1);
   --foreground-20: hsla(000deg, 000%, 009%, 0.2);
 
   --font-title: "Mondwest", serif;
@@ -13,6 +14,7 @@
   :root {
     --background:    hsla(000deg, 000%, 004%, 1.0);
     --foreground:    hsla(000deg, 000%, 093%, 1.0);
+    --foreground-10: hsla(000deg, 000%, 093%, 0.1);
     --foreground-20: hsla(000deg, 000%, 093%, 0.2);
   }
 }
