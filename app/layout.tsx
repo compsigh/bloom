@@ -30,7 +30,14 @@ const iAWriterMono = localFont({
   variable: "--font-ia-writer-mono"
 })
 
+let metadataBase: URL
+if (process.env.VERCEL_URL)
+  metadataBase = new URL(`https://${process.env.VERCEL_URL}`)
+else
+  metadataBase = new URL(`http://localhost:${process.env.PORT || 3000}`)
+
 export const metadata: Metadata = {
+  metadataBase,
   title: "BLOOM",
   description: "The Spring 2025 hackathon for the arts & sciences, hosted by compsigh — the social computer science club at the University of San Francisco for meeting cool people && building cool things",
   icons: {
@@ -44,6 +51,9 @@ export const metadata: Metadata = {
         url: "/icons/favicon-dark.svg"
       },
     ]
+  },
+  openGraph: {
+    images: "/og.png"
   }
 };
 
