@@ -2,11 +2,6 @@
   --background:    hsla(000deg, 000%, 100%, 1.0);
   --foreground:    hsla(000deg, 000%, 009%, 1.0);
   --foreground-10: hsla(000deg, 000%, 009%, 0.1);
-
-  --font-title: "Mondwest", serif;
-  --font-text: "Departure Mono", monospace;
-  --font-mono: "iA Writer Mono V", monospace;
-  --font-link: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,8 +74,7 @@ ul ul > li {
 
 a {
   color: inherit;
-  text-decoration: none;
-  font-family: var(--font-link);
+  font-family: var(--font-ia-writer-mono);
   text-transform: uppercase;
   text-decoration: underline dashed var(--foreground) 2px;
   text-underline-offset: 6px;
@@ -93,13 +87,13 @@ a:hover {
 }
 
 h1 {
-  font-family: var(--font-title);
+  font-family: var(--font-mondwest);
   font-weight: 400;
 }
 
 p,
 details {
-  font-family: var(--font-text);
+  font-family: var(--font-departure-mono);
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;

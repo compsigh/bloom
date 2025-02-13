@@ -69,7 +69,7 @@ div.faq {
     position: absolute;
     right: 16px;
     content: '>';
-    font-family: var(--font-text);
+    font-family: var(--font-departure-mono);
     color: var(--foreground);
   }
 
