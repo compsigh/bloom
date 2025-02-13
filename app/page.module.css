@@ -52,7 +52,7 @@ div.faq {
   width: 700px;
   margin-top: 80px;
 
-  details > summary {
+  details.faq > summary {
     cursor: pointer;
     list-style: none;
     appearance: none;
@@ -65,7 +65,7 @@ div.faq {
     line-height: 1.2em;
   }
 
-  details > summary::before {
+  details.faq > summary::before {
     position: absolute;
     right: 16px;
     content: '>';
@@ -73,25 +73,25 @@ div.faq {
     color: var(--foreground);
   }
 
-  details[open] > summary::before {
+  details.faq[open] > summary::before {
     transform: rotate(90deg);
   }
 
-  details > summary::-webkit-details-marker {
+  details.faq > summary::-webkit-details-marker {
     display: none;
   }
 
-  details > summary:last-child {
+  details.faq > summary:last-child {
     border-bottom: 2px solid var(--foreground);
   }
 
-  details > summary:hover,
-  details > summary:hover::before {
+  details.faq > summary:hover,
+  details.faq > summary:hover::before {
     background-color: var(--foreground);
     color: var(--background);
   }
 
-  details > p {
+  details.faq > p {
     padding: 0 16px;
   }
 }
