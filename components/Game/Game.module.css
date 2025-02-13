@@ -1,0 +1,16 @@
+div.feed {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid red;
+}
+
+div.player {
+  border: 1px solid red;
+  min-width: fit-content;
+}
+
+div.responses {
+  border: 1px solid red;
+  align-items: center;
+  flex: 1;
+}

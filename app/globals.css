@@ -1,17 +1,19 @@
 :root {
   --background:    hsla(000deg, 000%, 100%, 1.0);
   --foreground:    hsla(000deg, 000%, 009%, 1.0);
-  --foreground-20: hsla(000deg, 000%, 100%, 0.2);
+  --foreground-10: hsla(000deg, 000%, 009%, 0.1);
 
   --font-title: "Mondwest", serif;
+  --font-text: "Departure Mono", monospace;
   --font-mono: "iA Writer Mono V", monospace;
   --font-link: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background:    hsla(000deg, 000%, 004%, 1.0);
+    --foreground:    hsla(000deg, 000%, 093%, 1.0);
+    --foreground-10: hsla(000deg, 000%, 093%, 0.1);
   }
 }
 
@@ -41,6 +43,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p,
+ul,
+ol {
+  margin: 1em 0;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+li::before,
+li::marker {
+  color: var(--foreground);
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+ul > li::before {
+  position: absolute;
+  margin-left: -22px;
+  margin-top: -1px;
+  content: "-";
+}
+
+ul ul {
+  margin: unset;
+}
+
+ul ul > li {
+  margin-left: 1em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -59,4 +95,14 @@ a:hover {
 h1 {
   font-family: var(--font-title);
   font-weight: 400;
+}
+
+p,
+details {
+  font-family: var(--font-text);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.5em;
 }

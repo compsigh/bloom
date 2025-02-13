@@ -30,6 +30,11 @@ const iAWriterMono = localFont({
   variable: "--font-ia-writer-mono"
 })
 
+const DepartureMono = localFont({
+  src: "../public/fonts/DepartureMono-Regular.woff2",
+  variable: "--font-departure-mono"
+})
+
 let metadataBase: URL
 if (process.env.VERCEL_URL) metadataBase = new URL('https://bloom.build')
 else metadataBase = new URL(`http://localhost:${process.env.PORT || 3000}`)
@@ -63,7 +68,7 @@ export default function RootLayout({
   const shouldInjectToolbar = process.env.NODE_ENV === "development"
   return (
     <html lang="en">
-      <body className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable}`}>
+      <body className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable} ${DepartureMono.variable}`}>
         {children}
         {shouldInjectToolbar && <VercelToolbar />}
         <Analytics />
