@@ -46,6 +46,56 @@ div.info {
   gap: 8px;
 }
 
+div.faq {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin-top: 80px;
+
+  details > summary {
+    cursor: pointer;
+    list-style: none;
+    appearance: none;
+
+    position: relative;
+    padding: 32px 16px;
+    border-top: 2px solid var(--foreground);
+
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+
+  details > summary::before {
+    position: absolute;
+    right: 16px;
+    content: '>';
+    font-family: var(--font-text);
+    color: var(--foreground);
+  }
+
+  details[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details > summary:last-child {
+    border-bottom: 2px solid var(--foreground);
+  }
+
+  details > summary:hover,
+  details > summary:hover::before {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+
+  details > p {
+    padding: 0 16px;
+  }
+}
+
 div.content {
   display: flex;
   flex-direction: row;
@@ -99,6 +149,10 @@ a.social {
 }
 
 @media (max-width: 1000px) {
+  div.faq {
+    width: fit-content;
+  }
+
   div.icon {
     width: 200px;
     height: 200px;
