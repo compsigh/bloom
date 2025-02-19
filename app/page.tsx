@@ -43,10 +43,10 @@ export default function Home() {
           </details>
           <details className={styles.faq}>
             <summary>Can/should I attend?</summary>
-            <p>BLOOM is open to any and all USF students.</p>
-            <p>The event is beginner-friendly.</p>
+            <p>BLOOM is open to any and all USF students of teams 1–4.</p>
+            <p>The event is beginner-friendly!</p>
             <p>Undergraduates, especially freshmen and sophomores, as well as students from the College of Arts &amp; Sciences and the School of Management, are highly encouraged to join!</p>
-            <p>There are no registration deadlines — show up whenever, and present on Sunday.</p>
+            <p>There are no registration deadlines — show up whenever, and present on Sunday with your team.</p>
           </details>
           <details className={styles.faq}>
             <summary>What can I make?</summary>
