@@ -55,6 +55,12 @@ export default function Home() {
             <p>One twist, though: make something unrelated to generative AI. Make something human. (Feel free to use AI tools; it&apos;s just the project itself that can&apos;t be related.)</p>
           </details>
           <details className={styles.faq}>
+            <summary>How are projects judged?</summary>
+            <p>The panel of judges at BLOOM will be comprised of people from industry and USF alums.</p>
+            <p>Rather than evaluating projects on a typical hackathon rubric — explicit problem-solving, technically complex projects, etc. — the judges are basically running a vibe check.</p>
+            <p>The best projects will incorporate elements of both technology and other walks of scientific &amp; creative life.</p>
+          </details>
+          <details className={styles.faq}>
             <summary>What&apos;s the difference between BLOOM and DonsHack?</summary>
             <p>DonsHack is the annual Spring hackathon hosted by our friends at ACM &amp; WiT, two other computer science clubs at USF.</p>
             <p>We consider our hackathons to be smaller-scale, lower-stakes playgrounds for ideas and personal project exploration. Dons Hack is a great arena to test those ideas at a higher level, amongst industry professionals and with a specific theme like ed-tech.</p>
