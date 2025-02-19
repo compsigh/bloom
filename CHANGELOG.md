@@ -4,5 +4,6 @@
 - v0.4.0: added OG image
 - v0.4.1: fix OG image rendering on Discord
 - v0.5.0: scaffold game UI (hidden), show basic FAQ for now
+- v0.5.1: fix fonts not loading on Safari
 
 TODO: format properly
