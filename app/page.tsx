@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 // import { Game } from "@/components/Game"
+import { Alert } from "@/components/Alert"
 import { Button } from "@/components/Button"
 
 import styles from "./page.module.css"
@@ -30,6 +31,9 @@ export default function Home() {
           </p>
         </header>
 
+        <Alert>
+          Join us for the pre-event social: food, friends, and a how-to-hackathon panel! <strong>This Friday 2/21 at 6pm in the Social Hive</strong> (first floor of Harney Science Center)
+        </Alert>
         <div className={styles.faq}>
           <details className={styles.faq} open>
             <summary>What is BLOOM?</summary>
