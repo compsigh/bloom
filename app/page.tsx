@@ -49,6 +49,65 @@ export default function Home() {
             <p>There are no registration deadlines — show up whenever, and present on Sunday with your team.</p>
           </details>
           <details className={styles.faq}>
+            <summary>What&apos;s on the agenda?</summary>
+            <p>Friday, February 28</p>
+            <table>
+            <tbody>
+              <tr>
+                <td style={{ width: 120 }}>06:00pm</td>
+                <td>Doors open, registration &amp; check-in begins</td>
+              </tr>
+              <tr>
+                <td style={{ width: 120 }}>06:30pm</td>
+                <td>Opening keynote &amp; dinner</td>
+              </tr>
+              <tr>
+                <td style={{ width: 120 }}>07:00pm</td>
+                <td>Hacking &amp; looking-for-group begins</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Saturday, March 01</p>
+          <table>
+            <tbody>
+              <tr>
+                <td style={{ width: 120 }}>11:00am – 04:00pm</td>
+                <td>Office hours: chill social, light lunch, and getting help/advice from organizers/other teams</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Sunday, March 02</p>
+          <table>
+            <tbody>
+              <tr>
+                <td style={{ width: 120 }}>11:30am</td>
+                <td>Project submission deadline</td>
+              </tr>
+              <tr>
+                <td style={{ width: 120 }}>12:00pm</td>
+                <td>Lunch &amp; presentation day check-in begins</td>
+              </tr>
+              <tr>
+                <td style={{ width: 120 }}>01:00pm</td>
+                <td>Presentations begin</td>
+              </tr>
+              <tr>
+                <td style={{ width: 120 }}>02:00pm</td>
+                <td>Intermission</td>
+              </tr>
+              <tr>
+                <td style={{ width: 120 }}>02:20pm</td>
+                <td>Presentations continue</td>
+              </tr>
+              <tr>
+                <td style={{ width: 120 }}>04:00pm</td>
+                <td>Closing keynote; results announced</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>More details shared at Opening Keynote!</p>
+          </details>
+          <details className={styles.faq}>
             <summary>What can I make?</summary>
             <p>We believe the most interesting projects come at the intersection of technology and other walks of scientific &amp; creative life.</p>
             <p>We&apos;d love to see the thing you wanna make: software, research papers, open-source contributions, documentaries, music.</p>

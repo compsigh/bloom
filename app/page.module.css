@@ -91,7 +91,8 @@ div.faq {
     color: var(--background);
   }
 
-  details.faq > p {
+  details.faq > p,
+  details.faq > table {
     padding: 0 16px;
   }
 }
