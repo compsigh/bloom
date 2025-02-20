@@ -48,8 +48,8 @@ export default function Home() {
           </details>
           <details className={styles.faq}>
             <summary>Can/should I attend?</summary>
-            <p>BLOOM is open to any and all USF students of teams 1–4.</p>
-            <p>The event is beginner-friendly!</p>
+            <p>BLOOM is <strong>open to any and all USF students</strong> of teams 1–4.</p>
+            <p>The event is <strong>beginner-friendly</strong>!</p>
             <p>Undergraduates, especially freshmen and sophomores, as well as students from the College of Arts &amp; Sciences and the School of Management, are highly encouraged to join!</p>
             <p>There are no registration deadlines — show up whenever, and present on Sunday with your team.</p>
           </details>
@@ -121,7 +121,7 @@ export default function Home() {
             <summary>What can I make?</summary>
             <p>We believe the most interesting projects come at the intersection of technology and other walks of scientific &amp; creative life.</p>
             <p>We&apos;d love to see the thing you wanna make: software, research papers, open-source contributions, documentaries, music.</p>
-            <p>One twist, though: make something unrelated to generative AI. Make something human. (Feel free to use AI tools; it&apos;s just the project itself that can&apos;t be related.)</p>
+            <p>One twist, though: make something <strong>unrelated to generative AI</strong>. Make something human. (Feel free to use AI tools; it&apos;s just the project itself that can&apos;t be related.)</p>
           </details>
           <details className={styles.faq}>
             <summary>How are projects judged?</summary>
@@ -132,7 +132,7 @@ export default function Home() {
           <details className={styles.faq}>
             <summary>What&apos;s the difference between BLOOM and DonsHack?</summary>
             <p>DonsHack is the annual Spring hackathon hosted by our friends at ACM &amp; WiT, two other computer science clubs at USF.</p>
-            <p>We consider our hackathons to be smaller-scale, lower-stakes playgrounds for ideas and personal project exploration. Dons Hack is a great arena to test those ideas at a higher level, amongst industry professionals and with a specific theme like ed-tech.</p>
+            <p>We consider our hackathons to be smaller-scale, lower-stakes playgrounds for ideas and personal project exploration. DonsHack is a great arena to test those ideas at a higher level, amongst industry professionals and with a specific theme like ed-tech.</p>
           </details>
           <details className={styles.faq}>
             <summary>What&apos;s the difference between BLOOM and DEPLOY?</summary>
