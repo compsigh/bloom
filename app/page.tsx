@@ -143,7 +143,7 @@ export default function Home() {
 
         <div style={{ textAlign: "center" }}>
           <p>We&apos;re updating this page regularly with more info</p>
-          <p>Last updated on Tuesday, February 18th</p>
+          <p>Last updated on Thursday, February 20th</p>
           <p>Stay tuned:</p>
         </div>
 
