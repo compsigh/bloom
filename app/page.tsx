@@ -54,6 +54,11 @@ export default function Home() {
             <p>There are no registration deadlines — show up whenever, and present on Sunday with your team.</p>
           </details>
           <details className={styles.faq}>
+            <summary>What&apos;s in it for me?</summary>
+            <p>Hackathons are an incredible <strong>social</strong>, <strong>learning</strong>, and <strong>résumé</strong> opportunity. Building cool, tangible things with your friends you can talk about helps you stand out, and makes the grind more fun.</p>
+            <p>There will also be food throughout the weekend, and prizes for the top three teams + People&apos;s Choice vote.</p>
+          </details>
+          <details className={styles.faq}>
             <summary>What&apos;s on the agenda?</summary>
             <p>Friday, February 28</p>
             <table>
