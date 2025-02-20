@@ -43,8 +43,8 @@ export default function Home() {
           </details>
           <details className={styles.faq}>
             <summary>What is a hackathon?</summary>
-            <p>A hackathon is a (typically) weekend-long event where you start a project with your team, get as far as you can, and present to a set of judges.</p>
-            <p>These are usually gatekept to computer science students. We believe the most interesting projects come at the intersection of technology and other walks of scientific &amp; creative life. With BLOOM, we really want to open this opportunity up to everyone.</p>
+            <p>A hackathon is a weekend-long event where a team starts some sort of technical project or design challenge, gets as far as they can, and presents to a set of judges.</p>
+            <p>These are usually gatekept to students of a technical background. We believe the most interesting projects come at the intersection of technology and other walks of scientific &amp; creative life. With BLOOM, we really want to emphasize interdisciplinary collaboration and open this opportunity up to everyone.</p>
           </details>
           <details className={styles.faq}>
             <summary>Can/should I attend?</summary>
