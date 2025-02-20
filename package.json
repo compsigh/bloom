@@ -11,7 +11,7 @@
   "homepage": "https://bloom.compsigh.club",
   "version": "0.5.1",
   "license": "UNLICENSED",
-  "description": "BLOOM: the Spring 2025 hackathon for the arts & sciences, hosted by @compsigh — the social computer science club at the University of San Francisco for meeting cool people && building cool things",
+  "description": "BLOOM: the Spring 2025 hackathon for the arts & sciences, hosted by @compsigh — the social computer science club at the University of San Francisco for meeting cool people & building cool things",
   "repository": {
     "type": "git",
     "url": "https://github.com/compsigh/bloom.git"

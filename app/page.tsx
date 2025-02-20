@@ -34,10 +34,11 @@ export default function Home() {
         <Alert>
           Join us for the pre-event social: food, friends, and a how-to-hackathon panel! <strong>This Friday 2/21 at 6pm in the Social Hive</strong> (first floor of Harney Science Center)
         </Alert>
+
         <div className={styles.faq}>
           <details className={styles.faq} open>
             <summary>What is BLOOM?</summary>
-            <p>BLOOM is the interdisciplinary Spring 2025 hackathon hosted by <Link href="https://compsigh.club">compsigh</Link>, the social computer science club at USF for meeting cool people &amp;&amp; building cool things.</p>
+            <p>BLOOM is the interdisciplinary Spring 2025 hackathon hosted by <Link href="https://compsigh.club">compsigh</Link>, the social computer science club at USF for meeting cool people &amp; building cool things.</p>
             <p>BLOOM is all about personal project exploration. A low-stakes, high-quality playground for ideas. Grab a few friends and create that thing you&apos;ve always wanted to. All kinds of projects from all walks of scientific &amp; creative life are welcome.</p>
           </details>
           <details className={styles.faq}>
@@ -67,7 +68,7 @@ export default function Home() {
               </tr>
               <tr>
                 <td style={{ width: 120 }}>07:00pm</td>
-                <td>Hacking &amp; looking-for-group begins</td>
+                <td>Hacking begins</td>
               </tr>
             </tbody>
           </table>
