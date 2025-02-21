@@ -97,21 +97,8 @@ div.faq {
   }
 }
 
-div.content {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid red;
-}
-
-div.icon {
-  border: 1px solid red;
-  position: relative;
-  width: 500px;
-  height: 500px;
-}
-
-div.game {
-  width: 700px;
+div#game-container {
+  width: fit-content;
 }
 
 div.socials {
@@ -129,8 +116,7 @@ a.social {
     color: var(--foreground);
   }
 
-  div.logo,
-  div.icon {
+  div.logo {
     filter: invert();
   }
 }
@@ -142,26 +128,11 @@ a.social {
     text-align: center;
     gap: 16px;
   }
-
-  div.icon {
-    width: 300px;
-    height: 300px;
-  }
 }
 
 @media (max-width: 1000px) {
   div.faq {
     width: fit-content;
-  }
-
-  div.icon {
-    width: 200px;
-    height: 200px;
-  }
-
-  div.content {
-    flex-direction: column;
-    align-items: center;
   }
 }
 

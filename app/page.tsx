@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-// import { Game } from "@/components/Game"
+import { Game } from "@/components/Game"
 import { Alert } from "@/components/Alert"
 import { Button } from "@/components/Button"
 
@@ -47,6 +47,10 @@ export default function Home() {
           Join us for the pre-event social: food, friends, and a how-to-hackathon panel! <strong>This Friday 2/21 at 6pm in the Social Hive</strong> (first floor of Harney Science Center)
         </Alert>
 
+        <div id={styles["game-container"]}>
+          <Game />
+        </div>
+
         <div className={styles.faq}>
           <details className={styles.faq} open>
             <summary>What is BLOOM?</summary>
@@ -91,19 +95,6 @@ export default function Home() {
           <p>Last updated on Thursday, February 20th</p>
           <p>Stay tuned:</p>
         </div>
-
-        {/* <div className={styles.content}>
-          <div className={styles.icon}>
-            <Image
-              src={"/animations/Hand.gif"}
-              fill
-              alt=""
-            />
-          </div>
-          <div className={styles.game}>
-            <Game />
-          </div>
-        </div> */}
 
         <Button
           destination="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250228T180000/20250302T160000&ctz=America/Los_Angeles&text=BLOOM+Hackathon&location=Social+Hive&details=The+hackathon+for+the+arts+%26+sciences,+join+compsigh+from+February+28th+%E2%80%93+March+2nd+for+our+first-ever+Spring+hackathon:+BLOOM.+Grab+a+few+friends+%E2%80%94+or+meet+some+new+ones+at+our+pre-hackathon+social!+%E2%80%94+and+create+that+thing+you%27ve+always+wanted+to.+Web+apps,+research+papers,+open+source+contributions,+documentaries,+music+%E2%80%94+all+kinds+of+projects+from+all+walks+of+creative+life+are+welcome!+Make+something+human+with+us.+Go+to+https://bloom.build."

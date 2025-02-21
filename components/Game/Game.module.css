@@ -1,7 +1,17 @@
+div.container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.icon {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
 div.feed {
   display: flex;
-  flex-direction: row-reverse;
-  border: 1px solid red;
+  flex-direction: column-reverse;
 }
 
 div.player {
