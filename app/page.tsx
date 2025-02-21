@@ -123,6 +123,7 @@ export default function Home() {
             <p>We&apos;d love to see the thing you wanna make: software, research papers, open-source contributions, documentaries, music.</p>
             <p>One twist, though: make something <strong>unrelated to generative AI</strong>. Make something human. (Feel free to use AI tools; it&apos;s just the project itself that can&apos;t be related.)</p>
             <p><strong>Judges are not evaluating completeness.</strong> In fact, mentioning what worked, what didn&apos;t, how your team would continue developing the project with more time, etc. is great!</p>
+            <p>Also, brainstorming is great, but please don&apos;t start making something until after Opening Keynote on Friday, February 28th!</p>
           </details>
           <details className={styles.faq}>
             <summary>How are projects judged?</summary>
