@@ -81,7 +81,7 @@ div.faq {
     display: none;
   }
 
-  details.faq > summary:last-child {
+  details.faq:last-child > summary {
     border-bottom: 2px solid var(--foreground);
   }
 
