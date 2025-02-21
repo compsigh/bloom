@@ -14,13 +14,42 @@ div.feed {
   flex-direction: column-reverse;
 }
 
-div.player {
-  border: 1px solid red;
+div.available-questions {
   min-width: fit-content;
 }
 
-div.responses {
-  border: 1px solid red;
-  align-items: center;
-  flex: 1;
+div.message {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+}
+
+div.message.question {
+  color: var(--foreground-50);
+  text-align: right;
+}
+
+div.message.response {
+  max-width: 700px;
+}
+
+@media (prefers-color-scheme: dark) {
+  div.icon {
+    filter: invert();
+  }
+}
+
+@media (max-width: 1320px) {
+  div.icon {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  div.icon {
+    width: 200px;
+    height: 200px;
+  }
 }

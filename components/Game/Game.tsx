@@ -79,6 +79,10 @@ info.set("What's the difference between BLOOM and DEPLOY?", {
   icon: "Hand"
 })
 
+type Message = {
+  type: "question" | "response"
+  content: Question | Response
+}
 
 function Icon({ icon }: { icon: Icon }) {
   return (
@@ -93,12 +97,103 @@ function Icon({ icon }: { icon: Icon }) {
     </>
   )
 }
+
+function Question({ question }: { question: Question }) {
+  return (
+    <>
+      <div className={`${styles.message} ${styles.question}`}>
+        <p>{question}</p>
+      </div>
+    </>
+  )
+}
+
+function Response({ response }: { response: Response }) {
+  return (
+    <>
+      <div className={`${styles.message} ${styles.response}`}>
+        {response.response}
+      </div>
+    </>
+  )
+}
+
+function Message({ message }: { message: Message }) {
+  if (message.type === "question") {
+    return <Question question={message.content as Question} />
+  }
+
+  if (message.type === "response") {
+    return <Response response={message.content as Response} />
+  }
+
+  return null
+}
+
+function MessageFeed({ messages }: { messages: Message[] }) {
+  return (
+    <>
+      <div className={styles.messages}>
+        {
+          messages.map((message, index) => (
+              <Message key={index} message={message} />
+          ))
+        }
+      </div>
+    </>
+  )
+}
+
+function QuestionBox({
+  info,
+  messages,
+  setMessages,
+  setCurrentIcon
+}: {
+  info: Map<Question, Response>,
+  messages: Message[],
+  setMessages: (messages: Message[]) => void,
+  setCurrentIcon: (icon: Icon) => void
+}) {
+  return (
+    <>
+      <div className={styles["available-questions"]}>
+        {
+          Array.from(info.keys()).map((question) => (
+            <div
+              key={question}
+              style={{
+                display: messages.some(
+                  message => message.type === "question" && message.content === question
+                )
+                ? "none"
+                : "block"
+              }}
+            >
+              <Button
+                onClick={() => {
+                  setMessages([
+                    ...messages,
+                    { type: "question", content: question },
+                    { type: "response", content: info.get(question)! }
+                  ])
+                  setCurrentIcon(info.get(question)!.icon)
+                }}
+              >
+                {question}
+              </Button>
+            </div>
+          ))
+        }
+      </div>
     </>
   )
 }
 
 export function Game() {
-  const [seen, setSeen] = useState<Question[]>([])
+  const [currentIcon, setCurrentIcon] = useState<Icon>("Hand")
+  const [messages, setMessages] = useState<Message[]>([])
+
   // Ramblings/plans to hold state in URL query params:
   // const pathname = usePathname()
   // const searchParams = useSearchParams()
@@ -108,13 +203,16 @@ export function Game() {
 
   return (
     <>
-      <div className={styles.feed}>
-        <div className={styles.player}>
-          <Button onClick={() => setSeen(["What is this?", ...seen])}>
-            What is this?
-          </Button>
-        </div>
-        <div className={styles.responses}>
+      <div className={styles.container}>
+        <Icon icon={currentIcon} />
+        <div className={styles.feed}>
+          <QuestionBox
+            info={info}
+            messages={messages}
+            setMessages={setMessages}
+            setCurrentIcon={setCurrentIcon}
+          />
+          <MessageFeed messages={messages} />
         </div>
       </div>
     </>
