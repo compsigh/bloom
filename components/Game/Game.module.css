@@ -18,7 +18,10 @@ div.feed {
 }
 
 div.available-questions {
-  min-width: fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 32px;
+  width: 700px;
 }
 
 div.message {
