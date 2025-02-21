@@ -2,8 +2,8 @@
 
 import { JSX, useState } from "react"
 
+import Image from "next/image"
 import { Button } from "@/components/Button"
-import { TypewriterWrapper } from "@/components/TypewriterWrapper"
 
 import {
   CanShouldIAttend,
@@ -80,19 +80,19 @@ info.set("What's the difference between BLOOM and DEPLOY?", {
 })
 
 
-function Response({ question }: { question: Question }) {
+function Icon({ icon }: { icon: Icon }) {
   return (
     <>
-      { question === "What is this?" &&
-        <TypewriterWrapper
-          as={'p'}
-          options={{
-            cursor: " [ •‿• ]",
-            delay: 20,
-          }}
-          strings={[whatIsThisResponse]}
+      <div className={styles.icon}>
+        <Image
+          src={`/animations/${icon}.gif`}
+          fill
+          alt=""
         />
-      }
+      </div>
+    </>
+  )
+}
     </>
   )
 }
@@ -115,7 +115,6 @@ export function Game() {
           </Button>
         </div>
         <div className={styles.responses}>
-          { seen.includes("What is this?") && <Response question="What is this?" /> }
         </div>
       </div>
     </>
