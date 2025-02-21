@@ -16,6 +16,8 @@ import {
   WhatsTheDifferenceBetweenBLOOMAndDonsHack
 } from "./Info"
 
+import Cottage from "@/public/animations/Cottage.gif"
+
 import styles from "./page.module.css"
 
 export default function Home() {
@@ -121,6 +123,18 @@ export default function Home() {
             Website
           </Link>
         </div>
+
+        <footer id={styles.footer}>
+          <Image
+            src={Cottage}
+            alt="An animation of a compsigh cottage amidst a field of flowers. A cat is sleeping on the roof. Puffs of smoke rise from the chimney. The clouds and flowers gently move."
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto"
+            }}
+          />
+        </footer>
       </div>
     </main>
   )

@@ -3,7 +3,7 @@ div.container {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin: 40px;
+  margin: 40px 40px 0 40px;
   min-height: 100vh;
   background-color: var(--background);
   color: var(--foreground);
@@ -110,6 +110,12 @@ a.social {
   padding: 8px 16px;
 }
 
+footer#footer {
+  pointer-events: none;
+  user-select: none;
+  width: 100vw;
+}
+
 @media (prefers-color-scheme: dark) {
   .container {
     background-color: var(--background);
@@ -117,6 +123,10 @@ a.social {
   }
 
   div.logo {
+    filter: invert();
+  }
+
+  footer#footer {
     filter: invert();
   }
 }
