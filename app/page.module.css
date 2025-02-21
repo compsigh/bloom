@@ -95,6 +95,8 @@ div.faq {
   details.faq > table {
     padding: 0 16px;
   }
+
+  display: none;
 }
 
 div#game-container {
@@ -141,7 +143,12 @@ footer#footer {
 }
 
 @media (max-width: 1000px) {
+  div#game-container {
+    display: none;
+  }
+
   div.faq {
+    display: block;
     width: fit-content;
   }
 }
