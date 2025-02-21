@@ -1,14 +1,14 @@
 :root {
   --background:    hsla(000deg, 000%, 100%, 1.0);
-  --foreground:    hsla(000deg, 000%, 009%, 1.0);
-  --foreground-10: hsla(000deg, 000%, 009%, 0.1);
+  --foreground:    hsla(000deg, 000%, 000%, 1.0);
+  --foreground-10: hsla(000deg, 000%, 000%, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:    hsla(000deg, 000%, 004%, 1.0);
-    --foreground:    hsla(000deg, 000%, 093%, 1.0);
-    --foreground-10: hsla(000deg, 000%, 093%, 0.1);
+    --background:    hsla(000deg, 000%, 000%, 1.0);
+    --foreground:    hsla(000deg, 000%, 100%, 1.0);
+    --foreground-10: hsla(000deg, 000%, 100%, 0.1);
   }
 }
 
