@@ -39,44 +39,69 @@ type Icon = "Hand"
 type Response = {
   response: JSX.Element
   icon: Icon
+  unlocks: Question[]
 }
 
 const info = new Map<Question, Response>()
 info.set("What is BLOOM?", {
   response: <WhatIsBLOOM />,
-  icon: "Hand"
+  icon: "Hand",
+  unlocks: [
+    "What is a hackathon?",
+    "Can/should I attend?",
+    "What can I make?"
+  ]
 })
 info.set("What is a hackathon?", {
   response: <WhatIsAHackathon />,
-  icon: "Hand" // TODO: replace
+  icon: "Hand", // TODO: replace
+  unlocks: [
+    "Can/should I attend?"
+  ]
 })
 info.set("Can/should I attend?", {
   response: <CanShouldIAttend />,
-  icon: "Hand" // TODO: replace
+  icon: "Hand", // TODO: replace
+  unlocks: [
+    "What can I make?",
+    "How are projects judged?",
+    "What's on the agenda?",
+    "What's in it for me?"
+  ]
 })
 info.set("What's in it for me?", {
   response: <WhatsInItForMe />,
-  icon: "Hand" // TODO: replace
+  icon: "Hand", // TODO: replace,
+  unlocks: [
+    "What's on the agenda?"
+  ]
 })
 info.set("What's on the agenda?", {
   response: <WhatsOnTheAgenda />,
-  icon: "Calendar"
+  icon: "Calendar",
+  unlocks: []
 })
 info.set("What can I make?", {
   response: <WhatCanIMake />,
-  icon: "Brain"
+  icon: "Brain",
+  unlocks: [
+    "How are projects judged?"
+  ]
 })
 info.set("How are projects judged?", {
   response: <HowAreProjectsJudged />,
-  icon: "Checklist"
+  icon: "Checklist",
+  unlocks: []
 })
 info.set("What's the difference between BLOOM and DonsHack?", {
   response: <WhatsTheDifferenceBetweenBLOOMAndDonsHack />,
-  icon: "Hand"
+  icon: "Hand",
+  unlocks: []
 })
 info.set("What's the difference between BLOOM and DEPLOY?", {
   response: <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />,
-  icon: "Hand"
+  icon: "Hand",
+  unlocks: []
 })
 
 type Message = {
@@ -148,18 +173,22 @@ function QuestionBox({
   info,
   messages,
   setMessages,
-  setCurrentIcon
+  setCurrentIcon,
+  availableQuestions,
+  setAvailableQuestions
 }: {
   info: Map<Question, Response>,
   messages: Message[],
   setMessages: (messages: Message[]) => void,
-  setCurrentIcon: (icon: Icon) => void
+  setCurrentIcon: (icon: Icon) => void,
+  availableQuestions: Question[],
+  setAvailableQuestions: (questions: Question[]) => void
 }) {
   return (
     <>
       <div className={styles["available-questions"]}>
         {
-          Array.from(info.keys()).map((question) => (
+          Array.from(availableQuestions).map((question) => (
             <div
               key={question}
               style={{
@@ -178,6 +207,12 @@ function QuestionBox({
                     { type: "response", content: info.get(question)! }
                   ])
                   setCurrentIcon(info.get(question)!.icon)
+                  setAvailableQuestions(
+                    Array.from(new Set([
+                      ...availableQuestions,
+                      ...info.get(question)!.unlocks
+                    ]))
+                  )
                 }}
               >
                 {question}
@@ -193,6 +228,7 @@ function QuestionBox({
 export function Game() {
   const [currentIcon, setCurrentIcon] = useState<Icon>("Hand")
   const [messages, setMessages] = useState<Message[]>([])
+  const [availableQuestions, setAvailableQuestions] = useState<Question[]>(["What is BLOOM?"])
 
   // Ramblings/plans to hold state in URL query params:
   // const pathname = usePathname()
@@ -211,6 +247,8 @@ export function Game() {
             messages={messages}
             setMessages={setMessages}
             setCurrentIcon={setCurrentIcon}
+            availableQuestions={availableQuestions}
+            setAvailableQuestions={setAvailableQuestions}
           />
           <MessageFeed messages={messages} />
         </div>
