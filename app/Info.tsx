@@ -3,7 +3,8 @@ import Link from "next/link"
 export function WhatIsBLOOM() {
   return (
     <>
-      <p>BLOOM is the interdisciplinary Spring 2025 hackathon hosted by <Link href="https://compsigh.club">compsigh</Link>, the social computer science club at USF for meeting cool people &amp; building cool things.</p>
+      <p>BLOOM is a <strong>beginner-friendly</strong>, interdisciplinary hackathon for USF students in the College of Arts &amp; Sciences. All are welcome!</p>
+      <p><strong>Low barrier to entry:</strong> no registration deadlines — come and vibe with us on Friday, and jam on your project until presentations on Sunday!</p>
       <p>BLOOM is all about personal project exploration. A low-stakes, high-quality playground for ideas. Grab a few friends and create that thing you&apos;ve always wanted to. All kinds of projects from all walks of scientific &amp; creative life are welcome.</p>
     </>
   )
@@ -25,6 +26,7 @@ export function CanShouldIAttend() {
       <p>The event is <strong>beginner-friendly</strong>!</p>
       <p>Undergraduates, especially freshmen and sophomores, as well as students from the College of Arts &amp; Sciences and the School of Management, are highly encouraged to join!</p>
       <p>There are no registration deadlines — show up whenever, and present on Sunday with your team.</p>
+      <p>So in short, yes!</p>
     </>
   )
 }
