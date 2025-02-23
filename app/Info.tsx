@@ -34,7 +34,7 @@ export function CanShouldIAttend() {
 export function WhatsInItForMe() {
   return (
     <>
-      <p>Hackathons are an incredible <strong>social</strong>, <strong>learning</strong>, and <strong>résumé</strong> opportunity. Building cool, tangible things with your friends you can talk about helps you stand out, and makes the grind more fun.</p>
+      <p>Hackathons are an incredible <strong>social</strong>, <strong>learning</strong>, and <strong>résumé</strong> opportunity. Building cool, tangible things you can talk about helps you stand out, and makes the grind more fun.</p>
       <p>There will also be food throughout the weekend, and prizes for the top three teams + People&apos;s Choice vote.</p>
     </>
   )
@@ -48,7 +48,7 @@ export function WhatsOnTheAgenda() {
         <tbody>
           <tr>
             <td style={{ width: 120 }}>06:00pm</td>
-            <td>Doors open, registration &amp; check-in begins</td>
+            <td>Doors open, check-in begins</td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>06:30pm</td>
@@ -106,10 +106,8 @@ export function WhatsOnTheAgenda() {
 export function WhatCanIMake() {
   return (
     <>
-      <p>We believe the most interesting projects come at the intersection of technology and other walks of scientific &amp; creative life.</p>
       <p>We&apos;d love to see the thing you wanna make: software, research papers, open-source contributions, documentaries, music.</p>
       <p>One twist, though: make something <strong>unrelated to generative AI</strong>. Make something human. (Feel free to use AI tools; it&apos;s just the project itself that can&apos;t be related.)</p>
-      <p><strong>Judges are not evaluating completeness.</strong> In fact, mentioning what worked, what didn&apos;t, how your team would continue developing the project with more time, etc. is great!</p>
       <p>Also, brainstorming is great, but please don&apos;t start making something until after Opening Keynote on Friday, February 28th!</p>
     </>
   )
@@ -123,7 +121,6 @@ export function HowAreProjectsJudged() {
       <p>In your presentation, please make sure your team members&apos; roles in bringing the project to life are clearly articulated.</p> */}
       <p>The panel of judges at BLOOM will be comprised of people from industry and USF alums.</p>
       <p>Rather than evaluating projects on a typical hackathon rubric — explicit problem-solving, technically complex projects, etc. — the judges are basically running a vibe check.</p>
-      <p>The best projects will incorporate elements of both technology and other walks of scientific &amp; creative life.</p>
       <p><strong>Judges are not evaluating completeness.</strong> In fact, mentioning what worked, what didn&apos;t, how your team would continue developing the project with more time, etc. is great!</p>
     </>
   )
