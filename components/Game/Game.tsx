@@ -51,7 +51,9 @@ info.set("What is BLOOM?", {
   unlocks: [
     "What is a hackathon?",
     "Can/should I attend?",
-    "What can I make?"
+    "What can I make?",
+    "What's the difference between BLOOM and DonsHack?",
+    "What's the difference between BLOOM and DEPLOY?"
   ]
 })
 info.set("What is a hackathon?", {
