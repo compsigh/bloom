@@ -1,6 +1,7 @@
 "use client"
 
 import { JSX, useState } from "react"
+import { useRouter } from "next/navigation"
 
 import Image from "next/image"
 import { Button } from "@/components/Button"
@@ -166,7 +167,12 @@ function MessageFeed({ messages }: { messages: Message[] }) {
       <div className={styles.messages}>
         {
           messages.map((message, index) => (
-              <Message key={index} message={message} />
+              <div
+                key={index}
+                id={(index + 1).toString()}
+              >
+                <Message message={message} />
+              </div>
           ))
         }
       </div>
@@ -189,6 +195,7 @@ function QuestionBox({
   availableQuestions: Question[],
   setAvailableQuestions: (questions: Question[]) => void
 }) {
+  const router = useRouter()
   return (
     <>
       <div className={styles["available-questions"]}>
@@ -218,6 +225,7 @@ function QuestionBox({
                       ...info.get(question)!.unlocks
                     ]))
                   )
+                  router.replace(`#${(messages.length + 1).toString()}`)
                 }}
               >
                 {question}
