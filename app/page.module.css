@@ -11,9 +11,10 @@ div.container {
 
 header#header {
   display: flex;
-  flex-direction: row;
-  align-items: last baseline;
-  gap: 70px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
 }
 
 div.wordmark {
@@ -36,7 +37,7 @@ h1#title {
 
 p.subtitle {
   font-size: 1.5rem;
-  max-width: 300px;
+  max-width: 700px;
   margin: 0;
 }
 
@@ -130,15 +131,6 @@ footer#footer {
 
   footer#footer {
     filter: invert();
-  }
-}
-
-@media (max-width: 1320px) {
-  header#header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
   }
 }
 

@@ -36,7 +36,7 @@ export default function Home() {
             <h1 id={styles.title}>BLOOM</h1>
           </div>
           <p className={styles.subtitle}>
-            The hackathon for the arts &amp; sciences
+            A hackathon from <Link href="https://compsigh.club">compsigh</Link>, the social computer science club at USF for meeting cool people &amp; building cool things
           </p>
           <p className={styles.subtitle}>
             Feb. 28th – Mar. 2
