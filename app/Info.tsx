@@ -392,7 +392,7 @@ export function HowAreProjectsJudged() {
         </strong>
         <Cascade
           duration={0.6}
-          text="In fact, mentioning what worked, what didn't, how your team would continue developing the project with more time, etc. is great!"
+          text=" In fact, mentioning what worked, what didn't, how your team would continue developing the project with more time, etc. is great!"
         />
       </p>
     </>
