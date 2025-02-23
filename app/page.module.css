@@ -3,7 +3,7 @@ div.container {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin: 40px;
+  margin: 40px 40px 0 40px;
   min-height: 100vh;
   background-color: var(--background);
   color: var(--foreground);
@@ -11,9 +11,10 @@ div.container {
 
 header#header {
   display: flex;
-  flex-direction: row;
-  align-items: last baseline;
-  gap: 70px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
 }
 
 div.wordmark {
@@ -36,14 +37,14 @@ h1#title {
 
 p.subtitle {
   font-size: 1.5rem;
-  max-width: 300px;
+  max-width: 700px;
   margin: 0;
 }
 
-div.info {
+div.socials {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  gap: 32px;
 }
 
 div.faq {
@@ -95,32 +96,22 @@ div.faq {
   details.faq > table {
     padding: 0 16px;
   }
+
+  display: none;
 }
 
-div.content {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid red;
+div#game-container {
+  width: fit-content;
 }
 
-div.icon {
-  border: 1px solid red;
-  position: relative;
-  width: 500px;
-  height: 500px;
+div.attributions td {
+  padding: 8px 32px;
 }
 
-div.game {
-  width: 700px;
-}
-
-div.socials {
-  display: flex;
-  gap: 50px;
-}
-
-a.social {
-  padding: 8px 16px;
+footer#footer {
+  pointer-events: none;
+  user-select: none;
+  width: 100vw;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -129,39 +120,57 @@ a.social {
     color: var(--foreground);
   }
 
-  div.logo,
-  div.icon {
+  div.logo {
+    filter: invert();
+  }
+
+  footer#footer {
     filter: invert();
   }
 }
 
-@media (max-width: 1320px) {
-  header#header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
+@media (max-width: 1000px) {
+  div#game-container {
+    display: none;
   }
 
-  div.icon {
-    width: 300px;
-    height: 300px;
+  div.faq {
+    display: block;
+    width: fit-content;
   }
 }
 
-@media (max-width: 1000px) {
-  div.faq {
-    width: fit-content;
+@media (max-width: 745px) {
+  div.socials {
+    flex-direction: column;
+    width: 100%;
   }
 
-  div.icon {
-    width: 200px;
-    height: 200px;
-  }
-
-  div.content {
+  div.attributions table {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -64px;
+  }
+
+  div.attributions tr {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 8px 0;
+  }
+
+  div.attributions td {
+    padding: 4px 0;
+  }
+
+  div.attributions span:first-child {
+    padding-left: 0;
+  }
+
+  div.attributions img {
+    position: absolute;
+    margin: -32px;
   }
 }
 
@@ -178,9 +187,5 @@ a.social {
 
   p.subtitle {
     font-size: 1.5rem;
-  }
-
-  div.socials {
-    gap: 20px;
   }
 }

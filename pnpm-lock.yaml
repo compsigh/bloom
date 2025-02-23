@@ -29,9 +29,9 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
-      typewriter-effect:
-        specifier: ^2.21.0
-        version: 2.21.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-random-reveal:
+        specifier: ^2.0.1
+        version: 2.0.1(react@19.0.0)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -1333,9 +1333,6 @@ packages:
   path-parse@1.0.7:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
 
-  performance-now@2.1.0:
-    resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
-
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -1365,9 +1362,6 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  raf@3.4.1:
-    resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
-
   range-parser@1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
@@ -1379,6 +1373,11 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-random-reveal@2.0.1:
+    resolution: {integrity: sha512-FDxoD75CbPbtrfn/RoYM7Iq9syLB5n/JdPHPEaXV5lj7W5hH7XyJqMQXqTpgAr3GjoWfFxotqWfB+V2IW6GcYw==}
+    peerDependencies:
+      react: '>=16.8.0'
 
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
@@ -1609,12 +1608,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typewriter-effect@2.21.0:
-    resolution: {integrity: sha512-Y3VL1fuJpUBj0gS4OTXBLzy1gnYTYaBuVuuO99tGNyTkkub5CXi+b/hsV7Og9fp6HlhogOwWJwgq7iXI5sQlEg==}
-    peerDependencies:
-      react: ^17.x || ^18.x
-      react-dom: ^17.x || ^18.x
-
   unbox-primitive@1.1.0:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
@@ -1624,6 +1617,11 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  use-elapsed-time@3.0.2:
+    resolution: {integrity: sha512-2EY9lJ5DWbAvT8wWiEp6Ztnl46DjXz2j78uhWbXaz/bg3OfpbgVucCAlcN8Bih6hTJfFTdVYX9L6ySMn5py/wQ==}
+    peerDependencies:
+      react: '>=16.8.0'
 
   which-boxed-primitive@1.1.1:
     resolution: {integrity: sha512-TbX3mj8n0odCBFVlY8AxkqcHASw3L60jIuF8jFP78az3C2YhmGvqbHBpAjTRH2/xqYunrJ9g1jSyjCjpoWzIAA==}
@@ -3079,8 +3077,6 @@ snapshots:
 
   path-parse@1.0.7: {}
 
-  performance-now@2.1.0: {}
-
   picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
@@ -3105,10 +3101,6 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  raf@3.4.1:
-    dependencies:
-      performance-now: 2.1.0
-
   range-parser@1.2.1: {}
 
   react-dom@19.0.0(react@19.0.0):
@@ -3117,6 +3109,11 @@ snapshots:
       scheduler: 0.25.0
 
   react-is@16.13.1: {}
+
+  react-random-reveal@2.0.1(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      use-elapsed-time: 3.0.2(react@19.0.0)
 
   react@19.0.0: {}
 
@@ -3418,13 +3415,6 @@ snapshots:
 
   typescript@5.7.3: {}
 
-  typewriter-effect@2.21.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
-    dependencies:
-      prop-types: 15.8.1
-      raf: 3.4.1
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-
   unbox-primitive@1.1.0:
     dependencies:
       call-bound: 1.0.3
@@ -3437,6 +3427,10 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  use-elapsed-time@3.0.2(react@19.0.0):
+    dependencies:
+      react: 19.0.0
 
   which-boxed-primitive@1.1.1:
     dependencies:

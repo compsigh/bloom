@@ -1,8 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
-// import { Game } from "@/components/Game"
-import { Alert } from "@/components/Alert"
+import { Game } from "@/components/Game"
+import { Label } from "@/components/Label"
 import { Button } from "@/components/Button"
+import { Mention } from "@/components/Mention"
 
 import {
   CanShouldIAttend,
@@ -15,6 +16,8 @@ import {
   WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
   WhatsTheDifferenceBetweenBLOOMAndDonsHack
 } from "./Info"
+
+import Cottage from "@/public/animations/Cottage.gif"
 
 import styles from "./page.module.css"
 
@@ -34,7 +37,7 @@ export default function Home() {
             <h1 id={styles.title}>BLOOM</h1>
           </div>
           <p className={styles.subtitle}>
-            The hackathon for the arts &amp; sciences
+            A hackathon from <Link href="https://compsigh.club">compsigh</Link>, the social computer science club at USF for meeting cool people &amp; building cool things
           </p>
           <p className={styles.subtitle}>
             Feb. 28th – Mar. 2
@@ -43,9 +46,91 @@ export default function Home() {
           </p>
         </header>
 
-        <Alert>
-          Join us for the pre-event social: food, friends, and a how-to-hackathon panel! <strong>This Friday 2/21 at 6pm in the Social Hive</strong> (first floor of Harney Science Center)
-        </Alert>
+        <div className={styles.socials}>
+          <Button destination="https://instagram.com/compsigh.club">
+            Instagram
+          </Button>
+          <Button
+            destination="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250228T180000/20250302T160000&ctz=America/Los_Angeles&text=BLOOM+Hackathon&location=Social+Hive&details=The+hackathon+for+the+arts+%26+sciences,+join+compsigh+from+February+28th+%E2%80%93+March+2nd+for+our+first-ever+Spring+hackathon:+BLOOM.+Grab+a+few+friends+%E2%80%94+or+meet+some+new+ones+at+our+pre-hackathon+social!+%E2%80%94+and+create+that+thing+you%27ve+always+wanted+to.+Web+apps,+research+papers,+open+source+contributions,+documentaries,+music+%E2%80%94+all+kinds+of+projects+from+all+walks+of+creative+life+are+welcome!+Make+something+human+with+us.+Go+to+https://bloom.build."
+          >
+              Add to Google Calendar
+          </Button>
+          <Button destination="https://discord.gg/compsigh">
+            Discord
+          </Button>
+        </div>
+        <div className={styles.socials}>
+          <div className={styles.attributions}>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <Mention
+                      avatar="/avatars/jet.png"
+                      name="Jet Pham"
+                      link="https://jetpham.com"
+                    />
+                  </td>
+                  <td>
+                    <Label text="Class of 2027" />
+                  </td>
+                  <td>
+                    <Label text="Posters" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <Mention
+                      avatar="/avatars/ilce.jpeg"
+                      name="Ilce Perez"
+                      link="https://github.com/ispecal"
+                    />
+                  </td>
+                  <td>
+                    <Label text="Class of 2024" />
+                  </td>
+                  <td>
+                    <Label text="Art & animation" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <Mention
+                      avatar="/avatars/jake.png"
+                      name="Jake Polintan"
+                      link="https://instagram.com/jakepolintanart"
+                    />
+                  </td>
+                  <td>
+                    <Label text="Class of 2025" />
+                  </td>
+                  <td>
+                    <Label text="Art & animation" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <Mention
+                      avatar="/avatars/edward.png"
+                      name="Edward Shturman"
+                      link="https://edwardshturman.com"
+                    />
+                  </td>
+                  <td>
+                    <Label text="Class of 2025" />
+                  </td>
+                  <td>
+                    <Label text="Platform" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id={styles["game-container"]}>
+          <Game />
+        </div>
 
         <div className={styles.faq}>
           <details className={styles.faq} open>
@@ -86,50 +171,17 @@ export default function Home() {
           </details>
         </div>
 
-        <div style={{ textAlign: "center" }}>
-          <p>We&apos;re updating this page regularly with more info</p>
-          <p>Last updated on Thursday, February 20th</p>
-          <p>Stay tuned:</p>
-        </div>
-
-        {/* <div className={styles.content}>
-          <div className={styles.icon}>
-            <Image
-              src={"/animations/Hand.gif"}
-              fill
-              alt=""
-            />
-          </div>
-          <div className={styles.game}>
-            <Game />
-          </div>
-        </div> */}
-
-        <Button
-          destination="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250228T180000/20250302T160000&ctz=America/Los_Angeles&text=BLOOM+Hackathon&location=Social+Hive&details=The+hackathon+for+the+arts+%26+sciences,+join+compsigh+from+February+28th+%E2%80%93+March+2nd+for+our+first-ever+Spring+hackathon:+BLOOM.+Grab+a+few+friends+%E2%80%94+or+meet+some+new+ones+at+our+pre-hackathon+social!+%E2%80%94+and+create+that+thing+you%27ve+always+wanted+to.+Web+apps,+research+papers,+open+source+contributions,+documentaries,+music+%E2%80%94+all+kinds+of+projects+from+all+walks+of+creative+life+are+welcome!+Make+something+human+with+us.+Go+to+https://bloom.build."
-        >
-            Add to Google Calendar
-        </Button>
-        <div className={styles.socials}>
-          <Link
-            href="https://discord.gg/compsigh"
-            className={styles.social}
-          >
-            Discord
-          </Link>
-          <Link
-            href="https://instagram.com/compsigh.club"
-            className={styles.social}
-          >
-            Instagram
-          </Link>
-          <Link
-            href="https://compsigh.club"
-            className={styles.social}
-          >
-            Website
-          </Link>
-        </div>
+        <footer id={styles.footer}>
+          <Image
+            src={Cottage}
+            alt="An animation of a compsigh cottage amidst a field of flowers. A cat is sleeping on the roof. Puffs of smoke rise from the chimney. The clouds and flowers gently move."
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto"
+            }}
+          />
+        </footer>
       </div>
     </main>
   )

@@ -1,14 +1,16 @@
 :root {
   --background:    hsla(000deg, 000%, 100%, 1.0);
-  --foreground:    hsla(000deg, 000%, 009%, 1.0);
-  --foreground-10: hsla(000deg, 000%, 009%, 0.1);
+  --foreground:    hsla(000deg, 000%, 000%, 1.0);
+  --foreground-10: hsla(000deg, 000%, 000%, 0.1);
+  --foreground-50: hsla(000deg, 000%, 000%, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:    hsla(000deg, 000%, 004%, 1.0);
-    --foreground:    hsla(000deg, 000%, 093%, 1.0);
-    --foreground-10: hsla(000deg, 000%, 093%, 0.1);
+    --background:    hsla(000deg, 000%, 000%, 1.0);
+    --foreground:    hsla(000deg, 000%, 100%, 1.0);
+    --foreground-10: hsla(000deg, 000%, 100%, 0.1);
+    --foreground-50: hsla(000deg, 000%, 100%, 0.5);
   }
 }
 
@@ -16,6 +18,10 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,7 +80,7 @@ ul ul > li {
 
 a {
   color: inherit;
-  font-family: var(--font-ia-writer-mono);
+  font-family: var(--font-departure-mono);
   text-transform: uppercase;
   text-decoration: underline dashed var(--foreground) 2px;
   text-underline-offset: 6px;
@@ -92,6 +98,7 @@ h1 {
 }
 
 p,
+td,
 details {
   font-family: var(--font-departure-mono);
   font-style: normal;

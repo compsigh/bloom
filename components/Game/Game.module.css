@@ -1,16 +1,62 @@
+div.container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.icon {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+  user-select: none;
+  align-self: flex-end;
+}
+
 div.feed {
   display: flex;
+  flex-direction: column-reverse;
+}
+
+div.available-questions {
+  display: flex;
   flex-direction: row-reverse;
-  border: 1px solid red;
+  gap: 32px;
+  width: 700px;
+  flex-wrap: wrap;
 }
 
-div.player {
-  border: 1px solid red;
-  min-width: fit-content;
+div.message {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
 }
 
-div.responses {
-  border: 1px solid red;
-  align-items: center;
-  flex: 1;
+div.message.question {
+  color: var(--foreground-50);
+  text-align: right;
+}
+
+div.message.response {
+  max-width: 700px;
+}
+
+@media (prefers-color-scheme: dark) {
+  div.icon {
+    filter: invert();
+  }
+}
+
+@media (max-width: 1320px) {
+  div.icon {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  div.icon {
+    width: 200px;
+    height: 200px;
+  }
 }
