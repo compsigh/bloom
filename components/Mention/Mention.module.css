@@ -1,0 +1,22 @@
+span.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+}
+
+span.container:hover {
+  background-color: var(--foreground);
+}
+
+span.container img#avatar {
+  vertical-align: text-bottom;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (prefers-color-scheme: light) {
+  img.theme {
+    filter: invert();
+  }
+}
