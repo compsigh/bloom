@@ -35,6 +35,8 @@ type Icon = "Hand"
           | "Calendar"
           | "Toolbox"
           | "Hive"
+          | "Trophy"
+          | "Thinking"
 
 type Response = {
   response: JSX.Element
@@ -61,7 +63,7 @@ info.set("What is a hackathon?", {
 })
 info.set("Can/should I attend?", {
   response: <CanShouldIAttend />,
-  icon: "Hand", // TODO: replace
+  icon: "Thinking",
   unlocks: [
     "What can I make?",
     "How are projects judged?",
@@ -71,7 +73,7 @@ info.set("Can/should I attend?", {
 })
 info.set("What's in it for me?", {
   response: <WhatsInItForMe />,
-  icon: "Hand", // TODO: replace,
+  icon: "Trophy",
   unlocks: [
     "What's on the agenda?"
   ]
@@ -116,7 +118,8 @@ function Icon({ icon }: { icon: Icon }) {
         <Image
           src={`/animations/${icon}.gif`}
           fill
-          alt=""
+          alt={`An animated ${icon}`}
+          unoptimized
         />
       </div>
     </>
