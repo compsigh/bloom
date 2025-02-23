@@ -22,6 +22,7 @@ div.available-questions {
   flex-direction: row-reverse;
   gap: 32px;
   width: 700px;
+  flex-wrap: wrap;
 }
 
 div.message {
