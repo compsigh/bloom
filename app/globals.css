@@ -76,7 +76,7 @@ ul ul > li {
 
 a {
   color: inherit;
-  font-family: var(--font-ia-writer-mono);
+  font-family: var(--font-departure-mono);
   text-transform: uppercase;
   text-decoration: underline dashed var(--foreground) 2px;
   text-underline-offset: 6px;
