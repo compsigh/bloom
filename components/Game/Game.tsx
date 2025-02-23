@@ -164,7 +164,7 @@ function Message({ message }: { message: Message }) {
 function MessageFeed({ messages }: { messages: Message[] }) {
   return (
     <>
-      <div className={styles.messages}>
+      <div>
         {
           messages.map((message, index) => (
               <div
