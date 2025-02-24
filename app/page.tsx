@@ -40,7 +40,7 @@ export default function Home() {
             A hackathon from <Link href="https://compsigh.club">compsigh</Link>, the social computer science club at USF for meeting cool people &amp; building cool things
           </p>
           <p className={styles.subtitle}>
-            Feb. 28th – Mar. 2
+            Feb. 28 – Mar. 2
             <br />
             Social Hive
           </p>
