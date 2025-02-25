@@ -20,24 +20,27 @@ import {
 
 import styles from "./Game.module.css"
 
-type Question = "What is BLOOM?"
-              | "What is a hackathon?"
-              | "Can/should I attend?"
-              | "What's in it for me?"
-              | "What's on the agenda?"
-              | "What can I make?"
-              | "How are projects judged?"
-              | "What's the difference between BLOOM and DonsHack?"
-              | "What's the difference between BLOOM and DEPLOY?"
+type Question
+  = "What is BLOOM?"
+  | "What is a hackathon?"
+  | "Can/should I attend?"
+  | "What's in it for me?"
+  | "What's on the agenda?"
+  | "What can I make?"
+  | "How are projects judged?"
+  | "What's the difference between BLOOM and DonsHack?"
+  | "What's the difference between BLOOM and DEPLOY?"
 
-type Icon = "Hand"
-          | "Brain"
-          | "Checklist"
-          | "Calendar"
-          | "Toolbox"
-          | "Hive"
-          | "Trophy"
-          | "Thinking"
+type Icon
+  = "Hand"
+  | "People"
+  | "Thinking"
+  | "Trophy"
+  | "Calendar"
+  | "Brain"
+  | "Checklist"
+  | "Toolbox"
+  | "Hive"
 
 type Response = {
   response: JSX.Element
@@ -59,7 +62,7 @@ info.set("What is BLOOM?", {
 })
 info.set("What is a hackathon?", {
   response: <WhatIsAHackathon />,
-  icon: "Hand", // TODO: replace
+  icon: "People",
   unlocks: [
     "Can/should I attend?"
   ]
