@@ -76,20 +76,10 @@ div.attributions td {
   padding: 8px 32px;
 }
 
-footer#footer {
-  pointer-events: none;
-  user-select: none;
-  width: 100vw;
-}
-
 @media (prefers-color-scheme: dark) {
   .container {
     background-color: var(--background);
     color: var(--foreground);
-  }
-
-  footer#footer {
-    filter: invert();
   }
 }
 

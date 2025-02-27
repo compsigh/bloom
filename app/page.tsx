@@ -1,7 +1,7 @@
-import Image from "next/image"
 import { Game } from "@/components/Game"
 import { Label } from "@/components/Label"
 import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
 import { Button } from "@/components/Button"
 import { Mention } from "@/components/Mention"
 
@@ -16,8 +16,6 @@ import {
   WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
   WhatsTheDifferenceBetweenBLOOMAndDonsHack
 } from "./Info"
-
-import Cottage from "@/public/animations/Cottage.gif"
 
 import styles from "./page.module.css"
 
@@ -150,18 +148,7 @@ export default function Home() {
             <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />
           </details>
         </div>
-
-        <footer id={styles.footer}>
-          <Image
-            src={Cottage}
-            alt="An animation of a compsigh cottage amidst a field of flowers. A cat is sleeping on the roof. Puffs of smoke rise from the chimney. The clouds and flowers gently move."
-            sizes="100vw"
-            style={{
-              width: "100%",
-              height: "auto"
-            }}
-          />
-        </footer>
+        <Footer />
       </div>
     </main>
   )
