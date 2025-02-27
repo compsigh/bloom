@@ -168,7 +168,7 @@ export function WhatsOnTheAgenda() {
             <td>
               <Cascade
                 duration={0.4}
-                text="Doors open, check-in begins"
+                text="Doors open"
               />
             </td>
           </tr>
@@ -200,6 +200,34 @@ export function WhatsOnTheAgenda() {
               />
             </td>
           </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade
+                duration={0.4}
+                text="07:00pm"
+              />
+            </td>
+            <td>
+              <Cascade
+                duration={0.4}
+                text="Looking-for-team hour"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade
+                duration={0.4}
+                text="07:00pm"
+              />
+            </td>
+            <td>
+              <Cascade
+                duration={0.4}
+                text="Workshop: What Should We Make?"
+              />
+            </td>
+          </tr>
         </tbody>
       </table>
       <p>
@@ -214,7 +242,7 @@ export function WhatsOnTheAgenda() {
             <td style={{ width: 120 }}>
               <Cascade
                 duration={0.5}
-                text="11:00am – 04:00pm"
+                text="12:00pm"
               />
             </td>
             <td>
