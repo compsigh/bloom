@@ -97,6 +97,12 @@ h1 {
   font-weight: 400;
 }
 
+h2 {
+  font-family: var(--font-departure-mono);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 p,
 td,
 details {
