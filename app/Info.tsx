@@ -224,7 +224,7 @@ export function WhatsOnTheAgenda() {
             <td>
               <Cascade
                 duration={0.4}
-                text="Workshop: What Should We Make?"
+                text="Workshop: What Can We Make?"
               />
             </td>
           </tr>
