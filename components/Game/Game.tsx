@@ -3,7 +3,10 @@
 import { JSX, useState } from "react"
 import { useRouter } from "next/navigation"
 
-import Image from "next/image"
+import {
+  Animation,
+  type AnimationType
+} from "@/components/Animation"
 import { Button } from "@/components/Button"
 
 import {
@@ -31,27 +34,16 @@ type Question
   | "What's the difference between BLOOM and DonsHack?"
   | "What's the difference between BLOOM and DEPLOY?"
 
-type Icon
-  = "Hand"
-  | "People"
-  | "Thinking"
-  | "Trophy"
-  | "Calendar"
-  | "Brain"
-  | "Checklist"
-  | "Toolbox"
-  | "Hive"
-
 type Response = {
   response: JSX.Element
-  icon: Icon
+  animation: AnimationType
   unlocks: Question[]
 }
 
 const info = new Map<Question, Response>()
 info.set("What is BLOOM?", {
   response: <WhatIsBLOOM />,
-  icon: "Hand",
+  animation: "Hand",
   unlocks: [
     "What is a hackathon?",
     "Can/should I attend?",
@@ -62,14 +54,14 @@ info.set("What is BLOOM?", {
 })
 info.set("What is a hackathon?", {
   response: <WhatIsAHackathon />,
-  icon: "People",
+  animation: "People",
   unlocks: [
     "Can/should I attend?"
   ]
 })
 info.set("Can/should I attend?", {
   response: <CanShouldIAttend />,
-  icon: "Thinking",
+  animation: "Thinking",
   unlocks: [
     "What can I make?",
     "How are projects judged?",
@@ -79,57 +71,42 @@ info.set("Can/should I attend?", {
 })
 info.set("What's in it for me?", {
   response: <WhatsInItForMe />,
-  icon: "Trophy",
+  animation: "Trophy",
   unlocks: [
     "What's on the agenda?"
   ]
 })
 info.set("What's on the agenda?", {
   response: <WhatsOnTheAgenda />,
-  icon: "Calendar",
+  animation: "Calendar",
   unlocks: []
 })
 info.set("What can I make?", {
   response: <WhatCanIMake />,
-  icon: "Brain",
+  animation: "Brain",
   unlocks: [
     "How are projects judged?"
   ]
 })
 info.set("How are projects judged?", {
   response: <HowAreProjectsJudged />,
-  icon: "Checklist",
+  animation: "Checklist",
   unlocks: []
 })
 info.set("What's the difference between BLOOM and DonsHack?", {
   response: <WhatsTheDifferenceBetweenBLOOMAndDonsHack />,
-  icon: "Hand",
+  animation: "Hand",
   unlocks: []
 })
 info.set("What's the difference between BLOOM and DEPLOY?", {
   response: <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />,
-  icon: "Hand",
+  animation: "Hand",
   unlocks: []
 })
 
 type Message = {
   type: "question" | "response"
   content: Question | Response
-}
-
-function Icon({ icon }: { icon: Icon }) {
-  return (
-    <>
-      <div className={styles.icon}>
-        <Image
-          src={`/animations/${icon}.gif`}
-          fill
-          alt={`An animated ${icon}`}
-          unoptimized
-        />
-      </div>
-    </>
-  )
 }
 
 function Question({ question }: { question: Question }) {
@@ -187,14 +164,14 @@ function QuestionBox({
   info,
   messages,
   setMessages,
-  setCurrentIcon,
+  setCurrentAnimation,
   availableQuestions,
   setAvailableQuestions
 }: {
   info: Map<Question, Response>,
   messages: Message[],
   setMessages: (messages: Message[]) => void,
-  setCurrentIcon: (icon: Icon) => void,
+  setCurrentAnimation: (animation: AnimationType) => void,
   availableQuestions: Question[],
   setAvailableQuestions: (questions: Question[]) => void
 }) {
@@ -221,7 +198,7 @@ function QuestionBox({
                     { type: "question", content: question },
                     { type: "response", content: info.get(question)! }
                   ])
-                  setCurrentIcon(info.get(question)!.icon)
+                  setCurrentAnimation(info.get(question)!.animation)
                   setAvailableQuestions(
                     Array.from(new Set([
                       ...availableQuestions,
@@ -242,27 +219,20 @@ function QuestionBox({
 }
 
 export function Game() {
-  const [currentIcon, setCurrentIcon] = useState<Icon>("Hand")
   const [messages, setMessages] = useState<Message[]>([])
+  const [currentAnimation, setCurrentAnimation] = useState<AnimationType>("Hand")
   const [availableQuestions, setAvailableQuestions] = useState<Question[]>(["What is BLOOM?"])
-
-  // Ramblings/plans to hold state in URL query params:
-  // const pathname = usePathname()
-  // const searchParams = useSearchParams()
-  // const displayParam = searchParams.get('display') || ''
-  // const display = displayParam.split(',').filter(Boolean)
-  // const visible = display.includes(text)
 
   return (
     <>
       <div className={styles.container}>
-        <Icon icon={currentIcon} />
+        <Animation animation={currentAnimation} />
         <div className={styles.feed}>
           <QuestionBox
             info={info}
             messages={messages}
             setMessages={setMessages}
-            setCurrentIcon={setCurrentIcon}
+            setCurrentAnimation={setCurrentAnimation}
             availableQuestions={availableQuestions}
             setAvailableQuestions={setAvailableQuestions}
           />
