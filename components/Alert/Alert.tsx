@@ -6,14 +6,12 @@ export function Alert(
 ) {
   return (
     <>
-      <div id={styles["alert-container"]}>
-        <div id={styles.alert}>
-          <span>!</span>
-          <span>
-            {children}
-          </span>
-          <span>!</span>
-        </div>
+      <div id={styles.alert}>
+        <span>!</span>
+        <span>
+          {children}
+        </span>
+        <span>!</span>
       </div>
     </>
   )

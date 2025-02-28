@@ -3,17 +3,17 @@ import Image from "next/image"
 
 import styles from "./Mention.module.css"
 
-export function Mention(
-{
+type MentionProps = {
+  name: string
+  avatar: string
+  link: string
+}
+
+export function Mention({
   name,
   avatar,
   link
-}:
-{
-  name: string,
-  avatar: string,
-  link: string
-}
+}: MentionProps
 ) {
   return (
     <>
@@ -25,7 +25,7 @@ export function Mention(
             alt=""
             width={20}
             height={20}
-            className={name === "Edward Shturman" ? styles.theme : ""}
+            className={name.includes("Edward") ? styles.theme : ""}
           />
           <span className={styles.name}>
             {name}
