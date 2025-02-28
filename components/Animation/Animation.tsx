@@ -12,6 +12,10 @@ export type AnimationType
   | "Checklist"
   | "Toolbox"
   | "Hive"
+  | "Crab"
+  | "Palette"
+  | "Screen"
+  | "Atom"
 
 export function Animation({ animation }: { animation: AnimationType }) {
   return (
