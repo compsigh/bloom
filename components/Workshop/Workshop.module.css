@@ -38,13 +38,13 @@ p.datetime {
 }
 
 @media (max-width: 1320px) {
-  div#card {
+  div.card {
     flex-direction: row;
   }
 }
 
 @media (max-width: 1000px) {
-  div#card {
+  div.card {
     flex-direction: column;
     gap: 0;
   }
