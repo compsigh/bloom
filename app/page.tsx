@@ -25,11 +25,14 @@ export default function Home() {
       <div className={styles.container}>
         <Header />
         <div className={styles.socials}>
-          <Button destination="https://instagram.com/compsigh.club">
-            Instagram
-          </Button>
           <Button destination="/agenda">
             Agenda
+          </Button>
+          <Button destination="/help">
+            Get Help
+          </Button>
+          <Button destination="https://instagram.com/compsigh.club">
+            Instagram
           </Button>
           <Button destination="https://discord.gg/compsigh">
             Discord

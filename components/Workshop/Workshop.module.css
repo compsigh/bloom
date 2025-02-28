@@ -1,0 +1,51 @@
+div.card {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  max-width: 900px;
+
+  font-family: var(--font-departure-mono);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--foreground);
+
+  background-color: var(--background);
+}
+
+div.details {
+  width: 100%;
+}
+
+div.animation-container {
+  scale: 0.5;
+}
+
+h2.title {
+  padding: 16px;
+  line-height: 1.2em;
+
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+p.description,
+p.datetime {
+  padding: 0 16px;
+}
+
+@media (max-width: 1320px) {
+  div#card {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1000px) {
+  div#card {
+    flex-direction: column;
+    gap: 0;
+  }
+}

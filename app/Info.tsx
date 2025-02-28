@@ -150,7 +150,12 @@ export function WhatsInItForMe() {
 export function WhatsOnTheAgenda() {
   return (
     <>
-      <p>Everything happening in the Social Hive!</p>
+      <p>
+        <Cascade
+          duration={0.2}
+          text="Everything happening in the Social Hive!"
+        />
+      </p>
       <p>
         <Cascade
           duration={0.2}
