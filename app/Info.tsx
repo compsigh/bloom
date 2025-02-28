@@ -150,6 +150,7 @@ export function WhatsInItForMe() {
 export function WhatsOnTheAgenda() {
   return (
     <>
+      <p>Everything happening in the Social Hive!</p>
       <p>
         <Cascade
           duration={0.2}
@@ -218,13 +219,13 @@ export function WhatsOnTheAgenda() {
             <td style={{ width: 120 }}>
               <Cascade
                 duration={0.4}
-                text="07:00pm"
+                text="07:10pm"
               />
             </td>
             <td>
               <Cascade
                 duration={0.4}
-                text="Workshop: What Should We Make?"
+                text="Workshop: What Can We Make?"
               />
             </td>
           </tr>
@@ -248,7 +249,63 @@ export function WhatsOnTheAgenda() {
             <td>
               <Cascade
                 duration={0.5}
-                text="Office hours: chill social, light lunch, and getting help/advice from organizers/other teams"
+                text="Light lunch, chill hangout, share ideas and get help from other teams"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade
+                duration={0.5}
+                text="01:00pm"
+              />
+            </td>
+            <td>
+              <Cascade
+                duration={0.5}
+                text="Office Hours: UI Design"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade
+                duration={0.5}
+                text="01:00pm"
+              />
+            </td>
+            <td>
+              <Cascade
+                duration={0.5}
+                text="Office Hours: React & Next.js"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade
+                duration={0.5}
+                text="01:00pm"
+              />
+            </td>
+            <td>
+              <Cascade
+                duration={0.5}
+                text="Office Hours: Rust"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade
+                duration={0.5}
+                text="02:00pm"
+              />
+            </td>
+            <td>
+              <Cascade
+                duration={0.5}
+                text="Workshop: Making Good Presentations"
               />
             </td>
           </tr>
@@ -348,12 +405,6 @@ export function WhatsOnTheAgenda() {
           </tr>
         </tbody>
       </table>
-      <p>
-        <Cascade
-          duration={0.7}
-          text="More details shared at Opening Keynote!"
-        />
-      </p>
     </>
   )
 }
