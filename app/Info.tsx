@@ -29,7 +29,7 @@ export function WhatIsBLOOM() {
         </strong>
         <Cascade
           duration={0.4}
-          text=" no registration deadlines — come and vibe with us on Friday, and jam on your project until presentations on Sunday!"
+          text=" no registration deadlines — come and vibe with us on Friday, and jam on your project until demos on Sunday!"
         />
       </p>
       <p>
@@ -348,7 +348,7 @@ export function WhatsOnTheAgenda() {
             <td>
               <Cascade
                 duration={0.6}
-                text="Lunch & presentation day check-in begins"
+                text="Lunch & Demo Day check-in begins"
               />
             </td>
           </tr>
@@ -362,7 +362,7 @@ export function WhatsOnTheAgenda() {
             <td>
               <Cascade
                 duration={0.6}
-                text="Presentations begin"
+                text="Demos begin"
               />
             </td>
           </tr>
@@ -390,7 +390,7 @@ export function WhatsOnTheAgenda() {
             <td>
               <Cascade
                 duration={0.6}
-                text="Presentations continue"
+                text="Demos continue"
               />
             </td>
           </tr>
