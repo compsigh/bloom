@@ -9,6 +9,7 @@ export function Footer() {
     <>
       <footer id={styles.footer}>
         <Image
+          unoptimized
           src={Cottage}
           alt="An animation of a compsigh cottage amidst a field of flowers. A cat is sleeping on the roof. Puffs of smoke rise from the chimney. The clouds and flowers gently move."
           sizes="100vw"
