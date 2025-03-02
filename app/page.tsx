@@ -24,6 +24,7 @@ export default function Home() {
     <main tabIndex={-1}>
       <div className={styles.container}>
         <Header />
+
         <div className={styles.socials}>
           <Button destination="/agenda">
             Agenda
@@ -31,13 +32,20 @@ export default function Home() {
           <Button destination="/help">
             Get Help
           </Button>
-          <Button destination="https://instagram.com/compsigh.club">
+          <Button destination="/submit">
+            Submit Project
+          </Button>
+        </div>
+
+        <div className={styles.socials}>
+        <Button destination="https://instagram.com/compsigh.club">
             Instagram
           </Button>
           <Button destination="https://discord.gg/compsigh">
             Discord
           </Button>
         </div>
+
         <div className={styles.attributions}>
           <table>
             <tbody>
