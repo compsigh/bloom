@@ -35,6 +35,9 @@ export default function Home() {
           <Button destination="/submit">
             Submit Project
           </Button>
+          <Button destination="/vote">
+            Vote for People&apos;s Choice
+          </Button>
         </div>
 
         <div className={styles.socials}>
