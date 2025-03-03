@@ -32,16 +32,7 @@ export default function Home() {
           <Button destination="/help">
             Get Help
           </Button>
-          <Button destination="/submit">
-            Submit Project
-          </Button>
-          <Button destination="/vote">
-            Vote for People&apos;s Choice
-          </Button>
-        </div>
-
-        <div className={styles.socials}>
-        <Button destination="https://instagram.com/compsigh.club">
+          <Button destination="https://instagram.com/compsigh.club">
             Instagram
           </Button>
           <Button destination="https://discord.gg/compsigh">
