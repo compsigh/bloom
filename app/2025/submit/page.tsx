@@ -12,7 +12,7 @@ export default function Submit() {
       <main tabIndex={-1}>
         <div className={styles.container}>
           <Header />
-          <Button destination="/">&lt; Back</Button>
+          <Button destination="/2025">&lt; Back</Button>
           <div className={styles.submit}>
             <h2 className={styles.title}>
               <Cascade text="Submit Project" duration={0.2} />

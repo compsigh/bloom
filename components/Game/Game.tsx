@@ -16,7 +16,7 @@ import {
   WhatsOnTheAgenda,
   WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
   WhatsTheDifferenceBetweenBLOOMAndDonsHack
-} from "@/app/Info"
+} from "@/app/2025/Info"
 
 import styles from "./Game.module.css"
 

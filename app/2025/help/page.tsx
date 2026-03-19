@@ -11,7 +11,7 @@ export default function Help() {
     <main tabIndex={-1}>
       <div className={styles.container}>
         <Header />
-        <Button destination="/">&lt; Back</Button>
+        <Button destination="/2025">&lt; Back</Button>
         <div className={styles.help}>
           <div style={{ paddingLeft: 16 }}>
             <h2 className={styles.title}>
