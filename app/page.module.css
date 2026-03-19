@@ -37,7 +37,7 @@ div.faq {
   details.faq > summary::before {
     position: absolute;
     right: 16px;
-    content: '>';
+    content: ">";
     font-family: var(--font-departure-mono);
     color: var(--foreground);
   }

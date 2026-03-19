@@ -15,10 +15,7 @@ export default function Agenda() {
         <Button destination="/">&lt; Back</Button>
         <div className={styles.agenda}>
           <h2 className={styles.title}>
-            <Cascade
-              text="Agenda"
-              duration={0.2}
-            />
+            <Cascade text="Agenda" duration={0.2} />
           </h2>
           <WhatsOnTheAgenda />
         </div>

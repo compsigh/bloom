@@ -26,18 +26,12 @@ export default function Home() {
         <Header />
 
         <div className={styles.socials}>
-          <Button destination="/agenda">
-            Agenda
-          </Button>
-          <Button destination="/help">
-            Get Help
-          </Button>
+          <Button destination="/agenda">Agenda</Button>
+          <Button destination="/help">Get Help</Button>
           <Button destination="https://instagram.com/compsigh.club">
             Instagram
           </Button>
-          <Button destination="https://discord.gg/compsigh">
-            Discord
-          </Button>
+          <Button destination="https://discord.gg/compsigh">Discord</Button>
         </div>
 
         <div className={styles.attributions}>
@@ -141,11 +135,15 @@ export default function Home() {
             <HowAreProjectsJudged />
           </details>
           <details className={styles.faq}>
-            <summary>What&apos;s the difference between BLOOM and DonsHack?</summary>
+            <summary>
+              What&apos;s the difference between BLOOM and DonsHack?
+            </summary>
             <WhatsTheDifferenceBetweenBLOOMAndDonsHack />
           </details>
           <details className={styles.faq}>
-            <summary>What&apos;s the difference between BLOOM and DEPLOY?</summary>
+            <summary>
+              What&apos;s the difference between BLOOM and DEPLOY?
+            </summary>
             <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />
           </details>
         </div>

@@ -11,19 +11,15 @@ export function Button({
   onClick
 }: {
   children: React.ReactNode
-  destination?: string,
+  destination?: string
   onClick?: () => void | MouseEventHandler<HTMLButtonElement>
 }) {
   let clickHandler = onClick
-  if (destination)
-    clickHandler = () => router.push(destination)
+  if (destination) clickHandler = () => router.push(destination)
 
   const router = useRouter()
   return (
-    <button
-      onClick={clickHandler}
-      className={styles.button}
-    >
+    <button onClick={clickHandler} className={styles.button}>
       {children}
     </button>
   )

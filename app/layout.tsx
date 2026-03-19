@@ -36,13 +36,14 @@ const DepartureMono = localFont({
 })
 
 let metadataBase: URL
-if (process.env.VERCEL_URL) metadataBase = new URL('https://bloom.build')
+if (process.env.VERCEL_URL) metadataBase = new URL("https://bloom.build")
 else metadataBase = new URL(`http://localhost:${process.env.PORT || 3000}`)
 
 export const metadata: Metadata = {
   metadataBase,
   title: "BLOOM",
-  description: "The Spring 2025 hackathon for the arts & sciences, hosted by compsigh — the social computer science club at the University of San Francisco for meeting cool people & building cool things",
+  description:
+    "The Spring 2025 hackathon for the arts & sciences, hosted by compsigh — the social computer science club at the University of San Francisco for meeting cool people & building cool things",
   icons: {
     icon: [
       {
@@ -52,27 +53,29 @@ export const metadata: Metadata = {
       {
         media: "(prefers-color-scheme: dark)",
         url: "/icons/favicon-dark.svg"
-      },
+      }
     ]
   },
   openGraph: {
     images: "/og.png"
   }
-};
+}
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   const shouldInjectToolbar = process.env.NODE_ENV === "development"
   return (
     <html lang="en">
-      <body className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable} ${DepartureMono.variable}`}>
+      <body
+        className={`${Mondwest.variable} ${Daydream.variable} ${iAWriterMono.variable} ${DepartureMono.variable}`}
+      >
         {children}
         {shouldInjectToolbar && <VercelToolbar />}
         <Analytics />
       </body>
     </html>
-  );
+  )
 }

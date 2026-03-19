@@ -15,10 +15,7 @@ export default function Judge() {
           <Button destination="/">&lt; Back</Button>
           <div className={styles.judge}>
             <h2 className={styles.title}>
-              <Cascade
-                text="Evaluate projects"
-                duration={0.2}
-              />
+              <Cascade text="Evaluate projects" duration={0.2} />
             </h2>
             <div className={styles.form}>
               <Script async src="https://tally.so/widgets/embed.js" />
@@ -29,8 +26,7 @@ export default function Judge() {
                 height="1000"
                 style={{ border: "none" }}
                 title="BLOOM Project Evaluation"
-              >
-              </iframe>
+              ></iframe>
             </div>
           </div>
           <Footer />
