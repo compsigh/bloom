@@ -1,18 +1,16 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useSyncExternalStore } from "react"
 import { RandomReveal } from "react-random-reveal"
+
+const subscribe = () => () => {}
 
 export function Cascade(
   { text, duration = 2 }:
   { text: string, duration?: number }
 ) {
-  const [isLoaded, setIsLoaded] = useState(false)
+  const isLoaded = useSyncExternalStore(subscribe, () => true, () => false)
   const CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?".split("")
-
-  useEffect(() => {
-    setIsLoaded(true)
-  }, [])
 
   return isLoaded
     ?
