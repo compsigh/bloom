@@ -4,16 +4,10 @@ import { withVercelToolbar as Toolbar } from "@vercel/toolbar/plugins/next"
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   async redirects() {
-    return [
-      "/agenda",
-      "/help",
-      "/judge",
-      "/vote",
-      "/submit",
-    ].map((route) => ({
+    return ["/agenda", "/help", "/judge", "/vote", "/submit"].map((route) => ({
       source: route,
       destination: `/2025${route}`,
-      permanent: false,
+      permanent: false
     }))
   }
 }
