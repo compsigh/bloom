@@ -15,10 +15,7 @@ export default function Submit() {
           <Button destination="/">&lt; Back</Button>
           <div className={styles.submit}>
             <h2 className={styles.title}>
-              <Cascade
-                text="Submit Project"
-                duration={0.2}
-              />
+              <Cascade text="Submit Project" duration={0.2} />
             </h2>
             <div className={styles.form}>
               <Script async src="https://tally.so/widgets/embed.js" />
@@ -29,8 +26,7 @@ export default function Submit() {
                 height="1000"
                 style={{ border: "none" }}
                 title="BLOOM Project Submission"
-              >
-              </iframe>
+              ></iframe>
             </div>
           </div>
           <Footer />

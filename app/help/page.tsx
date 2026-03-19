@@ -15,10 +15,7 @@ export default function Help() {
         <div className={styles.help}>
           <div style={{ paddingLeft: 16 }}>
             <h2 className={styles.title}>
-              <Cascade
-                text="Get Help"
-                duration={0.2}
-              />
+              <Cascade text="Get Help" duration={0.2} />
             </h2>
             <p
               style={{

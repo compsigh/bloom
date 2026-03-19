@@ -3,10 +3,7 @@
 import { JSX, useState } from "react"
 import { useRouter } from "next/navigation"
 
-import {
-  Animation,
-  type AnimationType
-} from "@/components/Animation"
+import { Animation, type AnimationType } from "@/components/Animation"
 import { Button } from "@/components/Button"
 
 import {
@@ -23,8 +20,8 @@ import {
 
 import styles from "./Game.module.css"
 
-type Question
-  = "What is BLOOM?"
+type Question =
+  | "What is BLOOM?"
   | "What is a hackathon?"
   | "Can/should I attend?"
   | "What's in it for me?"
@@ -55,9 +52,7 @@ info.set("What is BLOOM?", {
 info.set("What is a hackathon?", {
   response: <WhatIsAHackathon />,
   animation: "People",
-  unlocks: [
-    "Can/should I attend?"
-  ]
+  unlocks: ["Can/should I attend?"]
 })
 info.set("Can/should I attend?", {
   response: <CanShouldIAttend />,
@@ -72,9 +67,7 @@ info.set("Can/should I attend?", {
 info.set("What's in it for me?", {
   response: <WhatsInItForMe />,
   animation: "Trophy",
-  unlocks: [
-    "What's on the agenda?"
-  ]
+  unlocks: ["What's on the agenda?"]
 })
 info.set("What's on the agenda?", {
   response: <WhatsOnTheAgenda />,
@@ -84,9 +77,7 @@ info.set("What's on the agenda?", {
 info.set("What can I make?", {
   response: <WhatCanIMake />,
   animation: "Brain",
-  unlocks: [
-    "How are projects judged?"
-  ]
+  unlocks: ["How are projects judged?"]
 })
 info.set("How are projects judged?", {
   response: <HowAreProjectsJudged />,
@@ -145,16 +136,11 @@ function MessageFeed({ messages }: { messages: Message[] }) {
   return (
     <>
       <div>
-        {
-          messages.map((message, index) => (
-              <div
-                key={index}
-                id={(index + 1).toString()}
-              >
-                <Message message={message} />
-              </div>
-          ))
-        }
+        {messages.map((message, index) => (
+          <div key={index} id={(index + 1).toString()}>
+            <Message message={message} />
+          </div>
+        ))}
       </div>
     </>
   )
@@ -168,51 +154,52 @@ function QuestionBox({
   availableQuestions,
   setAvailableQuestions
 }: {
-  info: Map<Question, Response>,
-  messages: Message[],
-  setMessages: (messages: Message[]) => void,
-  setCurrentAnimation: (animation: AnimationType) => void,
-  availableQuestions: Question[],
+  info: Map<Question, Response>
+  messages: Message[]
+  setMessages: (messages: Message[]) => void
+  setCurrentAnimation: (animation: AnimationType) => void
+  availableQuestions: Question[]
   setAvailableQuestions: (questions: Question[]) => void
 }) {
   const router = useRouter()
   return (
     <>
       <div className={styles["available-questions"]}>
-        {
-          Array.from(availableQuestions).map((question) => (
-            <div
-              key={question}
-              style={{
-                display: messages.some(
-                  message => message.type === "question" && message.content === question
-                )
+        {Array.from(availableQuestions).map((question) => (
+          <div
+            key={question}
+            style={{
+              display: messages.some(
+                (message) =>
+                  message.type === "question" && message.content === question
+              )
                 ? "none"
                 : "block"
-              }}
-            >
-              <Button
-                onClick={() => {
-                  setMessages([
-                    ...messages,
-                    { type: "question", content: question },
-                    { type: "response", content: info.get(question)! }
-                  ])
-                  setCurrentAnimation(info.get(question)!.animation)
-                  setAvailableQuestions(
-                    Array.from(new Set([
+            }}
+          >
+            <Button
+              onClick={() => {
+                setMessages([
+                  ...messages,
+                  { type: "question", content: question },
+                  { type: "response", content: info.get(question)! }
+                ])
+                setCurrentAnimation(info.get(question)!.animation)
+                setAvailableQuestions(
+                  Array.from(
+                    new Set([
                       ...availableQuestions,
                       ...info.get(question)!.unlocks
-                    ]))
+                    ])
                   )
-                  router.replace(`#${(messages.length + 1).toString()}`)
-                }}
-              >
-                {question}
-              </Button>
-            </div>
-          ))
-        }
+                )
+                router.replace(`#${(messages.length + 1).toString()}`)
+              }}
+            >
+              {question}
+            </Button>
+          </div>
+        ))}
       </div>
     </>
   )
@@ -220,8 +207,11 @@ function QuestionBox({
 
 export function Game() {
   const [messages, setMessages] = useState<Message[]>([])
-  const [currentAnimation, setCurrentAnimation] = useState<AnimationType>("Hand")
-  const [availableQuestions, setAvailableQuestions] = useState<Question[]>(["What is BLOOM?"])
+  const [currentAnimation, setCurrentAnimation] =
+    useState<AnimationType>("Hand")
+  const [availableQuestions, setAvailableQuestions] = useState<Question[]>([
+    "What is BLOOM?"
+  ])
 
   return (
     <>

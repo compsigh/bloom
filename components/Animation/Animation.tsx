@@ -2,8 +2,8 @@ import Image from "next/image"
 
 import styles from "./Animation.module.css"
 
-export type AnimationType
-  = "Hand"
+export type AnimationType =
+  | "Hand"
   | "People"
   | "Thinking"
   | "Trophy"

@@ -15,10 +15,7 @@ export default function Vote() {
           <Button destination="/">&lt; Back</Button>
           <div className={styles.vote}>
             <h2 className={styles.title}>
-              <Cascade
-                text="People's Choice Vote"
-                duration={0.2}
-              />
+              <Cascade text="People's Choice Vote" duration={0.2} />
             </h2>
             <div className={styles.form}>
               <Script async src="https://tally.so/widgets/embed.js" />
@@ -29,8 +26,7 @@ export default function Vote() {
                 height="1000"
                 style={{ border: "none" }}
                 title="BLOOM People's Choice Vote"
-              >
-              </iframe>
+              ></iframe>
             </div>
           </div>
           <Footer />

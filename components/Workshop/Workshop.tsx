@@ -1,7 +1,4 @@
-import {
-  Animation,
-  type AnimationType
-} from "@/components/Animation"
+import { Animation, type AnimationType } from "@/components/Animation"
 
 import styles from "./Workshop.module.css"
 
@@ -17,8 +14,7 @@ export function Workshop({
   datetime,
   description,
   graphic
-}: WorkshopProps
-) {
+}: WorkshopProps) {
   return (
     <>
       <div className={styles.card}>

@@ -9,12 +9,7 @@ type MentionProps = {
   link: string
 }
 
-export function Mention({
-  name,
-  avatar,
-  link
-}: MentionProps
-) {
+export function Mention({ name, avatar, link }: MentionProps) {
   return (
     <>
       <Link href={link}>
@@ -27,9 +22,7 @@ export function Mention({
             height={20}
             className={name.includes("Edward") ? styles.theme : ""}
           />
-          <span className={styles.name}>
-            {name}
-          </span>
+          <span className={styles.name}>{name}</span>
         </span>
       </Link>
     </>

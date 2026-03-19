@@ -5,15 +5,9 @@ export function WhatIsBLOOM() {
   return (
     <>
       <p>
-        <Cascade
-          duration={0.05}
-          text="BLOOM is a "
-        />
+        <Cascade duration={0.05} text="BLOOM is a " />
         <strong>
-          <Cascade
-            duration={0.1}
-            text="beginner-friendly"
-          />
+          <Cascade duration={0.1} text="beginner-friendly" />
         </strong>
         <Cascade
           duration={0.2}
@@ -22,10 +16,7 @@ export function WhatIsBLOOM() {
       </p>
       <p>
         <strong>
-          <Cascade
-            duration={0.3}
-            text="Low barrier to entry:"
-          />
+          <Cascade duration={0.3} text="Low barrier to entry:" />
         </strong>
         <Cascade
           duration={0.4}
@@ -65,36 +56,18 @@ export function CanShouldIAttend() {
   return (
     <>
       <p>
-        <Cascade
-          duration={0.2}
-          text="BLOOM is "
-        />
+        <Cascade duration={0.2} text="BLOOM is " />
         <strong>
-          <Cascade
-            duration={0.2}
-            text="open to any and all USF students"
-          />
+          <Cascade duration={0.2} text="open to any and all USF students" />
         </strong>
-        <Cascade
-          duration={0.2}
-          text=" of teams 1–4."
-        />
+        <Cascade duration={0.2} text=" of teams 1–4." />
       </p>
       <p>
-        <Cascade
-          duration={0.4}
-          text="The event is "
-        />
+        <Cascade duration={0.4} text="The event is " />
         <strong>
-          <Cascade
-            duration={0.4}
-            text="beginner-friendly"
-          />
+          <Cascade duration={0.4} text="beginner-friendly" />
         </strong>
-        <Cascade
-          duration={0.4}
-          text="!"
-        />
+        <Cascade duration={0.4} text="!" />
       </p>
       <p>
         <Cascade
@@ -109,10 +82,7 @@ export function CanShouldIAttend() {
         />
       </p>
       <p>
-        <Cascade
-          duration={1}
-          text="So in short, yes!"
-        />
+        <Cascade duration={1} text="So in short, yes!" />
       </p>
     </>
   )
@@ -122,15 +92,9 @@ export function WhatsInItForMe() {
   return (
     <>
       <p>
-        <Cascade
-          duration={0.2}
-          text="Hackathons are an incredible "
-        />
+        <Cascade duration={0.2} text="Hackathons are an incredible " />
         <strong>
-          <Cascade
-            duration={0.2}
-            text="social, learning, and résumé"
-          />
+          <Cascade duration={0.2} text="social, learning, and résumé" />
         </strong>
         <Cascade
           duration={0.2}
@@ -157,99 +121,60 @@ export function WhatsOnTheAgenda() {
         />
       </p>
       <p>
-        <Cascade
-          duration={0.2}
-          text="Friday, February 28"
-        />
+        <Cascade duration={0.2} text="Friday, February 28" />
       </p>
       <table>
         <tbody>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.4}
-                text="06:00pm"
-              />
+              <Cascade duration={0.4} text="06:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.4}
-                text="Doors open"
-              />
+              <Cascade duration={0.4} text="Doors open" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.4}
-                text="06:30pm"
-              />
+              <Cascade duration={0.4} text="06:30pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.4}
-                text="Opening keynote & dinner"
-              />
+              <Cascade duration={0.4} text="Opening keynote & dinner" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.4}
-                text="07:00pm"
-              />
+              <Cascade duration={0.4} text="07:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.4}
-                text="Hacking begins"
-              />
+              <Cascade duration={0.4} text="Hacking begins" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.4}
-                text="07:00pm"
-              />
+              <Cascade duration={0.4} text="07:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.4}
-                text="Looking-for-team hour"
-              />
+              <Cascade duration={0.4} text="Looking-for-team hour" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.4}
-                text="07:10pm"
-              />
+              <Cascade duration={0.4} text="07:10pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.4}
-                text="Workshop: What Can We Make?"
-              />
+              <Cascade duration={0.4} text="Workshop: What Can We Make?" />
             </td>
           </tr>
         </tbody>
       </table>
       <p>
-        <Cascade
-          duration={0.3}
-          text="Saturday, March 01"
-        />
+        <Cascade duration={0.3} text="Saturday, March 01" />
       </p>
       <table>
         <tbody>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.5}
-                text="12:00pm"
-              />
+              <Cascade duration={0.5} text="12:00pm" />
             </td>
             <td>
               <Cascade
@@ -260,52 +185,31 @@ export function WhatsOnTheAgenda() {
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.5}
-                text="01:00pm"
-              />
+              <Cascade duration={0.5} text="01:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.5}
-                text="Office Hours: UI Design"
-              />
+              <Cascade duration={0.5} text="Office Hours: UI Design" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.5}
-                text="01:00pm"
-              />
+              <Cascade duration={0.5} text="01:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.5}
-                text="Office Hours: React & Next.js"
-              />
+              <Cascade duration={0.5} text="Office Hours: React & Next.js" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.5}
-                text="01:00pm"
-              />
+              <Cascade duration={0.5} text="01:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.5}
-                text="Office Hours: Rust"
-              />
+              <Cascade duration={0.5} text="Office Hours: Rust" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.5}
-                text="02:00pm"
-              />
+              <Cascade duration={0.5} text="02:00pm" />
             </td>
             <td>
               <Cascade
@@ -317,89 +221,53 @@ export function WhatsOnTheAgenda() {
         </tbody>
       </table>
       <p>
-        <Cascade
-          duration={0.4}
-          text="Sunday, March 02"
-        />
+        <Cascade duration={0.4} text="Sunday, March 02" />
       </p>
       <table>
         <tbody>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.6}
-                text="11:30am"
-              />
+              <Cascade duration={0.6} text="11:30am" />
             </td>
             <td>
-              <Cascade
-                duration={0.6}
-                text="Project submission deadline"
-              />
+              <Cascade duration={0.6} text="Project submission deadline" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.6}
-                text="12:00pm"
-              />
+              <Cascade duration={0.6} text="12:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.6}
-                text="Lunch & Demo Day check-in begins"
-              />
+              <Cascade duration={0.6} text="Lunch & Demo Day check-in begins" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.6}
-                text="01:00pm"
-              />
+              <Cascade duration={0.6} text="01:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.6}
-                text="Demos begin"
-              />
+              <Cascade duration={0.6} text="Demos begin" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.6}
-                text="02:00pm"
-              />
+              <Cascade duration={0.6} text="02:00pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.6}
-                text="Intermission"
-              />
+              <Cascade duration={0.6} text="Intermission" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.6}
-                text="02:20pm"
-              />
+              <Cascade duration={0.6} text="02:20pm" />
             </td>
             <td>
-              <Cascade
-                duration={0.6}
-                text="Demos continue"
-              />
+              <Cascade duration={0.6} text="Demos continue" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade
-                duration={0.6}
-                text="04:00pm"
-              />
+              <Cascade duration={0.6} text="04:00pm" />
             </td>
             <td>
               <Cascade
@@ -424,15 +292,9 @@ export function WhatCanIMake() {
         />
       </p>
       <p>
-        <Cascade
-          duration={0.4}
-          text="One twist, though: make something "
-        />
+        <Cascade duration={0.4} text="One twist, though: make something " />
         <strong>
-          <Cascade
-            duration={0.4}
-            text="unrelated to generative AI"
-          />
+          <Cascade duration={0.4} text="unrelated to generative AI" />
         </strong>
         <Cascade
           duration={0.4}
@@ -465,8 +327,8 @@ export function HowAreProjectsJudged() {
         <Cascade
           duration={0.4}
           text="Rather than evaluating projects on a typical hackathon rubric — explicit problem-solving, technically complex projects, etc. — the judges are basically running a vibe check."
-          />
-        </p>
+        />
+      </p>
       <p>
         <strong>
           <Cascade
@@ -507,15 +369,9 @@ export function WhatsTheDifferenceBetweenBLOOMAndDEPLOY() {
     <>
       <p>
         <Link href="https://deploy.compsigh.club">
-          <Cascade
-            duration={0.2}
-            text="DEPLOY"
-          />
+          <Cascade duration={0.2} text="DEPLOY" />
         </Link>
-        <Cascade
-          duration={0.2}
-          text=" is compsigh's annual Fall hackathon."
-        />
+        <Cascade duration={0.2} text=" is compsigh's annual Fall hackathon." />
       </p>
       <p>
         <Cascade
