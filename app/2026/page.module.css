@@ -1,0 +1,129 @@
+div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 40px 0 40px;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+div.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+div.faq {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin-top: 80px;
+
+  details.faq > summary {
+    cursor: pointer;
+    list-style: none;
+    appearance: none;
+
+    position: relative;
+    padding: 32px 16px;
+    border-top: 2px solid var(--foreground);
+
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+
+  details.faq > summary::before {
+    position: absolute;
+    right: 16px;
+    content: ">";
+    font-family: var(--font-departure-mono);
+    color: var(--foreground);
+  }
+
+  details.faq[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  details.faq > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details.faq:last-child > summary {
+    border-bottom: 2px solid var(--foreground);
+  }
+
+  details.faq > summary:hover,
+  details.faq > summary:hover::before {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+
+  details.faq > p,
+  details.faq > table {
+    padding: 0 16px;
+  }
+
+  display: none;
+}
+
+div#game-container {
+  width: fit-content;
+}
+
+div.attributions td {
+  padding: 8px 32px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+@media (max-width: 1000px) {
+  div#game-container {
+    display: none;
+  }
+
+  div.faq {
+    display: block;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 745px) {
+  div.socials {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  div.attributions table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -64px;
+  }
+
+  div.attributions tr {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 8px 0;
+  }
+
+  div.attributions td {
+    padding: 4px 0;
+  }
+
+  div.attributions span:first-child {
+    padding-left: 0;
+  }
+
+  div.attributions img {
+    position: absolute;
+    margin: -32px;
+  }
+}
