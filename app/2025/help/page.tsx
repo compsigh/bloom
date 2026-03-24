@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header"
+import { Header } from "@/components/2025/Header"
 import { Footer } from "@/components/Footer"
 import { Button } from "@/components/Button"
 import { Cascade } from "@/components/Cascade"

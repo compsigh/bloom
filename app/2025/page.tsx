@@ -1,6 +1,6 @@
-import { Game } from "@/components/Game"
+import { Game } from "@/components/2025/Game"
 import { Label } from "@/components/Label"
-import { Header } from "@/components/Header"
+import { Header } from "@/components/2025/Header"
 import { Footer } from "@/components/Footer"
 import { Button } from "@/components/Button"
 import { Mention } from "@/components/Mention"
@@ -15,7 +15,7 @@ import {
   WhatsOnTheAgenda,
   WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
   WhatsTheDifferenceBetweenBLOOMAndDonsHack
-} from "./Info"
+} from "@/components/2025/Info"
 
 import styles from "./page.module.css"
 
