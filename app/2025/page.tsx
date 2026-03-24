@@ -1,9 +1,9 @@
 import { Game } from "@/components/2025/Game"
-import { Label } from "@/components/Label"
+import { Label } from "@/components/2025/Label"
 import { Header } from "@/components/2025/Header"
-import { Footer } from "@/components/Footer"
-import { Button } from "@/components/Button"
-import { Mention } from "@/components/Mention"
+import { Footer } from "@/components/2025/Footer"
+import { Button } from "@/components/2025/Button"
+import { Mention } from "@/components/2025/Mention"
 
 import {
   CanShouldIAttend,

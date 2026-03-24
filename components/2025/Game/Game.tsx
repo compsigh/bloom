@@ -3,8 +3,8 @@
 import { JSX, useState } from "react"
 import { useRouter } from "next/navigation"
 
-import { Animation, type AnimationType } from "@/components/Animation"
-import { Button } from "@/components/Button"
+import { Animation, type AnimationType } from "@/components/2025/Animation"
+import { Button } from "@/components/2025/Button"
 
 import {
   CanShouldIAttend,

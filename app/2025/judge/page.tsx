@@ -1,8 +1,8 @@
 import Script from "next/script"
-import { Button } from "@/components/Button"
+import { Button } from "@/components/2025/Button"
 import { Header } from "@/components/2025/Header"
-import { Footer } from "@/components/Footer"
-import { Cascade } from "@/components/Cascade"
+import { Footer } from "@/components/2025/Footer"
+import { Cascade } from "@/components/2025/Cascade"
 
 import styles from "./Judge.module.css"
 

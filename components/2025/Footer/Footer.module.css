@@ -1,0 +1,11 @@
+footer#footer {
+  pointer-events: none;
+  user-select: none;
+  width: 100vw;
+}
+
+@media (prefers-color-scheme: dark) {
+  footer#footer {
+    filter: invert();
+  }
+}
