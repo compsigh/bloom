@@ -1,0 +1,27 @@
+div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 40px 0 40px;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+h2.title {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+div.agenda {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin-top: 80px;
+}
+
+div.agenda > p,
+div.agenda > table {
+  padding: 0 16px;
+}

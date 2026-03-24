@@ -1,0 +1,22 @@
+div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 40px 0 40px;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+div.help {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+@media (max-width: 1000px) {
+  div.help {
+    gap: 64px;
+  }
+}
