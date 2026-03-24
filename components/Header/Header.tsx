@@ -14,12 +14,12 @@ export function Header() {
           <h1 id={styles.title}>BLOOM</h1>
         </div>
         <p className={styles.subtitle}>
-          A hackathon from <Link href="https://compsigh.club">compsigh</Link>,
-          the social computer science club at USF for meeting cool people &amp;
-          building cool things
+          A celebration of passion projects, hosted by{" "}
+          <Link href="https://compsigh.club">compsigh</Link>, the computer
+          science club for meeting cool people &amp;&amp; building cool things
         </p>
         <p className={styles.subtitle}>
-          Feb. 28 – Mar. 2
+          Apr 10 – 12
           <br />
           Social Hive
         </p>
