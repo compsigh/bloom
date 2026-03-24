@@ -1,6 +1,6 @@
-import { Game } from "@/components/2025/Game"
+import { Game } from "@/components/Game"
 import { Label } from "@/components/Label"
-import { Header } from "@/components/2025/Header"
+import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { Button } from "@/components/Button"
 import { Mention } from "@/components/Mention"
@@ -26,8 +26,8 @@ export default function Home() {
         <Header />
 
         <div className={styles.socials}>
-          <Button destination="/2025/agenda">Agenda</Button>
-          <Button destination="/2025/help">Get Help</Button>
+          <Button destination="/agenda">Agenda</Button>
+          <Button destination="/help">Get Help</Button>
           <Button destination="https://instagram.com/compsigh.club">
             Instagram
           </Button>
