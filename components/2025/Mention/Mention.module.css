@@ -14,9 +14,3 @@ span.container img#avatar {
   pointer-events: none;
   user-select: none;
 }
-
-@media (prefers-color-scheme: light) {
-  img.theme {
-    filter: invert();
-  }
-}
