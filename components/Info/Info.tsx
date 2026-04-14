@@ -121,57 +121,64 @@ export function WhatsOnTheAgenda() {
         />
       </p>
       <p>
-        <Cascade duration={0.2} text="Friday, February 28" />
+        <Cascade duration={0.2} text="Friday, April 24" />
+        <br />
+        <Cascade duration={0.2} text="Opening Night" />
       </p>
       <table>
         <tbody>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="06:00pm" />
+              <Cascade duration={0.4} text="05:00pm" />
             </td>
             <td>
-              <Cascade duration={0.4} text="Doors open" />
+              <Cascade duration={0.4} text="Check in && dinner" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="06:30pm" />
+              <Cascade duration={0.4} text="05:30pm" />
             </td>
             <td>
-              <Cascade duration={0.4} text="Opening keynote & dinner" />
+              <Cascade duration={0.4} text="Opening keynote" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="07:00pm" />
+              <Cascade duration={0.4} text="05:40pm" />
             </td>
             <td>
-              <Cascade duration={0.4} text="Hacking begins" />
+              <Cascade duration={0.4} text="Hacking begins!" />
             </td>
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="07:00pm" />
+              <Cascade duration={0.4} text="05:40pm" />
             </td>
             <td>
-              <Cascade duration={0.4} text="Looking-for-team hour" />
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="07:10pm" />
-            </td>
-            <td>
-              <Cascade duration={0.4} text="Workshop: What Can We Make?" />
+              <Cascade
+                duration={0.4}
+                text="Algorave with local SF performers"
+              />
             </td>
           </tr>
         </tbody>
       </table>
       <p>
-        <Cascade duration={0.3} text="Saturday, March 01" />
+        <Cascade duration={0.3} text="Saturday, April 25" />
+        <br />
+        <Cascade duration={0.3} text="Hack Day" />
       </p>
       <table>
         <tbody>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade duration={0.5} text="11:00am" />
+            </td>
+            <td>
+              <Cascade duration={0.5} text="Afternoon tea all day! :)" />
+            </td>
+          </tr>
           <tr>
             <td style={{ width: 120 }}>
               <Cascade duration={0.5} text="12:00pm" />
@@ -179,7 +186,7 @@ export function WhatsOnTheAgenda() {
             <td>
               <Cascade
                 duration={0.5}
-                text="Light lunch, chill hangout, share ideas and get help from other teams"
+                text="Open session: share what you’re working on and where you’re stuck. Help each other! <3"
               />
             </td>
           </tr>
@@ -188,40 +195,18 @@ export function WhatsOnTheAgenda() {
               <Cascade duration={0.5} text="01:00pm" />
             </td>
             <td>
-              <Cascade duration={0.5} text="Office Hours: UI Design" />
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: 120 }}>
-              <Cascade duration={0.5} text="01:00pm" />
-            </td>
-            <td>
-              <Cascade duration={0.5} text="Office Hours: React & Next.js" />
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: 120 }}>
-              <Cascade duration={0.5} text="01:00pm" />
-            </td>
-            <td>
-              <Cascade duration={0.5} text="Office Hours: Rust" />
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: 120 }}>
-              <Cascade duration={0.5} text="02:00pm" />
-            </td>
-            <td>
               <Cascade
                 duration={0.5}
-                text="Workshop: Making Good Presentations"
+                text="Workshop from Faadil: Turing // Einstein"
               />
             </td>
           </tr>
         </tbody>
       </table>
       <p>
-        <Cascade duration={0.4} text="Sunday, March 02" />
+        <Cascade duration={0.4} text="Sunday, April 26" />
+        <br />
+        <Cascade duration={0.4} text="Demo Day" />
       </p>
       <table>
         <tbody>
@@ -238,7 +223,7 @@ export function WhatsOnTheAgenda() {
               <Cascade duration={0.6} text="12:00pm" />
             </td>
             <td>
-              <Cascade duration={0.6} text="Lunch & Demo Day check-in begins" />
+              <Cascade duration={0.6} text="Lunch && Demo Day check-in" />
             </td>
           </tr>
           <tr>
