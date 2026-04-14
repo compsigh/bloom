@@ -1,34 +1,62 @@
 import Link from "next/link"
+import { Note } from "@/components/Note"
+import { Board } from "@/components/Board"
 import { Cascade } from "@/components/Cascade"
+import { Animation } from "@/components/Animation"
 
 export function WhatIsBLOOM() {
   return (
     <>
       <p>
-        <Cascade duration={0.05} text="BLOOM is a " />
-        <strong>
-          <Cascade duration={0.1} text="beginner-friendly" />
-        </strong>
         <Cascade
           duration={0.2}
-          text=", interdisciplinary hackathon for USF students in the College of Arts & Sciences. All are welcome!"
+          text="BLOOM is a celebration of passion projects, hosted by "
         />
-      </p>
-      <p>
-        <strong>
-          <Cascade duration={0.3} text="Low barrier to entry:" />
-        </strong>
+        <Link href="https://compsigh.club">
+          <Cascade duration={0.1} text="compsigh" />
+        </Link>
         <Cascade
           duration={0.4}
-          text=" no registration deadlines — come and vibe with us on Friday, and jam on your project until demos on Sunday!"
+          text=", the computer science club for meeting cool people && building cool things. All USF students are welcome!"
         />
       </p>
       <p>
         <Cascade
           duration={0.5}
-          text="BLOOM is all about personal project exploration. A low-stakes, high-quality playground for ideas. Grab a few friends and create that thing you've always wanted to. All kinds of projects from all walks of scientific & creative life are welcome."
+          text="Grab a few friends and make the thing you've always wanted to. All kinds of projects from all walks of scientific & creative life are welcome."
         />
       </p>
+      <p>
+        <Cascade
+          duration={0.7}
+          text="Friends who went last year: BLOOM is..."
+        />
+      </p>
+      <Board>
+        <Note>
+          <Cascade duration={0.7} text="Creative" />
+          <Animation animation="Brain" />
+        </Note>
+        <Note>
+          <Cascade duration={0.7} text="Friendship" />
+          <Animation animation="People" />
+        </Note>
+        <Note>
+          <Cascade duration={0.7} text="Tasty food" />
+        </Note>
+        <Note>
+          <Cascade duration={0.7} text="Summer camp :)))" />
+        </Note>
+        <Note>
+          <Cascade duration={0.7} text="USF's Coachella" />
+        </Note>
+        <Note>
+          <Cascade
+            duration={0.7}
+            text="Building ur garden, getting ur hands dirty"
+          />
+        </Note>
+      </Board>
     </>
   )
 }
