@@ -27,7 +27,6 @@ export default function Home() {
 
         <div className={styles.socials}>
           <Button destination="/agenda">Agenda</Button>
-          <Button destination="/help">Get Help</Button>
           <Button destination="https://instagram.com/compsigh.club">
             Instagram
           </Button>
