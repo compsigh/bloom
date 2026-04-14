@@ -40,6 +40,21 @@ export default function Home() {
               <tr>
                 <td>
                   <Mention
+                    avatar="/avatars/faadil.jpeg"
+                    name="Faadil Shaik"
+                    link="https://https://www.linkedin.com/in/faadil-shaik"
+                  />
+                </td>
+                <td>
+                  <Label text="Class of 2026" />
+                </td>
+                <td>
+                  <Label text="Host" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <Mention
                     avatar="/avatars/jet.png"
                     name="Jet Pham"
                     link="https://jetpham.com"
@@ -49,7 +64,7 @@ export default function Home() {
                   <Label text="Class of 2027" />
                 </td>
                 <td>
-                  <Label text="Posters" />
+                  <Label text="Trophies" />
                 </td>
               </tr>
               <tr>
@@ -70,22 +85,7 @@ export default function Home() {
               <tr>
                 <td>
                   <Mention
-                    avatar="/avatars/jake.png"
-                    name="Jake Polintan"
-                    link="https://instagram.com/jakepolintanart"
-                  />
-                </td>
-                <td>
-                  <Label text="Class of 2025" />
-                </td>
-                <td>
-                  <Label text="Art & animation" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <Mention
-                    avatar="/avatars/edward.png"
+                    avatar="/avatars/edward.jpeg"
                     name="Edward Shturman"
                     link="https://edwardshturman.com"
                   />
