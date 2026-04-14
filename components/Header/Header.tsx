@@ -19,7 +19,7 @@ export function Header() {
           science club for meeting cool people &amp;&amp; building cool things
         </p>
         <p className={styles.subtitle}>
-          Apr 10 – 12
+          Apr 24 – 26
           <br />
           Social Hive
         </p>
