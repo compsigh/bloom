@@ -6,7 +6,6 @@ import { Button } from "@/components/Button"
 import { Mention } from "@/components/Mention"
 
 import {
-  CanShouldIAttend,
   HowAreProjectsJudged,
   WhatCanIMake,
   IsThisAHackathon,
@@ -114,8 +113,8 @@ export default function Home() {
             <IsThisAHackathon />
           </details>
           <details className={styles.faq}>
-            <summary>Can/should I attend?</summary>
-            <CanShouldIAttend />
+            <summary>What can I make?</summary>
+            <WhatCanIMake />
           </details>
           <details className={styles.faq}>
             <summary>What&apos;s in it for me?</summary>
@@ -124,10 +123,6 @@ export default function Home() {
           <details className={styles.faq}>
             <summary>What&apos;s on the agenda?</summary>
             <WhatsOnTheAgenda />
-          </details>
-          <details className={styles.faq}>
-            <summary>What can I make?</summary>
-            <WhatCanIMake />
           </details>
           <details className={styles.faq}>
             <summary>How are projects judged?</summary>

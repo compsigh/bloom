@@ -80,42 +80,6 @@ export function IsThisAHackathon() {
   )
 }
 
-export function CanShouldIAttend() {
-  return (
-    <>
-      <p>
-        <Cascade duration={0.2} text="BLOOM is " />
-        <strong>
-          <Cascade duration={0.2} text="open to any and all USF students" />
-        </strong>
-        <Cascade duration={0.2} text=" of teams 1–4." />
-      </p>
-      <p>
-        <Cascade duration={0.4} text="The event is " />
-        <strong>
-          <Cascade duration={0.4} text="beginner-friendly" />
-        </strong>
-        <Cascade duration={0.4} text="!" />
-      </p>
-      <p>
-        <Cascade
-          duration={0.6}
-          text="Undergraduates, especially freshmen and sophomores, as well as students from the College of Arts & Sciences and the School of Management, are highly encouraged to join!"
-        />
-      </p>
-      <p>
-        <Cascade
-          duration={0.8}
-          text="There are no registration deadlines — show up whenever, and present on Sunday with your team."
-        />
-      </p>
-      <p>
-        <Cascade duration={1} text="So in short, yes!" />
-      </p>
-    </>
-  )
-}
-
 export function WhatsInItForMe() {
   return (
     <>

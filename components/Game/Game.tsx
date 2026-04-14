@@ -7,7 +7,6 @@ import { Animation, type AnimationType } from "@/components/Animation"
 import { Button } from "@/components/Button"
 
 import {
-  CanShouldIAttend,
   HowAreProjectsJudged,
   WhatCanIMake,
   IsThisAHackathon,
@@ -23,7 +22,6 @@ import styles from "./Game.module.css"
 type Question =
   | "What is BLOOM?"
   | "Is this a hackathon?"
-  | "Can/should I attend?"
   | "What's in it for me?"
   | "What's on the agenda?"
   | "What can I make?"
@@ -43,7 +41,6 @@ info.set("What is BLOOM?", {
   animation: "Hand",
   unlocks: [
     "Is this a hackathon?",
-    "Can/should I attend?",
     "What can I make?",
     "What's the difference between BLOOM and DonsHack?",
     "What's the difference between BLOOM and DEPLOY?"
@@ -52,17 +49,7 @@ info.set("What is BLOOM?", {
 info.set("Is this a hackathon?", {
   response: <IsThisAHackathon />,
   animation: "Thinking",
-  unlocks: ["Can/should I attend?"]
-})
-info.set("Can/should I attend?", {
-  response: <CanShouldIAttend />,
-  animation: "Thinking",
-  unlocks: [
-    "What can I make?",
-    "How are projects judged?",
-    "What's on the agenda?",
-    "What's in it for me?"
-  ]
+  unlocks: ["What can I make?", "What's on the agenda?", "What's in it for me?"]
 })
 info.set("What's in it for me?", {
   response: <WhatsInItForMe />,
