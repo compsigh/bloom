@@ -9,7 +9,7 @@ import {
   CanShouldIAttend,
   HowAreProjectsJudged,
   WhatCanIMake,
-  WhatIsAHackathon,
+  IsThisAHackathon,
   WhatIsBLOOM,
   WhatsInItForMe,
   WhatsOnTheAgenda,
@@ -110,8 +110,8 @@ export default function Home() {
             <WhatIsBLOOM />
           </details>
           <details className={styles.faq}>
-            <summary>What is a hackathon?</summary>
-            <WhatIsAHackathon />
+            <summary>Is this a hackathon?</summary>
+            <IsThisAHackathon />
           </details>
           <details className={styles.faq}>
             <summary>Can/should I attend?</summary>

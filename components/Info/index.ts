@@ -1,6 +1,6 @@
 export {
   WhatIsBLOOM,
-  WhatIsAHackathon,
+  IsThisAHackathon,
   CanShouldIAttend,
   WhatsInItForMe,
   WhatsOnTheAgenda,

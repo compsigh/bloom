@@ -61,19 +61,19 @@ export function WhatIsBLOOM() {
   )
 }
 
-export function WhatIsAHackathon() {
+export function IsThisAHackathon() {
   return (
     <>
       <p>
         <Cascade
           duration={0.2}
-          text="A hackathon is a weekend-long event where a team starts some sort of technical project or design challenge, gets as far as they can, and presents to a set of judges."
+          text="Yes, in the sense that this is a weekend-long event where you present something you worked on in this time."
         />
       </p>
       <p>
         <Cascade
           duration={0.4}
-          text="These are usually gatekept to students of a technical background. We believe the most interesting projects come at the intersection of technology and other walks of scientific & creative life. With BLOOM, we really want to emphasize interdisciplinary collaboration and open this opportunity up to everyone."
+          text="No, in the sense that this is not a pitchfest. We are not industrymaxxing. We are not gatekeeping to highly technical backgrounds. We are here to celebrate each other && our interests."
         />
       </p>
     </>

@@ -10,7 +10,7 @@ import {
   CanShouldIAttend,
   HowAreProjectsJudged,
   WhatCanIMake,
-  WhatIsAHackathon,
+  IsThisAHackathon,
   WhatIsBLOOM,
   WhatsInItForMe,
   WhatsOnTheAgenda,
@@ -22,7 +22,7 @@ import styles from "./Game.module.css"
 
 type Question =
   | "What is BLOOM?"
-  | "What is a hackathon?"
+  | "Is this a hackathon?"
   | "Can/should I attend?"
   | "What's in it for me?"
   | "What's on the agenda?"
@@ -42,16 +42,16 @@ info.set("What is BLOOM?", {
   response: <WhatIsBLOOM />,
   animation: "Hand",
   unlocks: [
-    "What is a hackathon?",
+    "Is this a hackathon?",
     "Can/should I attend?",
     "What can I make?",
     "What's the difference between BLOOM and DonsHack?",
     "What's the difference between BLOOM and DEPLOY?"
   ]
 })
-info.set("What is a hackathon?", {
-  response: <WhatIsAHackathon />,
-  animation: "People",
+info.set("Is this a hackathon?", {
+  response: <IsThisAHackathon />,
+  animation: "Thinking",
   unlocks: ["Can/should I attend?"]
 })
 info.set("Can/should I attend?", {
