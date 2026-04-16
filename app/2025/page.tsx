@@ -85,7 +85,7 @@ export default function Home() {
               <tr>
                 <td>
                   <Mention
-                    avatar="/avatars/edward.png"
+                    avatar="/avatars/edward.jpeg"
                     name="Edward Shturman"
                     link="https://edwardshturman.com"
                   />
