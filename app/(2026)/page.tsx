@@ -81,6 +81,21 @@ export default function Home() {
               <tr>
                 <td>
                   <Mention
+                    avatar="/avatars/jake.png"
+                    name="Jake Polintan"
+                    link="https://instagram.com/jakepolintanart"
+                  />
+                </td>
+                <td>
+                  <Label text="Class of 2025" />
+                </td>
+                <td>
+                  <Label text="Art & animation" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <Mention
                     avatar="/avatars/edward.jpeg"
                     name="Edward Shturman"
                     link="https://edwardshturman.com"
