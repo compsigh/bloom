@@ -287,25 +287,25 @@ export function HowAreProjectsJudged() {
       <p>
         <Cascade
           duration={0.2}
-          text="The panel of judges at BLOOM will be comprised of people from industry and USF alums."
+          text="The panel of judges at BLOOM will be comprised of creative technologists && makers of all stripes!"
         />
       </p>
       <p>
         <Cascade
           duration={0.4}
-          text="Rather than evaluating projects on a typical hackathon rubric — explicit problem-solving, technically complex projects, etc. — the judges are basically running a vibe check."
+          text="Rather than evaluating projects on a typical hackathon rubric, the judges are basically running a vibe check."
         />
       </p>
       <p>
         <strong>
           <Cascade
             duration={0.6}
-            text="Judges are not evaluating completeness."
+            text="Judges are not evaluating complexity || completeness."
           />
         </strong>
         <Cascade
           duration={0.6}
-          text=" In fact, mentioning what worked, what didn't, how your team would continue developing the project with more time, etc. is great!"
+          text=" In fact, mentioning what worked, what didn't, and how your team would continue developing the project with more time, is great!"
         />
       </p>
     </>
