@@ -4,7 +4,5 @@ export {
   WhatsInItForMe,
   WhatsOnTheAgenda,
   WhatCanIMake,
-  HowAreProjectsJudged,
-  WhatsTheDifferenceBetweenBLOOMAndDonsHack,
-  WhatsTheDifferenceBetweenBLOOMAndDEPLOY
+  HowAreProjectsJudged
 } from "./Info"

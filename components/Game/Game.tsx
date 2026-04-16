@@ -12,9 +12,7 @@ import {
   IsThisAHackathon,
   WhatIsBLOOM,
   WhatsInItForMe,
-  WhatsOnTheAgenda,
-  WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
-  WhatsTheDifferenceBetweenBLOOMAndDonsHack
+  WhatsOnTheAgenda
 } from "@/components/Info"
 
 import styles from "./Game.module.css"
@@ -26,8 +24,6 @@ type Question =
   | "What's on the agenda?"
   | "What can I make?"
   | "How are projects judged?"
-  | "What's the difference between BLOOM and DonsHack?"
-  | "What's the difference between BLOOM and DEPLOY?"
 
 type Response = {
   response: JSX.Element
@@ -39,12 +35,7 @@ const info = new Map<Question, Response>()
 info.set("What is BLOOM?", {
   response: <WhatIsBLOOM />,
   animation: "Hand",
-  unlocks: [
-    "Is this a hackathon?",
-    "What can I make?",
-    "What's the difference between BLOOM and DonsHack?",
-    "What's the difference between BLOOM and DEPLOY?"
-  ]
+  unlocks: ["Is this a hackathon?", "What can I make?"]
 })
 info.set("Is this a hackathon?", {
   response: <IsThisAHackathon />,
@@ -69,16 +60,6 @@ info.set("What can I make?", {
 info.set("How are projects judged?", {
   response: <HowAreProjectsJudged />,
   animation: "Checklist",
-  unlocks: []
-})
-info.set("What's the difference between BLOOM and DonsHack?", {
-  response: <WhatsTheDifferenceBetweenBLOOMAndDonsHack />,
-  animation: "Hand",
-  unlocks: []
-})
-info.set("What's the difference between BLOOM and DEPLOY?", {
-  response: <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />,
-  animation: "Hand",
   unlocks: []
 })
 

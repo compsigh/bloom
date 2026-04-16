@@ -11,9 +11,7 @@ import {
   IsThisAHackathon,
   WhatIsBLOOM,
   WhatsInItForMe,
-  WhatsOnTheAgenda,
-  WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
-  WhatsTheDifferenceBetweenBLOOMAndDonsHack
+  WhatsOnTheAgenda
 } from "@/components/Info"
 
 import styles from "./page.module.css"
@@ -127,18 +125,6 @@ export default function Home() {
           <details className={styles.faq}>
             <summary>How are projects judged?</summary>
             <HowAreProjectsJudged />
-          </details>
-          <details className={styles.faq}>
-            <summary>
-              What&apos;s the difference between BLOOM and DonsHack?
-            </summary>
-            <WhatsTheDifferenceBetweenBLOOMAndDonsHack />
-          </details>
-          <details className={styles.faq}>
-            <summary>
-              What&apos;s the difference between BLOOM and DEPLOY?
-            </summary>
-            <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />
           </details>
         </div>
         <Footer />
