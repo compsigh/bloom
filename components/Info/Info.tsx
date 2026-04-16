@@ -215,7 +215,7 @@ export function WhatsOnTheAgenda() {
               <Cascade duration={0.6} text="12:00pm" />
             </td>
             <td>
-              <Cascade duration={0.6} text="Lunch && Demo Day check-in" />
+              <Cascade duration={0.6} text="Check-in && lunch" />
             </td>
           </tr>
           <tr>
@@ -265,23 +265,13 @@ export function WhatCanIMake() {
       <p>
         <Cascade
           duration={0.2}
-          text="We'd love to see the thing you wanna make: software, research papers, open-source contributions, documentaries, music."
-        />
-      </p>
-      <p>
-        <Cascade duration={0.4} text="One twist, though: make something " />
-        <strong>
-          <Cascade duration={0.4} text="unrelated to generative AI" />
-        </strong>
-        <Cascade
-          duration={0.4}
-          text=". Make something human. (Feel free to use AI tools; it's just the project itself that can't be related.)"
+          text="We'd love to see the thing you wanna make: games, software, research papers, open-source contributions, documentaries, music. Make something human."
         />
       </p>
       <p>
         <Cascade
           duration={0.6}
-          text="Also, brainstorming is great, but please don't start making something until after Opening Keynote on Friday, February 28th!"
+          text="Also, brainstorming is great, but please don't start making something until after Opening Keynote on Friday, April 24th!"
         />
       </p>
     </>
