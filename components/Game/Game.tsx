@@ -35,7 +35,12 @@ const info = new Map<Question, Response>()
 info.set("What is BLOOM?", {
   response: <WhatIsBLOOM />,
   animation: "Hand",
-  unlocks: ["Is this a hackathon?", "What can I make?"]
+  unlocks: [
+    "Is this a hackathon?",
+    "What can I make?",
+    "What's on the agenda?",
+    "What's in it for me?"
+  ]
 })
 info.set("Is this a hackathon?", {
   response: <IsThisAHackathon />,
