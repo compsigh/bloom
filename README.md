@@ -20,6 +20,4 @@
 
 # BLOOM
 
-BLOOM: the Spring 2025 hackathon for the arts & sciences, hosted by @compsigh — the social computer science club at the University of San Francisco for meeting cool people & building cool things
-
-This repo is for the BLOOM web platform. See [`compsigh/compsigh`](https://github.com/compsigh/compsigh) for BLOOM-related documentation.
+BLOOM: a celebration of passion projects, hosted every Spring by @compsigh, the social computer science club at the University of San Francisco for meeting cool people && building cool things

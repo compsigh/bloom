@@ -20,6 +20,7 @@ export function Mention({ name, avatar, link }: MentionProps) {
             alt=""
             width={20}
             height={20}
+            className={name.includes("Edward") ? styles.theme : ""}
           />
           <span className={styles.name}>{name}</span>
         </span>

@@ -1,0 +1,35 @@
+div#alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 30px;
+  gap: 30px;
+  max-width: 700px;
+
+  font-family: var(--font-departure-mono);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2em;
+  color: var(--foreground);
+
+  background-color: var(--background);
+  border: 2px dashed var(--foreground);
+  box-shadow: 2px 2px 0px var(--foreground);
+}
+
+div#alert > span:nth-child(odd) {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

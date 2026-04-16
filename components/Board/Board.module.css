@@ -1,0 +1,26 @@
+div.board {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 24px;
+  width: 100%;
+  margin: 16px 0;
+  justify-items: center;
+}
+
+@media (max-width: 900px) {
+  div.board {
+    grid-template-columns: repeat(max(1, calc(var(--columns) - 1)), 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  div.board {
+    grid-template-columns: repeat(max(1, calc(var(--columns) - 2)), 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  div.board {
+    grid-template-columns: 1fr;
+  }
+}

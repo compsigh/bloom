@@ -3,27 +3,33 @@
 import { JSX, useState } from "react"
 import { useRouter } from "next/navigation"
 
-import { Animation, type AnimationType } from "@/components/Animation"
-import { Button } from "@/components/Button"
+import { Animation, type AnimationType } from "@/components/2025/Animation"
+import { Button } from "@/components/2025/Button"
 
 import {
+  CanShouldIAttend,
   HowAreProjectsJudged,
   WhatCanIMake,
-  IsThisAHackathon,
+  WhatIsAHackathon,
   WhatIsBLOOM,
   WhatsInItForMe,
-  WhatsOnTheAgenda
-} from "@/components/Info"
+  WhatsOnTheAgenda,
+  WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
+  WhatsTheDifferenceBetweenBLOOMAndDonsHack
+} from "@/components/2025/Info"
 
 import styles from "./Game.module.css"
 
 type Question =
   | "What is BLOOM?"
-  | "Is this a hackathon?"
+  | "What is a hackathon?"
+  | "Can/should I attend?"
   | "What's in it for me?"
   | "What's on the agenda?"
   | "What can I make?"
   | "How are projects judged?"
+  | "What's the difference between BLOOM and DonsHack?"
+  | "What's the difference between BLOOM and DEPLOY?"
 
 type Response = {
   response: JSX.Element
@@ -36,16 +42,27 @@ info.set("What is BLOOM?", {
   response: <WhatIsBLOOM />,
   animation: "Hand",
   unlocks: [
-    "Is this a hackathon?",
+    "What is a hackathon?",
+    "Can/should I attend?",
     "What can I make?",
+    "What's the difference between BLOOM and DonsHack?",
+    "What's the difference between BLOOM and DEPLOY?"
+  ]
+})
+info.set("What is a hackathon?", {
+  response: <WhatIsAHackathon />,
+  animation: "People",
+  unlocks: ["Can/should I attend?"]
+})
+info.set("Can/should I attend?", {
+  response: <CanShouldIAttend />,
+  animation: "Thinking",
+  unlocks: [
+    "What can I make?",
+    "How are projects judged?",
     "What's on the agenda?",
     "What's in it for me?"
   ]
-})
-info.set("Is this a hackathon?", {
-  response: <IsThisAHackathon />,
-  animation: "Thinking",
-  unlocks: ["What can I make?", "What's on the agenda?", "What's in it for me?"]
 })
 info.set("What's in it for me?", {
   response: <WhatsInItForMe />,
@@ -65,6 +82,16 @@ info.set("What can I make?", {
 info.set("How are projects judged?", {
   response: <HowAreProjectsJudged />,
   animation: "Checklist",
+  unlocks: []
+})
+info.set("What's the difference between BLOOM and DonsHack?", {
+  response: <WhatsTheDifferenceBetweenBLOOMAndDonsHack />,
+  animation: "Hand",
+  unlocks: []
+})
+info.set("What's the difference between BLOOM and DEPLOY?", {
+  response: <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />,
+  animation: "Hand",
   unlocks: []
 })
 

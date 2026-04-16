@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Cascade } from "@/components/Cascade"
+import { Cascade } from "@/components/2025/Cascade"
 
 export function WhatIsBLOOM() {
   return (

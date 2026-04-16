@@ -4,8 +4,6 @@ import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/react"
 import { VercelToolbar } from "@vercel/toolbar/next"
 
-import "./globals.css"
-
 const Mondwest = localFont({
   src: "../public/fonts/PPMondwest-Regular.otf",
   variable: "--font-mondwest"

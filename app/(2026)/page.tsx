@@ -1,21 +1,18 @@
-import { Game } from "@/components/2025/Game"
-import { Label } from "@/components/2025/Label"
-import { Header } from "@/components/2025/Header"
-import { Footer } from "@/components/2025/Footer"
-import { Button } from "@/components/2025/Button"
-import { Mention } from "@/components/2025/Mention"
+import { Game } from "@/components/Game"
+import { Label } from "@/components/Label"
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
+import { Button } from "@/components/Button"
+import { Mention } from "@/components/Mention"
 
 import {
-  CanShouldIAttend,
   HowAreProjectsJudged,
   WhatCanIMake,
-  WhatIsAHackathon,
+  IsThisAHackathon,
   WhatIsBLOOM,
   WhatsInItForMe,
-  WhatsOnTheAgenda,
-  WhatsTheDifferenceBetweenBLOOMAndDEPLOY,
-  WhatsTheDifferenceBetweenBLOOMAndDonsHack
-} from "@/components/2025/Info"
+  WhatsOnTheAgenda
+} from "@/components/Info"
 
 import styles from "./page.module.css"
 
@@ -26,8 +23,7 @@ export default function Home() {
         <Header />
 
         <div className={styles.socials}>
-          <Button destination="/2025/agenda">Agenda</Button>
-          <Button destination="/2025/help">Get Help</Button>
+          <Button destination="/agenda">Agenda</Button>
           <Button destination="https://instagram.com/compsigh.club">
             Instagram
           </Button>
@@ -40,6 +36,21 @@ export default function Home() {
               <tr>
                 <td>
                   <Mention
+                    avatar="/avatars/faadil.jpeg"
+                    name="Faadil Shaik"
+                    link="https://https://www.linkedin.com/in/faadil-shaik"
+                  />
+                </td>
+                <td>
+                  <Label text="Class of 2026" />
+                </td>
+                <td>
+                  <Label text="Host" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <Mention
                     avatar="/avatars/jet.png"
                     name="Jet Pham"
                     link="https://jetpham.com"
@@ -49,7 +60,7 @@ export default function Home() {
                   <Label text="Class of 2027" />
                 </td>
                 <td>
-                  <Label text="Posters" />
+                  <Label text="Trophies" />
                 </td>
               </tr>
               <tr>
@@ -111,12 +122,12 @@ export default function Home() {
             <WhatIsBLOOM />
           </details>
           <details className={styles.faq}>
-            <summary>What is a hackathon?</summary>
-            <WhatIsAHackathon />
+            <summary>Is this a hackathon?</summary>
+            <IsThisAHackathon />
           </details>
           <details className={styles.faq}>
-            <summary>Can/should I attend?</summary>
-            <CanShouldIAttend />
+            <summary>What can I make?</summary>
+            <WhatCanIMake />
           </details>
           <details className={styles.faq}>
             <summary>What&apos;s in it for me?</summary>
@@ -127,24 +138,8 @@ export default function Home() {
             <WhatsOnTheAgenda />
           </details>
           <details className={styles.faq}>
-            <summary>What can I make?</summary>
-            <WhatCanIMake />
-          </details>
-          <details className={styles.faq}>
             <summary>How are projects judged?</summary>
             <HowAreProjectsJudged />
-          </details>
-          <details className={styles.faq}>
-            <summary>
-              What&apos;s the difference between BLOOM and DonsHack?
-            </summary>
-            <WhatsTheDifferenceBetweenBLOOMAndDonsHack />
-          </details>
-          <details className={styles.faq}>
-            <summary>
-              What&apos;s the difference between BLOOM and DEPLOY?
-            </summary>
-            <WhatsTheDifferenceBetweenBLOOMAndDEPLOY />
           </details>
         </div>
         <Footer />

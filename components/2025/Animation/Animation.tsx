@@ -25,7 +25,6 @@ export function Animation({ animation }: { animation: AnimationType }) {
           src={`/animations/${animation}.gif`}
           fill
           alt={`An animated ${animation}`}
-          loading="eager"
           unoptimized
         />
       </div>

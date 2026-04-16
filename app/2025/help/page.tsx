@@ -1,8 +1,8 @@
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
-import { Button } from "@/components/Button"
-import { Cascade } from "@/components/Cascade"
-import { Workshop } from "@/components/Workshop"
+import { Header } from "@/components/2025/Header"
+import { Footer } from "@/components/2025/Footer"
+import { Button } from "@/components/2025/Button"
+import { Cascade } from "@/components/2025/Cascade"
+import { Workshop } from "@/components/2025/Workshop"
 
 import styles from "./Help.module.css"
 
