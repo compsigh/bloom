@@ -38,7 +38,7 @@ export default function Home() {
                   <Mention
                     avatar="/avatars/faadil.jpeg"
                     name="Faadil Shaik"
-                    link="https://https://www.linkedin.com/in/faadil-shaik"
+                    link="https://linkedin.com/in/faadil-shaik"
                   />
                 </td>
                 <td>
