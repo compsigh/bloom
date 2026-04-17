@@ -26,6 +26,9 @@ importers:
         specifier: 2.0.1
         version: 2.0.1(react@19.2.4)
     devDependencies:
+      "@thi.ng/imago":
+        specifier: 1.6.7
+        version: 1.6.7
       "@types/node":
         specifier: 25.5.0
         version: 25.5.0
@@ -343,6 +346,7 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-libvips-linux-arm@1.2.4":
     resolution:
@@ -351,6 +355,7 @@ packages:
       }
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-libvips-linux-ppc64@1.2.4":
     resolution:
@@ -359,6 +364,7 @@ packages:
       }
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-libvips-linux-riscv64@1.2.4":
     resolution:
@@ -367,6 +373,7 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-libvips-linux-s390x@1.2.4":
     resolution:
@@ -375,6 +382,7 @@ packages:
       }
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-libvips-linux-x64@1.2.4":
     resolution:
@@ -383,6 +391,7 @@ packages:
       }
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-libvips-linuxmusl-arm64@1.2.4":
     resolution:
@@ -391,6 +400,7 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   "@img/sharp-libvips-linuxmusl-x64@1.2.4":
     resolution:
@@ -399,6 +409,7 @@ packages:
       }
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   "@img/sharp-linux-arm64@0.34.5":
     resolution:
@@ -408,6 +419,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-linux-arm@0.34.5":
     resolution:
@@ -417,6 +429,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-linux-ppc64@0.34.5":
     resolution:
@@ -426,6 +439,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-linux-riscv64@0.34.5":
     resolution:
@@ -435,6 +449,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-linux-s390x@0.34.5":
     resolution:
@@ -444,6 +459,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-linux-x64@0.34.5":
     resolution:
@@ -453,6 +469,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   "@img/sharp-linuxmusl-arm64@0.34.5":
     resolution:
@@ -462,6 +479,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   "@img/sharp-linuxmusl-x64@0.34.5":
     resolution:
@@ -471,6 +489,7 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   "@img/sharp-wasm32@0.34.5":
     resolution:
@@ -582,6 +601,7 @@ packages:
     engines: { node: ">= 10" }
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   "@next/swc-linux-arm64-musl@16.2.0":
     resolution:
@@ -591,6 +611,7 @@ packages:
     engines: { node: ">= 10" }
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   "@next/swc-linux-x64-gnu@16.2.0":
     resolution:
@@ -600,6 +621,7 @@ packages:
     engines: { node: ">= 10" }
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   "@next/swc-linux-x64-musl@16.2.0":
     resolution:
@@ -609,6 +631,7 @@ packages:
     engines: { node: ">= 10" }
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   "@next/swc-win32-arm64-msvc@16.2.0":
     resolution:
@@ -667,6 +690,153 @@ packages:
       {
         integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==
       }
+
+  "@thi.ng/api@8.12.18":
+    resolution:
+      {
+        integrity: sha512-zIQMySGpCtqsdyWKFO17sIaw+5absvDBokNwEc0Adk8BfFg5jtBY1rWJHqZQPDO8BkaIi3xYBoG7CkmZMjj4Bg==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/base-n@2.7.63":
+    resolution:
+      {
+        integrity: sha512-qhBL7J7PEccdiMUo53powwzEh/dI/VkHPnAjpc+E9Psgb3ubHdxTDPOkKgQXMIVpZkc0DCSaCQkrPhGuBTEsOg==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/blurhash@1.0.40":
+    resolution:
+      {
+        integrity: sha512-7v84mrrHB2sGO0PRvg0NF7J3xPCF4q1bRGpR6UV8GZBwO4JcHRKWXsyVNOwHY/vd+sYv+dk4rqZ8yk3VFjyT8g==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/canvas@1.1.10":
+    resolution:
+      {
+        integrity: sha512-SuigFM4Tl+dsA7P7ojilAJvopT4kUIhSEyIG/effflA3A7G0KDzjgNGZI11zYSbvrZ5BqnNjnnie8uZ5dS1CDg==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/checks@3.8.8":
+    resolution:
+      {
+        integrity: sha512-M2KXml9m2bhqtDAJou0HJWip2xjvXO2i4DhlJ4ouFRoRPY5aCA+EcHFlxNl/DeVtns/Cv86xIUtBGzXksVHk2A==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/date@2.8.2":
+    resolution:
+      {
+        integrity: sha512-xfRtpyO1LXXpNOoJZwFu3lQgJ9yGecbTsoN8nwR7FsEaSrqGx2r4snJ9Fj1zIBGn+cQwhOECM8hfVeVYnzGskw==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/defmulti@3.0.95":
+    resolution:
+      {
+        integrity: sha512-PtxXwtW7Dsz13ri1WZ6xt+KYCzJFI0kPDiGt7JUz/tru/8EACUZB+B0JVq5sDVxBnNfzBKv6kJy1ixz3cEtIIg==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/errors@2.6.7":
+    resolution:
+      {
+        integrity: sha512-jFvECE7RPtB8P3BPL+XYOgGZqRheVtq32DAy3LJwbqgFP2v/lSyTwzvA47KsDKn1VDOGPGBhR5cM8eR7mnNbdQ==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/file-io@2.2.29":
+    resolution:
+      {
+        integrity: sha512-ieF2nSMD7pvQi47JuhRI8uTHT/9trboBemvcufQMHhiQoMLmKJC8JfZF39jTaaSR3fXgc45XH2uk+kiBr2eSiQ==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/hex@2.4.10":
+    resolution:
+      {
+        integrity: sha512-45AR0BhVibGrONzlSXF7q2+Z6P/akkD1TooMdtjVv77EuvqvpHk/Zz6+lff1JU6IfRmOhWZ+rYTQ3ZqTh9rLIQ==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/imago@1.6.7":
+    resolution:
+      {
+        integrity: sha512-HAiY0XU9tYbNK1ivKorl3tdtfQRkH825VsQgr81WOpZYRBlg+RsTjxLP/fKywsEfxbFKagNZfUxO2DGAB781Fg==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/logger@3.3.1":
+    resolution:
+      {
+        integrity: sha512-ItkbAvgzDeBZapKbSSrt7UUMwVD9vRz7eGILn3g0c4ygX+Om9hohy5P2L6T/hdzvA4+e5ACU77pYjHVQM4zTsA==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/math@5.15.7":
+    resolution:
+      {
+        integrity: sha512-8FCnnSBxBAwsqDepFoY5pm+pEzcAlqH6JxBhrdwfgOFYmP9YxOQrOTn82jDQb85bQqpg3XSTRdMwQSEO4802Zw==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/memoize@4.0.42":
+    resolution:
+      {
+        integrity: sha512-mcPlodz5KTq5sjOGtoXxtO1fTH0WNI6kQCy46DC8rcvW3LQ/IT5JOV9M1iFeSLt0R4Hv7BsiZvLiMm5LDesELQ==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/object-utils@1.3.10":
+    resolution:
+      {
+        integrity: sha512-lNhJHjhHcoQYUIAyq5d1Rkw3UxYSobrB/ReT8jOuPEVoMypG7zuxYtLquKRB5qj7RBB2ntX4Om1a8Soz4YhmUA==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/pixel-dither@1.1.195":
+    resolution:
+      {
+        integrity: sha512-jLuJMdD+hu/fpGlbjGCPgiOkGDtmiJ8WlgDqU2tnVw3/vy1XqKpz3d7up0BYC+ofqCN4ORyF6EpM2Dy5OnwyvQ==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/pixel@7.5.27":
+    resolution:
+      {
+        integrity: sha512-oWPSSubNCMoLU+dd+bonlxdtSwVQy60PNN8w3ztaN/LBa8r2RX9OqpDcmD27t+keBMa14MxuZu5x3W3o1H3wAQ==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/porter-duff@2.1.130":
+    resolution:
+      {
+        integrity: sha512-BJr2mVHTqVcwDP4nGttG4CBsH1EGDrZ+Aqi3soxmEe2KxXXjeAckKzt9f9jBPUCA08ydOpmvGm8pfnye9/fkpA==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/prefixes@2.3.68":
+    resolution:
+      {
+        integrity: sha512-K+7Xc/tf6H8KBE8ZrylgeCr8NDrqgZUJHBVm3NPIVpfSSIjbYpJVFV4H7i6Z2nPoE2E4+kd1D/movidj1N47jA==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/random@4.1.43":
+    resolution:
+      {
+        integrity: sha512-K5d6m7w+JnmGMAijd5ww1LJHEwfh21/DgQeV3PfyM/vS0ukYcgMsNlTUgmJl5qBrn6tTOyELC22q6pbmYh9xdQ==
+      }
+    engines: { node: ">=18" }
+
+  "@thi.ng/strings@3.12.0":
+    resolution:
+      {
+        integrity: sha512-/cI2ZlXC0KTwiy3+WlcR/erFAuoreUwx0gyXROslQtqYqnl3luzFboJ+qVQl5KJ74fU093GM8izDhnzu/K4sng==
+      }
+    engines: { node: ">=18" }
 
   "@tinyhttp/accepts@1.3.0":
     resolution:
@@ -3797,8 +3967,7 @@ snapshots:
 
   "@humanwhocodes/retry@0.4.3": {}
 
-  "@img/colour@1.1.0":
-    optional: true
+  "@img/colour@1.1.0": {}
 
   "@img/sharp-darwin-arm64@0.34.5":
     optionalDependencies:
@@ -3964,6 +4133,110 @@ snapshots:
   "@swc/helpers@0.5.15":
     dependencies:
       tslib: 2.8.1
+
+  "@thi.ng/api@8.12.18": {}
+
+  "@thi.ng/base-n@2.7.63": {}
+
+  "@thi.ng/blurhash@1.0.40":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/base-n": 2.7.63
+      "@thi.ng/canvas": 1.1.10
+      "@thi.ng/errors": 2.6.7
+      "@thi.ng/math": 5.15.7
+
+  "@thi.ng/canvas@1.1.10": {}
+
+  "@thi.ng/checks@3.8.8": {}
+
+  "@thi.ng/date@2.8.2":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/checks": 3.8.8
+      "@thi.ng/strings": 3.12.0
+
+  "@thi.ng/defmulti@3.0.95":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/errors": 2.6.7
+      "@thi.ng/logger": 3.3.1
+
+  "@thi.ng/errors@2.6.7": {}
+
+  "@thi.ng/file-io@2.2.29":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/checks": 3.8.8
+      "@thi.ng/hex": 2.4.10
+      "@thi.ng/logger": 3.3.1
+      "@thi.ng/random": 4.1.43
+
+  "@thi.ng/hex@2.4.10": {}
+
+  "@thi.ng/imago@1.6.7":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/blurhash": 1.0.40
+      "@thi.ng/checks": 3.8.8
+      "@thi.ng/date": 2.8.2
+      "@thi.ng/defmulti": 3.0.95
+      "@thi.ng/errors": 2.6.7
+      "@thi.ng/file-io": 2.2.29
+      "@thi.ng/logger": 3.3.1
+      "@thi.ng/object-utils": 1.3.10
+      "@thi.ng/pixel": 7.5.27
+      "@thi.ng/pixel-dither": 1.1.195
+      "@thi.ng/prefixes": 2.3.68
+      sharp: 0.34.5
+
+  "@thi.ng/logger@3.3.1": {}
+
+  "@thi.ng/math@5.15.7":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+
+  "@thi.ng/memoize@4.0.42":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+
+  "@thi.ng/object-utils@1.3.10":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/checks": 3.8.8
+
+  "@thi.ng/pixel-dither@1.1.195":
+    dependencies:
+      "@thi.ng/checks": 3.8.8
+      "@thi.ng/math": 5.15.7
+      "@thi.ng/pixel": 7.5.27
+
+  "@thi.ng/pixel@7.5.27":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/canvas": 1.1.10
+      "@thi.ng/checks": 3.8.8
+      "@thi.ng/errors": 2.6.7
+      "@thi.ng/math": 5.15.7
+      "@thi.ng/porter-duff": 2.1.130
+
+  "@thi.ng/porter-duff@2.1.130":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+
+  "@thi.ng/prefixes@2.3.68": {}
+
+  "@thi.ng/random@4.1.43":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/errors": 2.6.7
+
+  "@thi.ng/strings@3.12.0":
+    dependencies:
+      "@thi.ng/api": 8.12.18
+      "@thi.ng/errors": 2.6.7
+      "@thi.ng/hex": 2.4.10
+      "@thi.ng/memoize": 4.0.42
 
   "@tinyhttp/accepts@1.3.0":
     dependencies:
@@ -4494,8 +4767,7 @@ snapshots:
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
 
-  detect-libc@2.1.2:
-    optional: true
+  detect-libc@2.1.2: {}
 
   doctrine@2.1.0:
     dependencies:
@@ -5700,7 +5972,6 @@ snapshots:
       "@img/sharp-win32-arm64": 0.34.5
       "@img/sharp-win32-ia32": 0.34.5
       "@img/sharp-win32-x64": 0.34.5
-    optional: true
 
   shebang-command@2.0.0:
     dependencies:
