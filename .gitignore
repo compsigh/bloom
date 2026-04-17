@@ -12,6 +12,7 @@ out/
 
 # Misc
 .DS_Store
+.reference-deploy/
 
 # debug
 npm-debug.log*
@@ -19,6 +20,7 @@ npm-debug.log*
 
 # Env files
 .env*
+!.env.example
 
 # Vercel
 .vercel
