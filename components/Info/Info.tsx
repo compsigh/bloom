@@ -145,6 +145,14 @@ export function WhatsOnTheAgenda() {
           </tr>
           <tr>
             <td style={{ width: 120 }}>
+              <Cascade duration={0.4} text="05:00pm" />
+            </td>
+            <td>
+              <Cascade duration={0.4} text="Pendant necklace making" />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
               <Cascade duration={0.4} text="05:40pm" />
             </td>
             <td>
@@ -216,6 +224,14 @@ export function WhatsOnTheAgenda() {
             </td>
             <td>
               <Cascade duration={0.6} text="Check-in && lunch" />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade duration={0.6} text="12:00pm" />
+            </td>
+            <td>
+              <Cascade duration={0.6} text="Pendant necklace making" />
             </td>
           </tr>
           <tr>
