@@ -1,9 +1,28 @@
 header#header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-end;
+  text-align: right;
   gap: 32px;
+  padding: 40px;
+  background-color: color-mix(in srgb, var(--background) 50%, transparent);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      var(--foreground-10) 0px,
+      var(--foreground-10) 1px,
+      transparent 1px,
+      transparent 24px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--foreground-10) 0px,
+      var(--foreground-10) 1px,
+      transparent 1px,
+      transparent 24px
+    );
+  border: 2px dashed var(--foreground);
+  box-shadow: 2px 2px 0px var(--foreground);
 }
 
 div#wordmark {
@@ -30,11 +49,10 @@ p.subtitle {
   margin: 0;
 }
 
-@media (max-width: 600px) {
-  div#wordmark {
-    flex-direction: column;
+@media (max-width: 1000px) {
+  header#header {
     align-items: center;
-    margin-top: 80px;
+    text-align: center;
   }
 
   h1#title {
@@ -42,7 +60,22 @@ p.subtitle {
   }
 
   p.subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  div#wordmark {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1#title {
+    font-size: 4rem;
+  }
+
+  p.subtitle {
+    font-size: 1rem;
   }
 }
 

@@ -1,0 +1,23 @@
+div.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+}
+
+div.board {
+  flex: 1;
+  min-width: 0;
+}
+
+div#game-container {
+  width: fit-content;
+}
+
+@media (max-width: 1000px) {
+  div#game-container {
+    display: none;
+  }
+}
