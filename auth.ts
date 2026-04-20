@@ -1,25 +1,22 @@
 import NextAuth from "next-auth"
 import Google from "next-auth/providers/google"
-import type { NextAuthConfig } from "next-auth"
+import type { NextAuthConfig, Session } from "next-auth"
 
-import { isUsfEmail } from "@/functions/user-management"
-
-/**
- * JWT sessions only — no database adapter (no persisted user records).
- */
-function emailFromGoogleProfile(profile: unknown): string | undefined {
-  if (!profile || typeof profile !== "object") return undefined
-  const p = profile as Record<string, unknown>
-  const email = p.email
-  return typeof email === "string" && email.length > 0 ? email : undefined
+if (!process.env.GOOGLE_CLIENT_ID) {
+  throw new Error("Missing env var GOOGLE_CLIENT_ID")
+}
+if (!process.env.GOOGLE_CLIENT_SECRET) {
+  throw new Error("Missing env var GOOGLE_CLIENT_SECRET")
+}
+if (!process.env.NEXTAUTH_SECRET) {
+  throw new Error("Missing env var NEXTAUTH_SECRET")
 }
 
-const authConfig = {
-  trustHost: true,
+const authConfig: NextAuthConfig = {
   providers: [
     Google({
-      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       profile(profile) {
         return {
           id: profile.sub,
@@ -31,38 +28,46 @@ const authConfig = {
     })
   ],
   callbacks: {
-    jwt({ token, user, profile }) {
-      if (user) {
-        token.email = user.email ?? undefined
-        token.name = user.name ?? undefined
-        token.picture = user.image ?? undefined
-      }
-      if (!token.email) {
-        const fromProfile = emailFromGoogleProfile(profile)
-        if (fromProfile) token.email = fromProfile
+    async jwt({ token, profile }) {
+      if (profile) {
+        token.id = profile.sub
+        token.picture = profile.picture
       }
       return token
     },
-    session({ session, token }) {
-      if (session.user) {
-        if (token.email) session.user.email = token.email as string
-        if (token.name) session.user.name = token.name as string
-        if (token.picture) session.user.image = token.picture as string
-      }
+    async session({ session, token }) {
+      session.user.id = token.id as string
+      session.user.image = token.picture
       return session
-    },
-    signIn({ user, profile }) {
-      const email = user?.email ?? emailFromGoogleProfile(profile)
-      return typeof email === "string" && isUsfEmail(email)
-    },
-    authorized({ auth, request }) {
-      const path = request.nextUrl.pathname
-      const isJudgeRoute = path === "/judge" || path.startsWith("/judge/")
-      if (!isJudgeRoute) return true
-      return !!auth?.user?.email && isUsfEmail(auth.user.email)
     }
-  },
-  session: { strategy: "jwt" }
-} satisfies NextAuthConfig
+  }
+}
 
-export const { handlers, auth, signIn, signOut } = NextAuth(authConfig)
+export const {
+  handlers: { GET, POST },
+  auth
+} = NextAuth(authConfig)
+
+export type User = {
+  name: string
+  email: string
+}
+
+/**
+ * Checks if the current session's user is an authenticated USF account.
+ * Returns a guaranteed `User` object if so, `false` otherwise.
+ *
+ * @export
+ * @param {Session} session The current NextAuth session.
+ */
+export function checkAuth(session: Session | null): User | false {
+  if (!session) return false
+  const { user } = session
+  if (!user) return false
+  if (!user.email || !user.name) return false
+  if (!user.email.endsWith("usfca.edu")) return false
+  return {
+    name: user.name,
+    email: user.email
+  }
+}
