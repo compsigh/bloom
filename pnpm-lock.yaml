@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      "@notionhq/client":
+        specifier: 5.19.0
+        version: 5.19.0
       "@vercel/analytics":
         specifier: 2.0.1
         version: 2.0.1(next@16.2.0(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
@@ -695,6 +698,13 @@ packages:
         integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
       }
     engines: { node: ">=12.4.0" }
+
+  "@notionhq/client@5.19.0":
+    resolution:
+      {
+        integrity: sha512-9R93Yt6/OB3MP5h29WhnvIBWYVq4mzxOYn9oh0Ut642NWxOTTouv7vkwKnMj5LGAYTlot0fhmL8OK5Su5zEzCw==
+      }
+    engines: { node: ">=18" }
 
   "@panva/hkdf@1.2.1":
     resolution:
@@ -4057,6 +4067,8 @@ snapshots:
       fastq: 1.19.0
 
   "@nolyfill/is-core-module@1.0.39": {}
+
+  "@notionhq/client@5.19.0": {}
 
   "@panva/hkdf@1.2.1": {}
 

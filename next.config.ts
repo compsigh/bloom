@@ -4,9 +4,7 @@ import { withVercelToolbar as Toolbar } from "@vercel/toolbar/plugins/next"
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "*.googleusercontent.com" }
-    ]
+    remotePatterns: [{ protocol: "https", hostname: "*.googleusercontent.com" }]
   }
 }
 

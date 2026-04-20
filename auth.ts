@@ -1,6 +1,16 @@
 import NextAuth from "next-auth"
 import Google from "next-auth/providers/google"
+import { syncRegistrant } from "@/functions/notion"
 import type { NextAuthConfig, Session } from "next-auth"
+
+type GoogleProfile = {
+  sub: string
+  name?: string
+  given_name?: string
+  family_name?: string
+  email?: string
+  picture?: string
+}
 
 if (!process.env.GOOGLE_CLIENT_ID) {
   throw new Error("Missing env var GOOGLE_CLIENT_ID")
@@ -31,6 +41,24 @@ const authConfig: NextAuthConfig = {
     })
   ],
   callbacks: {
+    async signIn({ profile }) {
+      if (profile) {
+        const p = profile as GoogleProfile
+        if (p.sub && p.email && p.given_name && p.family_name) {
+          try {
+            await syncRegistrant({
+              googleId: p.sub,
+              firstName: p.given_name,
+              lastName: p.family_name,
+              email: p.email
+            })
+          } catch (err) {
+            console.error("[notion] registrant sync failed:", err)
+          }
+        }
+      }
+      return true
+    },
     async jwt({ token, profile }) {
       if (profile) {
         token.id = profile.sub

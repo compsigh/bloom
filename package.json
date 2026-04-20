@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "@notionhq/client": "5.19.0",
     "@vercel/analytics": "2.0.1",
     "@vercel/toolbar": "0.2.2",
     "next": "16.2.0",
