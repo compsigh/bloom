@@ -4,7 +4,6 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { Mention } from "@/components/Mention"
 import { LinkButton } from "@/components/LinkButton"
-import { AuthButton } from "@/components/AuthButton"
 
 import {
   HowAreProjectsJudged,
@@ -24,7 +23,6 @@ export default function Home() {
         <Header />
 
         <div className={styles.socials}>
-          <AuthButton />
           <LinkButton href="/agenda">Agenda</LinkButton>
           <LinkButton href="https://instagram.com/compsigh.club">
             Instagram
