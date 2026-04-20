@@ -1,25 +1,15 @@
 "use client"
 
-import { useRouter } from "next/navigation"
-import type { MouseEventHandler } from "react"
-
 import styles from "./Button.module.css"
 
-export function Button({
-  children,
-  destination,
-  onClick
-}: {
-  children: React.ReactNode
-  destination?: string
-  onClick?: () => void | MouseEventHandler<HTMLButtonElement>
-}) {
-  let clickHandler = onClick
-  if (destination) clickHandler = () => router.push(destination)
+type ButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>
 
-  const router = useRouter()
+export function Button({ children, ...props }: ButtonProps) {
   return (
-    <button onClick={clickHandler} className={styles.button}>
+    <button className={styles.button} {...props}>
       {children}
     </button>
   )

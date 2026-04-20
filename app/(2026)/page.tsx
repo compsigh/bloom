@@ -2,8 +2,8 @@ import { Game } from "@/components/Game"
 import { Label } from "@/components/Label"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { Button } from "@/components/Button"
 import { Mention } from "@/components/Mention"
+import { LinkButton } from "@/components/LinkButton"
 
 import {
   HowAreProjectsJudged,
@@ -23,11 +23,11 @@ export default function Home() {
         <Header />
 
         <div className={styles.socials}>
-          <Button destination="/agenda">Agenda</Button>
-          <Button destination="https://instagram.com/compsigh.club">
+          <LinkButton href="/agenda">Agenda</LinkButton>
+          <LinkButton href="https://instagram.com/compsigh.club">
             Instagram
-          </Button>
-          <Button destination="https://discord.gg/compsigh">Discord</Button>
+          </LinkButton>
+          <LinkButton href="https://discord.gg/compsigh">Discord</LinkButton>
         </div>
 
         <div className={styles.attributions}>

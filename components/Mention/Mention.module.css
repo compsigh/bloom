@@ -8,15 +8,3 @@ span.container {
 span.container:hover {
   background-color: var(--foreground);
 }
-
-span.container img#avatar {
-  vertical-align: text-bottom;
-  pointer-events: none;
-  user-select: none;
-}
-
-@media (prefers-color-scheme: light) {
-  img.theme {
-    filter: invert();
-  }
-}
