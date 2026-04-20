@@ -75,7 +75,7 @@ export default function Home() {
                   <Label text="Class of 2024" />
                 </td>
                 <td>
-                  <Label text="Art & animation" />
+                  <Label text="Art && animation" />
                 </td>
               </tr>
               <tr>
@@ -90,7 +90,7 @@ export default function Home() {
                   <Label text="Class of 2025" />
                 </td>
                 <td>
-                  <Label text="Art & animation" />
+                  <Label text="Art && animation" />
                 </td>
               </tr>
               <tr>
