@@ -36,7 +36,7 @@
     "@vercel/analytics": "2.0.1",
     "@vercel/toolbar": "0.2.2",
     "next": "16.2.0",
-    "next-auth": "5.0.0-beta.25",
+    "next-auth": "5.0.0-beta.31",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-random-reveal": "2.0.1"

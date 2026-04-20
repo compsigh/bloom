@@ -13,6 +13,9 @@ if (!process.env.NEXTAUTH_SECRET) {
 }
 
 const authConfig: NextAuthConfig = {
+  pages: {
+    error: "/"
+  },
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
