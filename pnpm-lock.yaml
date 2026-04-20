@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      "@notionhq/client":
+        specifier: 5.19.0
+        version: 5.19.0
       "@vercel/analytics":
         specifier: 2.0.1
         version: 2.0.1(next@16.2.0(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
@@ -16,6 +19,9 @@ importers:
       next:
         specifier: 16.2.0
         version: 16.2.0(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      next-auth:
+        specifier: 5.0.0-beta.31
+        version: 5.0.0-beta.31(next@16.2.0(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       react:
         specifier: 19.2.4
         version: 19.2.4
@@ -61,6 +67,23 @@ importers:
         version: 5.9.3
 
 packages:
+  "@auth/core@0.41.2":
+    resolution:
+      {
+        integrity: sha512-Hx5MNBxN2fJTbJKGUKAA0wca43D0Akl3TvufY54Gn8lop7F+34vU1zA1pn0vQfIoVuLIrpfc2nkyjwIaPJMW7w==
+      }
+    peerDependencies:
+      "@simplewebauthn/browser": ^9.0.1
+      "@simplewebauthn/server": ^9.0.2
+      nodemailer: ^7.0.7
+    peerDependenciesMeta:
+      "@simplewebauthn/browser":
+        optional: true
+      "@simplewebauthn/server":
+        optional: true
+      nodemailer:
+        optional: true
+
   "@babel/code-frame@7.29.0":
     resolution:
       {
@@ -678,6 +701,19 @@ packages:
         integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
       }
     engines: { node: ">=12.4.0" }
+
+  "@notionhq/client@5.19.0":
+    resolution:
+      {
+        integrity: sha512-9R93Yt6/OB3MP5h29WhnvIBWYVq4mzxOYn9oh0Ut642NWxOTTouv7vkwKnMj5LGAYTlot0fhmL8OK5Su5zEzCw==
+      }
+    engines: { node: ">=18" }
+
+  "@panva/hkdf@1.2.1":
+    resolution:
+      {
+        integrity: sha512-6oclG6Y3PiDFcoyk8srjLfVKyMfVCKJ27JwNPViuXziFpmdz+MZnZN/aKY0JGXgYuO/VghU0jcOAZgWXZ1Dmrw==
+      }
 
   "@rtsao/scc@1.1.0":
     resolution:
@@ -2630,6 +2666,12 @@ packages:
       }
     engines: { node: ">= 0.4" }
 
+  jose@6.2.2:
+    resolution:
+      {
+        integrity: sha512-d7kPDd34KO/YnzaDOlikGpOurfF0ByC2sEV4cANCtdqLlTfBlw2p14O/5d/zv40gJPbIQxfES3nSx1/oYNyuZQ==
+      }
+
   js-tokens@4.0.0:
     resolution:
       {
@@ -2891,6 +2933,25 @@ packages:
       }
     engines: { node: ">= 0.6" }
 
+  next-auth@5.0.0-beta.31:
+    resolution:
+      {
+        integrity: sha512-1OBgCKPzo+S7UWWMp3xgvGvIJ0OpV7B3vR4ZDRqD9a4Ch+OT6dakLXG9ivhtmIWVa71nTSXattOHyCg8sNi8/Q==
+      }
+    peerDependencies:
+      "@simplewebauthn/browser": ^9.0.1
+      "@simplewebauthn/server": ^9.0.2
+      next: ^14.0.0-0 || ^15.0.0 || ^16.0.0
+      nodemailer: ^7.0.7
+      react: ^18.2.0 || ^19.0.0
+    peerDependenciesMeta:
+      "@simplewebauthn/browser":
+        optional: true
+      "@simplewebauthn/server":
+        optional: true
+      nodemailer:
+        optional: true
+
   next@16.2.0:
     resolution:
       {
@@ -2934,6 +2995,12 @@ packages:
         integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==
       }
     engines: { node: ">=8" }
+
+  oauth4webapi@3.8.5:
+    resolution:
+      {
+        integrity: sha512-A8jmyUckVhRJj5lspguklcl90Ydqk61H3dcU0oLhH3Yv13KpAliKTt5hknpGGPZSSfOwGyraNEFmofDYH+1kSg==
+      }
 
   object-assign@4.1.1:
     resolution:
@@ -3106,6 +3173,20 @@ packages:
         integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==
       }
     engines: { node: ^10 || ^12 || >=14 }
+
+  preact-render-to-string@6.5.11:
+    resolution:
+      {
+        integrity: sha512-ubnauqoGczeGISiOh6RjX0/cdaF8v/oDXIjO85XALCQjwQP+SB4RDXXtvZ6yTYSjG+PC1QRP2AhPgCEsM2EvUw==
+      }
+    peerDependencies:
+      preact: ">=10"
+
+  preact@10.24.3:
+    resolution:
+      {
+        integrity: sha512-Z2dPnBnMUfyQfSQ+GBdsGa16hz35YmLmtTLhM169uW944hYL6xzTYkJjC07j+Wosz733pMWx0fgON3JNw1jJQA==
+      }
 
   prelude-ls@1.2.1:
     resolution:
@@ -3798,6 +3879,14 @@ packages:
       }
 
 snapshots:
+  "@auth/core@0.41.2":
+    dependencies:
+      "@panva/hkdf": 1.2.1
+      jose: 6.2.2
+      oauth4webapi: 3.8.5
+      preact: 10.24.3
+      preact-render-to-string: 6.5.11(preact@10.24.3)
+
   "@babel/code-frame@7.29.0":
     dependencies:
       "@babel/helper-validator-identifier": 7.28.5
@@ -4127,6 +4216,10 @@ snapshots:
       fastq: 1.19.0
 
   "@nolyfill/is-core-module@1.0.39": {}
+
+  "@notionhq/client@5.19.0": {}
+
+  "@panva/hkdf@1.2.1": {}
 
   "@rtsao/scc@1.1.0": {}
 
@@ -4973,7 +5066,7 @@ snapshots:
       eslint: 9.33.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint@9.33.0))(eslint@9.33.0)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.7.0)(eslint@9.33.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint@9.33.0))(eslint@9.33.0))(eslint@9.33.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.33.0)
       eslint-plugin-react: 7.37.4(eslint@9.33.0)
       eslint-plugin-react-hooks: 7.0.1(eslint@9.33.0)
@@ -5011,7 +5104,7 @@ snapshots:
       is-glob: 4.0.3
       stable-hash: 0.0.4
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.7.0)(eslint@9.33.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint@9.33.0))(eslint@9.33.0))(eslint@9.33.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5026,7 +5119,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.7.0)(eslint@9.33.0):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.1(eslint@9.33.0)(typescript@5.9.3))(eslint@9.33.0))(eslint@9.33.0))(eslint@9.33.0):
     dependencies:
       "@rtsao/scc": 1.1.0
       array-includes: 3.1.9
@@ -5539,6 +5632,8 @@ snapshots:
       has-symbols: 1.1.0
       set-function-name: 2.0.2
 
+  jose@6.2.2: {}
+
   js-tokens@4.0.0: {}
 
   js-yaml@4.1.1:
@@ -5672,6 +5767,12 @@ snapshots:
 
   negotiator@0.6.4: {}
 
+  next-auth@5.0.0-beta.31(next@16.2.0(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4):
+    dependencies:
+      "@auth/core": 0.41.2
+      next: 16.2.0(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+
   next@16.2.0(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       "@next/env": 16.2.0
@@ -5703,6 +5804,8 @@ snapshots:
   npm-run-path@4.0.1:
     dependencies:
       path-key: 3.1.1
+
+  oauth4webapi@3.8.5: {}
 
   object-assign@4.1.1: {}
 
@@ -5803,6 +5906,12 @@ snapshots:
       nanoid: 3.3.8
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  preact-render-to-string@6.5.11(preact@10.24.3):
+    dependencies:
+      preact: 10.24.3
+
+  preact@10.24.3: {}
 
   prelude-ls@1.2.1: {}
 

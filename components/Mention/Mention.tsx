@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { Avatar } from "@/components/Avatar"
 
 import styles from "./Mention.module.css"
 
@@ -11,19 +11,11 @@ type MentionProps = {
 
 export function Mention({ name, avatar, link }: MentionProps) {
   return (
-    <>
-      <Link href={link}>
-        <span className={styles.container}>
-          <Image
-            id={styles.avatar}
-            src={avatar}
-            alt=""
-            width={20}
-            height={20}
-          />
-          <span className={styles.name}>{name}</span>
-        </span>
-      </Link>
-    </>
+    <Link href={link}>
+      <span className={styles.container}>
+        <Avatar src={avatar} />
+        <span className={styles.name}>{name}</span>
+      </span>
+    </Link>
   )
 }

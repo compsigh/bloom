@@ -1,0 +1,32 @@
+a.linkButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 30px;
+
+  font-family: var(--font-departure-mono);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.2em;
+  color: var(--foreground);
+  text-decoration: none;
+
+  background-color: var(--background);
+  border: 2px dashed var(--foreground);
+  box-shadow: 2px 2px 0px var(--foreground);
+}
+
+a.linkButton:hover {
+  background-color: var(--foreground-10);
+  color: var(--foreground);
+}
+
+a.linkButton:active {
+  border: 2px dashed var(--background);
+  background-color: var(--foreground);
+  color: var(--background);
+  box-shadow: 0px 0px 0px 2px var(--foreground);
+}

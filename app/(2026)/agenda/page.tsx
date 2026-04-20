@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { Button } from "@/components/Button"
 import { Cascade } from "@/components/Cascade"
+import { LinkButton } from "@/components/LinkButton"
 
 import { WhatsOnTheAgenda } from "@/components/Info"
 
@@ -12,7 +12,7 @@ export default function Agenda() {
     <main tabIndex={-1}>
       <div className={styles.container}>
         <Header />
-        <Button destination="/">&lt; Back</Button>
+        <LinkButton href="/">&lt; Back</LinkButton>
         <div className={styles.agenda}>
           <h2 className={styles.title}>
             <Cascade text="Agenda" duration={0.2} />
