@@ -35,7 +35,7 @@ div.picture {
 
 div.image {
   position: relative;
-  width: 304px;
+  width: 200px;
   aspect-ratio: 608 / 400;
   line-height: 0;
 }

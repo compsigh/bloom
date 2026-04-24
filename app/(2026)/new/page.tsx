@@ -8,7 +8,7 @@ import { Board } from "@/components/Board"
 import styles from "./page.module.css"
 
 const pics = [
-  { slug: "crts-prep", caption: "crts gets ready for their demo" },
+  { slug: "crts-prep", caption: "crts prepping their demo" },
   { slug: "crts-win", caption: "crts wins first place" },
   { slug: "demo-day", caption: "Friends on demo day" },
   { slug: "leetrizz", caption: "Faadil demos LeetRizz" },
