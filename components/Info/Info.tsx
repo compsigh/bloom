@@ -23,7 +23,7 @@ export function WhatIsBLOOM() {
       <p>
         <Cascade
           duration={0.5}
-          text="Grab a few friends and make the thing you've always wanted to. All kinds of projects from all walks of scientific & creative life are welcome."
+          text="Grab a few friends and make the thing you've always wanted to. All kinds of projects from all walks of scientific && creative life are welcome."
         />
       </p>
       <p>

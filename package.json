@@ -24,7 +24,8 @@
     "format:write": "prettier . --write --ignore-unknown",
     "prebuild": "pnpm run lint && pnpm run format:check",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "pixelate": "node scripts/pixelate-pics.mts"
   },
   "lint-staged": {
     "**/*": [
@@ -43,6 +44,7 @@
     "react-random-reveal": "2.0.1"
   },
   "devDependencies": {
+    "@thi.ng/imago": "1.6.7",
     "@types/node": "25.5.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",

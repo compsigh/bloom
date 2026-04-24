@@ -1,0 +1,80 @@
+div.landscape {
+  position: relative;
+  width: 100%;
+  max-height: 66vh;
+  overflow: hidden;
+}
+
+img.background {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  object-fit: cover;
+  object-position: top;
+}
+
+img.night {
+  display: none;
+}
+
+div.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  div.landscape {
+    max-height: none;
+  }
+
+  img.background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  div.content {
+    position: relative;
+    width: 100%;
+    inset: auto;
+  }
+}
+
+div.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 20%,
+    color-mix(in srgb, var(--background) 10%, transparent) 40%,
+    color-mix(in srgb, var(--background) 35%, transparent) 60%,
+    color-mix(in srgb, var(--background) 70%, transparent) 80%,
+    var(--background) 100%
+  );
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  img.background {
+    display: none;
+  }
+
+  img.night {
+    display: block;
+  }
+}

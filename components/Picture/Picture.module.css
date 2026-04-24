@@ -1,0 +1,84 @@
+div.picture {
+  --reveal-duration: 200ms;
+  --block-fade: 0s;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 32px 20px 32px;
+  background-color: var(--background);
+  border: 2px dashed var(--foreground);
+  box-shadow: 2px 2px 0px var(--foreground);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+div.picture:hover:not(.revealed) {
+  background-color: var(--foreground-10);
+}
+
+div.picture {
+  transform: translate(var(--offset-x), 0) rotate(var(--rotation));
+  animation: float var(--float-duration) ease-in-out infinite;
+  animation-delay: var(--float-delay);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(var(--offset-x), 0) rotate(var(--rotation));
+  }
+  50% {
+    transform: translate(calc(var(--offset-x) + var(--dx)), var(--dy))
+      rotate(var(--rotation));
+  }
+}
+
+div.image {
+  position: relative;
+  width: 200px;
+  aspect-ratio: 608 / 400;
+  line-height: 0;
+}
+
+div.image > :global(img) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.4) brightness(0.95);
+}
+
+div.hover {
+  position: absolute;
+  inset: 0;
+}
+
+div.block {
+  position: absolute;
+  left: calc(var(--col) / var(--cols) * 100%);
+  top: calc(var(--row) / var(--rows) * 100%);
+  width: calc(100% / var(--cols));
+  height: calc(100% / var(--rows));
+  background-image: var(--hover-src);
+  background-size: calc(var(--cols) * 100%) calc(var(--rows) * 100%);
+  background-position: calc(var(--col) / (var(--cols) - 1) * 100%)
+    calc(var(--row) / (var(--rows) - 1) * 100%);
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity var(--block-fade);
+  transition-delay: calc(var(--order) / var(--total) * var(--reveal-duration));
+}
+
+div.picture.revealed div.block {
+  opacity: 1;
+}
+
+div.picture.revealed {
+  cursor: default;
+}
+
+p.caption {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
