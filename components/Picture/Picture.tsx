@@ -12,8 +12,8 @@ function hash(str: string): number {
 }
 
 const MAX_ROTATION = 8
-const COLS = 6
-const ROWS = 4
+const COLS = 24
+const ROWS = 16
 
 type Block = { col: number; row: number; order: number }
 
