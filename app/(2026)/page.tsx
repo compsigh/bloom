@@ -1,8 +1,12 @@
+import Image from "next/image"
 import { Game } from "@/components/Game"
+import { Board } from "@/components/Board"
 import { Label } from "@/components/Label"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { Mention } from "@/components/Mention"
+import { Picture } from "@/components/Picture"
+import { Landscape } from "@/components/Landscape"
 import { LinkButton } from "@/components/LinkButton"
 
 import {
@@ -16,12 +20,22 @@ import {
 
 import styles from "./page.module.css"
 
+const pics = [
+  { slug: "crts-prep", caption: "crts prepping their demo" },
+  { slug: "crts-win", caption: "crts wins first place" },
+  { slug: "demo-day", caption: "Friends on demo day" },
+  { slug: "leetrizz", caption: "Faadil demos LeetRizz" },
+  { slug: "opening-night", caption: "Friends at opening night" },
+  { slug: "synesthesia", caption: "Kiana demos Synesthesia" }
+]
+
 export default function Home() {
   return (
     <main tabIndex={-1}>
-      <div className={styles.container}>
+      <Landscape>
         <Header />
-
+      </Landscape>
+      <div className={styles.container}>
         <div className={styles.socials}>
           <LinkButton href="/agenda">Agenda</LinkButton>
           <LinkButton href="https://instagram.com/compsigh.club">
@@ -110,6 +124,25 @@ export default function Home() {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <div className={styles.board}>
+          <Board columns={3}>
+            {pics.map(({ slug, caption }) => (
+              <Picture
+                key={slug}
+                caption={caption}
+                hover={`/assets/pics-from-2025/${slug}.jpeg`}
+              >
+                <Image
+                  src={`/assets/pics-from-2025-pixelated/${slug}.png`}
+                  alt={caption}
+                  width={1280}
+                  height={854}
+                />
+              </Picture>
+            ))}
+          </Board>
         </div>
 
         <div id={styles["game-container"]}>

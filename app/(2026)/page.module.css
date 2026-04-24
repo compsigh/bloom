@@ -72,6 +72,10 @@ div#game-container {
   width: fit-content;
 }
 
+div.board {
+  max-width: 900px;
+}
+
 div.attributions td {
   padding: 8px 32px;
 }
