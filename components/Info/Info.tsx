@@ -124,23 +124,7 @@ export function WhatsOnTheAgenda() {
               <Cascade duration={0.4} text="05:00pm" />
             </td>
             <td>
-              <Cascade duration={0.4} text="Check in && dinner" />
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="05:30pm" />
-            </td>
-            <td>
-              <Cascade duration={0.4} text="Opening keynote" />
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="05:40pm" />
-            </td>
-            <td>
-              <Cascade duration={0.4} text="Hacking begins!" />
+              <Cascade duration={0.4} text="Check-in" />
             </td>
           </tr>
           <tr>
@@ -153,7 +137,31 @@ export function WhatsOnTheAgenda() {
           </tr>
           <tr>
             <td style={{ width: 120 }}>
-              <Cascade duration={0.4} text="05:40pm" />
+              <Cascade duration={0.4} text="05:30pm" />
+            </td>
+            <td>
+              <Cascade duration={0.4} text="Opening keynote" />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade duration={0.4} text="05:50pm" />
+            </td>
+            <td>
+              <Cascade duration={0.4} text="Dinner" />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade duration={0.4} text="06:00pm" />
+            </td>
+            <td>
+              <Cascade duration={0.4} text="Hacking begins!" />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade duration={0.4} text="06:00pm" />
             </td>
             <td>
               <Cascade
