@@ -32,17 +32,23 @@ div.content {
   z-index: 1;
 }
 
-@media (max-width: 1000px) {
-  div.content {
-    width: 100%;
-    left: 0;
+@media (max-width: 1200px) {
+  div.landscape {
+    max-height: none;
   }
 
-  div.content > :first-child {
+  img.background {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    border-left: none;
-    border-right: none;
-    box-shadow: none;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  div.content {
+    position: relative;
+    width: 100%;
+    inset: auto;
   }
 }
 

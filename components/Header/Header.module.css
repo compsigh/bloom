@@ -49,10 +49,10 @@ p.subtitle {
   margin: 0;
 }
 
-@media (max-width: 1000px) {
-  header#header {
-    align-items: center;
-    text-align: center;
+@media (max-width: 1580px) {
+  div#logo {
+    width: 68px;
+    height: 68px;
   }
 
   h1#title {
@@ -61,6 +61,19 @@ p.subtitle {
 
   p.subtitle {
     font-size: 1.2rem;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  header#header {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 80px 40px;
+    background-image: none;
+    border: none;
+    box-shadow: none;
   }
 }
 
@@ -68,6 +81,11 @@ p.subtitle {
   div#wordmark {
     flex-direction: column;
     align-items: center;
+  }
+
+  div#logo {
+    width: 45px;
+    height: 45px;
   }
 
   h1#title {

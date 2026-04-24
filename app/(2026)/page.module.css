@@ -72,8 +72,31 @@ div#game-container {
   width: fit-content;
 }
 
-div.board {
-  max-width: 900px;
+div.three-col {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "left middle right";
+  gap: 40px;
+  align-items: start;
+  justify-items: center;
+  width: 100%;
+  padding: 0 80px;
+}
+
+div.left {
+  grid-area: left;
+}
+
+div.right {
+  grid-area: right;
+}
+
+div.middle-col {
+  grid-area: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
 div.attributions td {
@@ -87,6 +110,17 @@ div.attributions td {
   }
 }
 
+@media (max-width: 1400px) {
+  div.three-col {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "middle middle"
+      "left right";
+    column-gap: 64px;
+    padding: 0 40px;
+  }
+}
+
 @media (max-width: 1000px) {
   div#game-container {
     display: none;
@@ -96,11 +130,31 @@ div.attributions td {
     display: block;
     width: fit-content;
   }
+
+  div.three-col {
+    grid-template-columns: 1fr;
+    grid-template-areas: "middle";
+    padding: 0;
+    justify-items: stretch;
+  }
+
+  div.middle-col {
+    width: 100%;
+  }
+
+  div.left,
+  div.right {
+    display: none;
+  }
 }
 
 @media (max-width: 745px) {
   div.socials {
     flex-direction: column;
+    width: 100%;
+  }
+
+  div.socials > a {
     width: 100%;
   }
 
