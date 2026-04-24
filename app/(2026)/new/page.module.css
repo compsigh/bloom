@@ -1,19 +1,13 @@
-div.row {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 40px;
-}
-
 div.board {
-  flex: 1;
-  min-width: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
 }
 
 div#game-container {
   width: fit-content;
+  margin: 0 auto;
+  padding: 40px;
 }
 
 @media (max-width: 1000px) {
