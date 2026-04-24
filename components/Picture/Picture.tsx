@@ -56,6 +56,7 @@ export function Picture({
   const delay = -((seed & 0xff) / 0xff) * duration
   const dx = Math.cos(angle) * distance
   const dy = Math.sin(angle) * distance
+  const offsetX = (((mix(seed) >>> 0) & 0xff) / 0xff) * 20 - 10
 
   const [revealed, setRevealed] = useState(false)
 
@@ -66,6 +67,7 @@ export function Picture({
       style={
         {
           "--rotation": `${rotation}deg`,
+          "--offset-x": `${offsetX.toFixed(1)}px`,
           "--dx": `${dx.toFixed(1)}px`,
           "--dy": `${dy.toFixed(1)}px`,
           "--float-duration": `${duration.toFixed(1)}s`,

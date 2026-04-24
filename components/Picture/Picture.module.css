@@ -18,7 +18,7 @@ div.picture:hover:not(.revealed) {
 }
 
 div.picture {
-  transform: rotate(var(--rotation));
+  transform: translate(var(--offset-x), 0) rotate(var(--rotation));
   animation: float var(--float-duration) ease-in-out infinite;
   animation-delay: var(--float-delay);
 }
@@ -26,10 +26,11 @@ div.picture {
 @keyframes float {
   0%,
   100% {
-    transform: rotate(var(--rotation)) translate(0, 0);
+    transform: translate(var(--offset-x), 0) rotate(var(--rotation));
   }
   50% {
-    transform: rotate(var(--rotation)) translate(var(--dx), var(--dy));
+    transform: translate(calc(var(--offset-x) + var(--dx)), var(--dy))
+      rotate(var(--rotation));
   }
 }
 
