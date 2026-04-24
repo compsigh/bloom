@@ -96,21 +96,6 @@ export default function Home() {
                   <tr>
                     <td>
                       <Mention
-                        avatar="/avatars/jet.png"
-                        name="Jet Pham"
-                        link="https://jetpham.com"
-                      />
-                    </td>
-                    <td>
-                      <Label text="Class of 2027" />
-                    </td>
-                    <td>
-                      <Label text="Trophies" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <Mention
                         avatar="/avatars/ilce.jpeg"
                         name="Ilce Perez"
                         link="https://github.com/ispecal"
@@ -141,6 +126,111 @@ export default function Home() {
                   <tr>
                     <td>
                       <Mention
+                        avatar="/avatars/z.jpeg"
+                        name="Zaylen Moore"
+                        link="https://discord.com/channels/@me/1287531438996197458"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2028" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/ash.jpeg"
+                        name="Ash Li"
+                        link="https://ashilated.net"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2029" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/emi.jpeg"
+                        name="Emily Johnson"
+                        link="https://instagram.com/ohemgeeemi"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2028" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/sam.jpeg"
+                        name="Sam Simmons"
+                        link="https://wordbunny.app"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2026" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/nora.jpg"
+                        name="Nora Kravets"
+                        link="https://norakravets.com"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2027" />
+                    </td>
+                    <td>
+                      <Label text="Mocktails" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/geneva.jpg"
+                        name="Geneva Tovar"
+                        link="https://linkedin.com/in/genevatovar"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2027" />
+                    </td>
+                    <td>
+                      <Label text="Mocktails" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/jet.png"
+                        name="Jet Pham"
+                        link="https://jetpham.com"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2027" />
+                    </td>
+                    <td>
+                      <Label text="Trophies" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
                         avatar="/avatars/edward.jpeg"
                         name="Edward Shturman"
                         link="https://edwardshturman.com"
@@ -160,37 +250,36 @@ export default function Home() {
           <div className={styles.right}>
             <PicColumn slice={rightPics} />
           </div>
+          <div className={styles.faq}>
+            <details className={styles.faq} open>
+              <summary>What is BLOOM?</summary>
+              <WhatIsBLOOM />
+            </details>
+            <details className={styles.faq}>
+              <summary>Is this a hackathon?</summary>
+              <IsThisAHackathon />
+            </details>
+            <details className={styles.faq}>
+              <summary>What can I make?</summary>
+              <WhatCanIMake />
+            </details>
+            <details className={styles.faq}>
+              <summary>What&apos;s in it for me?</summary>
+              <WhatsInItForMe />
+            </details>
+            <details className={styles.faq}>
+              <summary>What&apos;s on the agenda?</summary>
+              <WhatsOnTheAgenda />
+            </details>
+            <details className={styles.faq}>
+              <summary>How are projects judged?</summary>
+              <HowAreProjectsJudged />
+            </details>
+          </div>
         </div>
 
         <div id={styles["game-container"]}>
           <Game />
-        </div>
-
-        <div className={styles.faq}>
-          <details className={styles.faq} open>
-            <summary>What is BLOOM?</summary>
-            <WhatIsBLOOM />
-          </details>
-          <details className={styles.faq}>
-            <summary>Is this a hackathon?</summary>
-            <IsThisAHackathon />
-          </details>
-          <details className={styles.faq}>
-            <summary>What can I make?</summary>
-            <WhatCanIMake />
-          </details>
-          <details className={styles.faq}>
-            <summary>What&apos;s in it for me?</summary>
-            <WhatsInItForMe />
-          </details>
-          <details className={styles.faq}>
-            <summary>What&apos;s on the agenda?</summary>
-            <WhatsOnTheAgenda />
-          </details>
-          <details className={styles.faq}>
-            <summary>How are projects judged?</summary>
-            <HowAreProjectsJudged />
-          </details>
         </div>
         <Footer />
       </div>
