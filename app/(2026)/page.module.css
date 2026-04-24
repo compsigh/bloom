@@ -126,19 +126,42 @@ div.attributions td {
     display: none;
   }
 
-  div.faq {
-    display: block;
-    width: fit-content;
-  }
-
   div.three-col {
     grid-template-columns: 1fr;
-    grid-template-areas: "middle";
+    grid-template-areas:
+      "socials"
+      "faq"
+      "attributions";
     padding: 0;
     justify-items: stretch;
   }
 
   div.middle-col {
+    display: contents;
+  }
+
+  div.socials {
+    grid-area: socials;
+  }
+
+  div.attributions {
+    grid-area: attributions;
+  }
+
+  div.faq {
+    display: block;
+    width: fit-content;
+    margin-top: 0;
+    justify-self: center;
+    grid-area: faq;
+  }
+
+  div.socials {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  div.socials > a {
     width: 100%;
   }
 
@@ -149,20 +172,15 @@ div.attributions td {
 }
 
 @media (max-width: 745px) {
-  div.socials {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  div.socials > a {
-    width: 100%;
+  div.attributions {
+    margin-bottom: 40px;
   }
 
   div.attributions table {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: -64px;
+    margin-bottom: 0;
   }
 
   div.attributions tr {

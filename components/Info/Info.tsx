@@ -32,7 +32,7 @@ export function WhatIsBLOOM() {
           text="Friends who went last year: BLOOM is..."
         />
       </p>
-      <Board>
+      <Board gap="24px">
         <Note>
           <Cascade duration={0.7} text="Creative" />
           <Animation animation="Brain" />

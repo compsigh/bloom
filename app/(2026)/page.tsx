@@ -250,37 +250,36 @@ export default function Home() {
           <div className={styles.right}>
             <PicColumn slice={rightPics} />
           </div>
+          <div className={styles.faq}>
+            <details className={styles.faq} open>
+              <summary>What is BLOOM?</summary>
+              <WhatIsBLOOM />
+            </details>
+            <details className={styles.faq}>
+              <summary>Is this a hackathon?</summary>
+              <IsThisAHackathon />
+            </details>
+            <details className={styles.faq}>
+              <summary>What can I make?</summary>
+              <WhatCanIMake />
+            </details>
+            <details className={styles.faq}>
+              <summary>What&apos;s in it for me?</summary>
+              <WhatsInItForMe />
+            </details>
+            <details className={styles.faq}>
+              <summary>What&apos;s on the agenda?</summary>
+              <WhatsOnTheAgenda />
+            </details>
+            <details className={styles.faq}>
+              <summary>How are projects judged?</summary>
+              <HowAreProjectsJudged />
+            </details>
+          </div>
         </div>
 
         <div id={styles["game-container"]}>
           <Game />
-        </div>
-
-        <div className={styles.faq}>
-          <details className={styles.faq} open>
-            <summary>What is BLOOM?</summary>
-            <WhatIsBLOOM />
-          </details>
-          <details className={styles.faq}>
-            <summary>Is this a hackathon?</summary>
-            <IsThisAHackathon />
-          </details>
-          <details className={styles.faq}>
-            <summary>What can I make?</summary>
-            <WhatCanIMake />
-          </details>
-          <details className={styles.faq}>
-            <summary>What&apos;s in it for me?</summary>
-            <WhatsInItForMe />
-          </details>
-          <details className={styles.faq}>
-            <summary>What&apos;s on the agenda?</summary>
-            <WhatsOnTheAgenda />
-          </details>
-          <details className={styles.faq}>
-            <summary>How are projects judged?</summary>
-            <HowAreProjectsJudged />
-          </details>
         </div>
         <Footer />
       </div>
