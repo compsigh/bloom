@@ -96,21 +96,6 @@ export default function Home() {
                   <tr>
                     <td>
                       <Mention
-                        avatar="/avatars/jet.png"
-                        name="Jet Pham"
-                        link="https://jetpham.com"
-                      />
-                    </td>
-                    <td>
-                      <Label text="Class of 2027" />
-                    </td>
-                    <td>
-                      <Label text="Trophies" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <Mention
                         avatar="/avatars/ilce.jpeg"
                         name="Ilce Perez"
                         link="https://github.com/ispecal"
@@ -136,6 +121,111 @@ export default function Home() {
                     </td>
                     <td>
                       <Label text="Art && animation" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/z.jpeg"
+                        name="Zaylen Moore"
+                        link="https://discord.com/channels/@me/1287531438996197458"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2028" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/ash.jpeg"
+                        name="Ash Li"
+                        link="https://ashilated.net"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2029" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/emi.jpeg"
+                        name="Emily Johnson"
+                        link="https://instagram.com/ohemgeeemi"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2028" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/sam.jpeg"
+                        name="Sam Simmons"
+                        link="https://wordbunny.app"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2026" />
+                    </td>
+                    <td>
+                      <Label text="Outreach" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/nora.jpg"
+                        name="Nora Kravets"
+                        link="https://norakravets.com"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2027" />
+                    </td>
+                    <td>
+                      <Label text="Mocktails" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/geneva.jpg"
+                        name="Geneva Tovar"
+                        link="https://linkedin.com/in/genevatovar"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2027" />
+                    </td>
+                    <td>
+                      <Label text="Mocktails" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Mention
+                        avatar="/avatars/jet.png"
+                        name="Jet Pham"
+                        link="https://jetpham.com"
+                      />
+                    </td>
+                    <td>
+                      <Label text="Class of 2027" />
+                    </td>
+                    <td>
+                      <Label text="Trophies" />
                     </td>
                   </tr>
                   <tr>
