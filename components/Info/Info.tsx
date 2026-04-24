@@ -231,6 +231,14 @@ export function WhatsOnTheAgenda() {
               <Cascade duration={0.6} text="12:00pm" />
             </td>
             <td>
+              <Cascade duration={0.6} text="Mocktail bar" />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ width: 120 }}>
+              <Cascade duration={0.6} text="12:00pm" />
+            </td>
+            <td>
               <Cascade duration={0.6} text="Pendant necklace making" />
             </td>
           </tr>
