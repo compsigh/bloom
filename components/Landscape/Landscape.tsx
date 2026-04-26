@@ -10,6 +10,7 @@ export function Landscape({ children }: { children?: React.ReactNode }) {
         alt="BLOOM landscape"
         width={3840}
         height={2160}
+        loading="eager"
         unoptimized
       />
       <Image
@@ -18,6 +19,7 @@ export function Landscape({ children }: { children?: React.ReactNode }) {
         alt="BLOOM landscape"
         width={3840}
         height={2160}
+        loading="eager"
         unoptimized
       />
       {children && <div className={styles.content}>{children}</div>}

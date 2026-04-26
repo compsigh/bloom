@@ -1,3 +1,15 @@
+header#header > a {
+  background-color: transparent;
+}
+
+header#header > a:hover {
+  background-color: var(--foreground-10);
+}
+
+header#header > a:active {
+  background-color: var(--foreground);
+}
+
 header#header {
   display: flex;
   flex-direction: column;
